@@ -128,7 +128,7 @@ export type TCatalogType =
   | 'spirits'
   | 'mixology'
   | 'cognac-all'
-  | 'champagne-and-sparkling-wines'
+  | 'bubbles'
   | 'whisky'
   | 'vodka-all';
 
