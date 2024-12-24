@@ -1,0 +1,38 @@
+.ProductInOrderCart {
+  display: flex;
+  gap: 16px;
+  .ImageBlock {
+    max-width: 84px;
+    min-width: 84px;
+    max-height: 84px;
+    min-height: 84px;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 100%;
+    }
+  }
+  .Info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .Vendor {
+      margin-bottom: 4px;
+    }
+    .Name {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      min-height: 48px;
+      max-width: 240px;
+      margin-bottom: 12px;
+    }
+    .PriceAndCount {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

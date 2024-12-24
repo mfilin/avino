@@ -1,0 +1,26 @@
+.HamburgerButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 22px;
+  gap: 8px;
+  border: 2px solid #ff5c21;
+  border-radius: 2px;
+  cursor: pointer;
+
+  .caption {
+    display: flex;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.005em;
+    color: #ff5c21;
+  }
+
+  & :global(.hamburger-react) {
+    & > div {
+      background: #ff5c21;
+    }
+  }
+}

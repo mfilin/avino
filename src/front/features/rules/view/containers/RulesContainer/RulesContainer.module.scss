@@ -1,0 +1,102 @@
+.RulesContainer {
+  width: 1586px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 35px auto 50px;
+  .Block {
+    padding: 81px 90px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    .InfoList {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      .List {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        list-style: none;
+        padding: 0 31px;
+        li {
+          &::before {
+            content: '\2022';
+            color: #ff5c21;
+            font-weight: bold;
+            display: inline-block;
+            width: 19px;
+            height: 5px;
+            margin-left: -14px;
+          }
+        }
+      }
+    }
+    .MiniBlocksList {
+      display: flex;
+      gap: 100px;
+      .InfoBlock {
+        display: flex;
+        gap: 10px;
+        max-width: 375px;
+        .Icon {
+          min-width: 70px;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .Info {
+          padding-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          a {
+            font-weight: 600;
+            color: #ff5c21;
+          }
+        }
+      }
+    }
+  }
+  .Number {
+    font-family: Manrope;
+    position: absolute;
+    color: #efefef;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 180px;
+    top: 0;
+    left: 0;
+    letter-spacing: 0.6px;
+  }
+  &.MobileView {
+    width: 100%;
+    gap: 60px;
+    margin: 35px auto 50px;
+    .Block {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      .InfoList {
+        gap: 22px;
+        .List {
+          padding: 0 20px;
+        }
+      }
+      .MiniBlocksList {
+        display: flex;
+        gap: 100px;
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
+    .Number {
+      display: none;
+    }
+  }
+}

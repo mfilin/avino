@@ -1,0 +1,9 @@
+.SelectLocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}

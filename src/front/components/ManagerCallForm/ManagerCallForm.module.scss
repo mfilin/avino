@@ -1,0 +1,18 @@
+.ManagerCallForm {
+  .Text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  .TimeBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

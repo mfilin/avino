@@ -1,0 +1,38 @@
+.Card {
+  padding: 8px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  position: relative;
+  min-width: 106px;
+  background-color: #fff;
+  cursor: pointer;
+  .AvailabilityPoint {
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #00a300;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+  }
+  &.NoAnotherAvailableInGroup {
+    opacity: 0.6;
+    cursor: default;
+    .AvailabilityPoint {
+      background-color: #ff151f;
+    }
+  }
+  &.Active {
+    border: 1px solid #00a300;
+  }
+  &.Active.CurrentNotAvailable {
+    border: 1px solid #ff151f;
+  }
+  &.Mobile {
+    padding: 8px 7px 10px;
+    min-width: 88px;
+  }
+}

@@ -1,0 +1,72 @@
+.ProductCard {
+  padding: 20px 20px 20px 0;
+  border-bottom: 1px solid #efefef;
+  background-color: #fff;
+  width: 694px;
+  height: 136px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  .Group {
+    display: flex;
+    gap: 16px;
+  }
+  .ImageBlock {
+    position: relative;
+    width: 84px;
+    height: 84px;
+    min-width: 84px;
+    display: block;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .InfoBlock {
+    display: flex;
+    flex-direction: column;
+    .Vendor {
+      margin-bottom: 6px;
+    }
+    .Name {
+      max-width: 250px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-bottom: 12px;
+      min-height: 48px;
+    }
+  }
+
+  &.Mobile {
+    width: 370px;
+    height: 164px;
+    padding: 0 0 25px 0;
+    .Group {
+      gap: 4px;
+    }
+    .ImageBlock {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+    }
+    .InfoBlock {
+      .Name {
+        max-width: fit-content;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 24px;
+        min-height: 48px;
+      }
+    }
+    .ExtraButtons {
+      flex-basis: 100%;
+    }
+  }
+}

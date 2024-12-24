@@ -1,0 +1,64 @@
+.TooltipWrapper {
+  position: relative;
+  &:hover {
+    .Tooltip {
+      visibility: visible;
+    }
+    .ContentTooltip {
+      display: block;
+    }
+  }
+  .Tooltip {
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.36px;
+    visibility: hidden;
+    width: 165px;
+    background-color: #35393e;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 12px;
+    position: absolute;
+    z-index: 10;
+    // bottom: 0%;
+    top: 100%;
+    left: 50%;
+    margin-left: -82px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #35393e transparent transparent transparent;
+    }
+  }
+  .ContentTooltip {
+    display: none;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 4px 4px;
+    transform: translate(-50%, -0%);
+    &::before {
+      z-index: 10;
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-left: 5px transparent;
+      border-right: 5px transparent;
+      border-bottom: 10px red;
+    }
+  }
+}

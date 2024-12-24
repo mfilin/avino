@@ -1,0 +1,14 @@
+.CatalogFilterTreeTopLevel {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  //gap: 5px;
+
+  .Childs {
+    margin-left: 10px;
+  }
+
+  & :global(.virtual-tree-plusminus) {
+    //opacity: 0.5;
+  }
+}

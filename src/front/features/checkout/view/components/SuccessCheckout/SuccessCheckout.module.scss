@@ -1,0 +1,49 @@
+.Wrapper {
+  display: flex;
+  gap: 109px;
+  .InfoBlock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 216px;
+    .Title {
+      margin-bottom: 21px;
+    }
+    .SubTitle {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 29px;
+    }
+    .Description {
+      margin-bottom: 53px;
+    }
+  }
+  .ImageBlock {
+    width: 704px;
+    height: 951px;
+  }
+  &.MobileView {
+    flex-direction: column;
+    gap: 60px;
+    .InfoBlock {
+      margin-top: 60px;
+      .Title {
+        margin-bottom: 20px;
+      }
+      .SubTitle {
+        gap: 2px;
+        margin-bottom: 20px;
+      }
+      .Description {
+        margin-bottom: 32px;
+      }
+    }
+    .ImageBlock {
+      width: 370px;
+      height: 500px;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}

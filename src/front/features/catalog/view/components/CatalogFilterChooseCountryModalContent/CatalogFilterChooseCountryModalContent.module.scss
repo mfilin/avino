@@ -1,0 +1,57 @@
+.CatalogFilterChooseCountryModalContent {
+  display: flex;
+  flex-direction: column;
+
+  .Breadcrumbs {
+    display: flex;
+    color: #797979;
+    font-family: Manrope;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .Label {
+      display: flex;
+      //margin-right: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transform: translateX(10px);
+
+      & svg {
+        margin-right: 20px;
+        transition: all 0.3s linear;
+      }
+
+      &:hover {
+        color: #bd4a22;
+
+        & svg {
+          transform: translateX(4px);
+        }
+      }
+
+    }
+  }
+
+  .SearchResultContent {
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    max-height: 220px;
+    overflow-y: scroll;
+  }
+
+  .RowChilds {
+    margin-left: 10px;
+  }
+
+}
+
+.Actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

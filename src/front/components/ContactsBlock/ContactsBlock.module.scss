@@ -1,0 +1,52 @@
+.ContactsBlock {
+  margin-top: 36px;
+  background-color: #fff;
+  .Contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 40px;
+    align-items: center;
+    .Row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      max-width: 300px;
+      .Socials {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+  }
+  &.DesktopView {
+    margin-top: 0px;
+    padding: 20px 24px 24px;
+    .Contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+      align-items: flex-start;
+      .Row {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        text-align: start;
+        max-width: 185px;
+        .Socials {
+          margin-top: 2px;
+          gap: 9px;
+        }
+        a {
+          display: flex;
+        }
+      }
+    }
+    button {
+      padding: 14px 20px;
+      font-size: 14px;
+    }
+  }
+}

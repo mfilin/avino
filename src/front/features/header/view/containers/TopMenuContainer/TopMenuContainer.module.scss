@@ -1,0 +1,34 @@
+.TopMenuContainer {
+  position: sticky;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: #fff;
+  top: 0;
+
+  .StickyBottomHeader {
+    //position: fixed;
+    //top: 148px;
+    //width: 100vw;
+    //background-color: #fff;
+    //z-index: 1000;
+  }
+
+  .MiddleRow {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #efefef;
+
+    body:global(.scroll-freeze) & {
+      padding-right: 5px;
+    }
+  }
+
+  .BottomRow {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+  }
+}

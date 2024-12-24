@@ -1,0 +1,142 @@
+.ContactsContainer {
+  margin: 60px 0;
+  .TopImage {
+    width: 1680px;
+    margin: 0 -120px 110px;
+  }
+  .Title {
+    margin-bottom: 28px;
+  }
+  .Description {
+    max-width: 770px;
+    display: block;
+    margin-bottom: 50px;
+  }
+  .ContactsBlocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    .Block {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+      .IconAndTitle {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      .InfoList {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        .ListInBlock {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          list-style: none;
+          padding-left: 25px;
+          li {
+            &::before {
+              content: '\2022';
+              color: #ff5c21;
+              font-weight: bold;
+              display: inline-block;
+              width: 19px;
+              height: 5px;
+              margin-left: -14px;
+            }
+          }
+        }
+      }
+      .RequisitesList {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    .EmailBlock {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    .PhoneBlock {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .MapBlock {
+      grid-area: 1 / 3 / 3 / 4;
+    }
+    .RequisitesBlock {
+      margin-top: 114px;
+      grid-area: 2 / 1 / 3 / 3;
+    }
+    .MapImage {
+      width: 450px;
+      height: 500px;
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .Socials {
+    display: flex;
+    gap: 20px;
+  }
+
+  &.MobileView {
+    margin-top: 60px;
+    .TopImage {
+      width: 100%;
+      height: 148px;
+      margin: 0 0 60px;
+      img {
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+    .Title {
+      margin-bottom: 20px;
+    }
+    .Description {
+      max-width: inherit;
+      display: block;
+      margin-bottom: 60px;
+    }
+    .ContactsBlocks {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      .Block {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        .IconAndTitle {
+          display: flex;
+          flex-direction: row;
+          gap: 22px;
+          align-items: center;
+          svg {
+            min-width: 48px;
+          }
+        }
+      }
+      .RequisitesBlock {
+        margin-top: 0;
+      }
+      .MapImage {
+        width: 100%;
+        height: fit-content;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    .Socials {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}

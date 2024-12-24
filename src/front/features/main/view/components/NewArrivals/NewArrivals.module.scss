@@ -1,0 +1,21 @@
+.NewArrivals {
+  padding: 110px 135px;
+  margin: 0 -135px;
+  background: #f9f9fa;
+  .List {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+  }
+  &.MobileView {
+    padding: 48px 0;
+    margin: 0 -10px;
+    .Title {
+      margin-left: 10px;
+    }
+    .List {
+      margin-top: 28px;
+    }
+  }
+}

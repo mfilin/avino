@@ -1,0 +1,21 @@
+.ComparisonContainer {
+  .List {
+    display: flex;
+    .FirstColumn {
+      height: 100%;
+      .FirstBlock {
+        height: 364.5px;
+        border: 1px solid #efefef;
+      }
+      .SecondBlock {
+        padding: 33px 50px;
+        .ComparisonFields {
+          display: flex;
+          flex-direction: column;
+          gap: 35px;
+          margin-bottom: 28px;
+        }
+      }
+    }
+  }
+}

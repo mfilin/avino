@@ -1,0 +1,32 @@
+.Drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 64px);
+  width: 100vw;
+  background-color: #fff;
+  z-index: 7;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.5s cubic-bezier(0.82, 0.085, 0.395, 0.895);
+  .DrawerHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 22px;
+    padding: 0 10px;
+    span {
+      cursor: pointer;
+    }
+  }
+  .DrawerContent {
+    flex: 1;
+    padding: 0 10px 64px;
+    max-width: 390px;
+  }
+  &.Hidden {
+    left: -100vw;
+  }
+}

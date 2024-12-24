@@ -1,0 +1,78 @@
+.AdultDisclaimer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  background: rgba(53, 57, 62, 0.9);
+  .Content {
+    margin-top: 71px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 602px;
+    align-items: center;
+    .Social {
+      margin-bottom: 55px;
+    }
+    .Welcome {
+      margin-bottom: 20px;
+    }
+    .Title {
+      margin-bottom: 32px;
+      line-height: 36px;
+    }
+    .Buttons {
+      margin-bottom: 32px;
+      display: flex;
+      gap: 32px;
+      button {
+        min-width: 90px;
+        color: #fff;
+      }
+    }
+    .TextsBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      a {
+        color: #ff5c21;
+      }
+    }
+  }
+  &.MobileView {
+    .Content {
+      margin-top: 50px;
+      max-width: 364px;
+      .Social {
+        margin-bottom: 20px;
+      }
+      .Welcome {
+        margin-bottom: 20px;
+      }
+      .Title {
+        margin-bottom: 20px;
+        line-height: 18px;
+      }
+      .Buttons {
+        margin-bottom: 32px;
+        gap: 20px;
+        button {
+          min-width: 60px;
+          color: #fff;
+        }
+      }
+      .TextsBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        a {
+          color: #ff5c21;
+        }
+      }
+    }
+  }
+}

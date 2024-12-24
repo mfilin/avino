@@ -1,0 +1,52 @@
+.CatalogFiltersDrawerSingleFilterContent {
+  .ToMenuBtn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 47px;
+    padding: 0 22px;
+    border-radius: 4px;
+    background: #f9f9fa;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .SearchBar {
+    display: flex;
+
+    .SearchInput {
+      flex: 1;
+
+      input {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.065px;
+        padding: 10px 16px;
+        border-radius: 4px 0 0 4px;
+      }
+    }
+
+    .SearchIcon {
+      width: 43px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0px 4px 4px 0px;
+      background: #efefef;
+      cursor: pointer;
+    }
+    margin-bottom: 24px;
+  }
+
+  .CategoryTitle {
+    text-transform: uppercase;
+  }
+
+  .ItemsList {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,25 @@
+.PrivacyContainer {
+  max-width: 800px;
+  margin: 50px auto;
+  h1 {
+    margin-bottom: 2%;
+    font-size: 21px;
+  }
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .List {
+    margin-top: 5px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

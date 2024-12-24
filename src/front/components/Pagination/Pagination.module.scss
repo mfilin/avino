@@ -1,0 +1,54 @@
+.Pagination {
+  display: flex;
+
+  & li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    border-radius: 2px;
+
+    &:hover path {
+      stroke: #FF5C21;
+    }
+
+    &:hover a {
+      color: #FF5C21;
+    }
+
+    & a {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 15px; /* 100% */
+      letter-spacing: 0.15px;
+    }
+
+    &:global(.rc-pagination-item-active) {
+      background: #35393E;
+
+      & a {
+        color: #fff;
+      }
+    }
+  }
+
+  .ArrowIcon {
+    //width: 16px;
+    //height: 16px;
+
+    &_left {
+      transform: rotate(180deg);
+    }
+  }
+
+  .AnotherSegmentBtn {
+
+    &:global(.rc-pagination-item-link)::after {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+}

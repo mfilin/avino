@@ -1,0 +1,9 @@
+.Tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .Tab {
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+}

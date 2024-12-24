@@ -1,0 +1,44 @@
+.PagesMenu {
+  display: flex;
+  padding: 13px 0;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f9;
+
+  body:global(.scroll-freeze) & {
+    padding-right: 5px;
+  }
+
+  & .brands {
+    display: flex;
+
+    & > *:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  & .pages {
+    display: flex;
+    padding: 0 150px 0 80px;
+
+    & > *:not(:first-child) {
+      margin-left: 54px;
+    }
+
+    & .pageItem {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.005em;
+
+      & a {
+        text-decoration: none;
+        color: #35393e;
+      }
+    }
+  }
+
+  & .phonePane {
+    margin-left: 68px;
+  }
+}

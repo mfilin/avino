@@ -1,0 +1,125 @@
+.AboutCompanyContainer {
+  margin: 50px -135px 300px;
+  padding-left: 135px;
+  .FirstBlock {
+    .Title {
+      margin-bottom: 28px;
+    }
+    width: 1168px;
+    margin-bottom: 180px;
+  }
+  .SecondBlock {
+    background: #f9f9fa;
+    margin: 0 0 200px -135px;
+    padding: 55px 125px 105px 135px;
+    .WhoAreWe {
+      min-width: 1440px;
+      display: flex;
+      width: 100%;
+      flex-direction: row-reverse;
+      margin-bottom: 200px;
+      position: relative;
+      .TextBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 580px;
+      }
+      .ImageBlock {
+        position: absolute;
+        left: 0;
+        top: -150px;
+        width: 690px;
+        height: 580px;
+      }
+    }
+    .OurPolicy {
+      width: 100%;
+      position: relative;
+      min-width: 1440px;
+      .TextBlock {
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 580px;
+      }
+      .ImageBlock {
+        position: absolute;
+        right: 0px;
+        top: -50px;
+        width: 580px;
+        height: 580px;
+      }
+    }
+  }
+  &.MobileView {
+    margin: 28px auto 40px;
+    padding: 0;
+    width: 100%;
+    .FirstBlock {
+      .Title {
+        margin-bottom: 20px;
+      }
+      width: 100%;
+      white-space: pre-wrap;
+      margin-bottom: 40px;
+    }
+    .SecondBlock {
+      background: #f9f9fa;
+      margin: 0 -10px;
+      padding: 0 10px;
+      .WhoAreWe {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 28px;
+        position: relative;
+        min-width: 100%;
+        .TextBlock {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          width: inherit;
+        }
+        .ImageBlock {
+          width: calc(100% + 20px);
+          height: 190px;
+          position: relative;
+          overflow: hidden;
+          top: 0;
+          left: -10px;
+          margin-bottom: 40px;
+          img {
+            object-fit: scale-down;
+          }
+        }
+      }
+      .OurPolicy {
+        width: 100%;
+        position: relative;
+        flex-direction: column-reverse;
+        min-width: 100%;
+        .TextBlock {
+          margin-top: 0;
+          gap: 16px;
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        .ImageBlock {
+          width: calc(100% + 20px);
+          height: 190px;
+          position: relative;
+          overflow: hidden;
+          top: 0;
+          left: -10px;
+          margin-bottom: 40px;
+          img {
+            object-fit: scale-down;
+            object-position: 0 -120px;
+          }
+        }
+      }
+    }
+  }
+}

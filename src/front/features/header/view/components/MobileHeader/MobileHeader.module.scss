@@ -1,0 +1,46 @@
+.MobileHeader {
+  padding: 0 10px;
+  .TopHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    svg {
+      cursor: pointer;
+    }
+    .BurgerBtn {
+      min-width: 67px;
+    }
+    .Contacts {
+      display: flex;
+      gap: 19px;
+    }
+  }
+  .SearchBlock {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    .Search {
+      border: 1px solid #efefef;
+      border-radius: 4px 0 0 4px;
+      flex: 1;
+    }
+    .SearchIcon {
+      width: 43px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0px 4px 4px 0px;
+      background: #efefef;
+      cursor: pointer;
+    }
+    &.StickyBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0 10px;
+    }
+  }
+}

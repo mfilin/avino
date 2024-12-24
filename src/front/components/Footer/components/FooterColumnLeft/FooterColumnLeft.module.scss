@@ -1,0 +1,28 @@
+.FooterColumnLeft {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding: 0 14px;
+
+  .Top {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Text {
+    line-height: 14px;
+    font-size: 12px;
+    margin-top: 54px;
+  }
+
+  .Social {
+    margin-top: 48px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    & path {
+      fill: #fff;
+    }
+  }
+}

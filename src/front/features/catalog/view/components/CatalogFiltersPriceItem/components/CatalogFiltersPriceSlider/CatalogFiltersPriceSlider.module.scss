@@ -1,0 +1,43 @@
+.CatalogFiltersPriceSlider {
+  display: flex;
+  flex-direction: column;
+
+  .Inputs {
+    display: flex;
+    margin-bottom: 16px;
+
+    .Input {
+      width: 120px;
+      color: #35393E;
+      border-radius: 2px;
+      border: 1px solid #EFEFEF;
+      padding: 0 6px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.28px;
+
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .Slider {
+    display: flex;
+    height: 1px;
+    background-color: #EFEFEF;
+
+    & :global(.range-slider__thumb) {
+      width: 6px;
+      height: 6px;
+      background-color: #FF5C21;
+    }
+
+    & :global(.range-slider__range) {
+      height: 1px;
+      background-color: #FF5C21;
+    }
+  }
+}

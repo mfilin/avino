@@ -1,0 +1,15 @@
+import { getStaticProps as getStaticPageProps } from '../../front/next/pageActions/static.page.actions';
+import AboutPage from '../../front/pages/AboutPage';
+
+export const getStaticProps = async (params: any) => {
+  const { props } = await getStaticPageProps(params);
+  return {
+    props: {
+      ...props,
+      isMobile: true,
+    },
+    revalidate: false,
+  };
+};
+
+export default AboutPage;

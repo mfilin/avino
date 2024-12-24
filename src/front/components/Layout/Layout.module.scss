@@ -1,0 +1,23 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &.MobileLayout {
+    .Content {
+      width: 100%;
+      max-width: 390px;
+      padding: 0 10px;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+  &.Horizontal {
+    flex-direction: row;
+    gap: 30px;
+  }
+  &.HorizontalReversed {
+    flex-direction: row-reverse;
+    gap: 6px;
+  }
+
+  .Button {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      svg {
+        fill: #35393e;
+      }
+      &.HoverBackGround {
+        background-color: #f9f9fa;
+      }
+    }
+    &.Mobile {
+      background-color: #f9f9fa;
+    }
+  }
+
+  &.Mobile {
+    &.Button {
+      background-color: #f9f9fa;
+    }
+  }
+}

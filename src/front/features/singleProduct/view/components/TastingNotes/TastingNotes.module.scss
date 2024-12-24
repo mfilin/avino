@@ -1,0 +1,48 @@
+.TastingNotes {
+  width: 1000px;
+  .TastingNotesTitle {
+    display: block;
+    margin-bottom: 50px;
+  }
+  svg {
+    min-width: 52px;
+  }
+  .Notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 45px;
+    .Note {
+      display: flex;
+      gap: 19px;
+      & > div {
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  }
+  &.MobileView {
+    max-width: 370px;
+    .TastingNotesTitle {
+      margin-bottom: 28px;
+    }
+    .Notes {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .Note {
+        display: flex;
+        gap: 19px;
+        & > div {
+          max-width: 270px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}

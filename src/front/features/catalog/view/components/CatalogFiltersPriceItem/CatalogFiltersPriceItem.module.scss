@@ -1,0 +1,20 @@
+.CatalogFiltersPriceItem {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  .Caption {
+    display: flex;
+    font-family: Raleway, Manrope;
+    text-transform: uppercase;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.18px;
+    margin-bottom: 20px;
+  }
+
+  .RangeSlider {
+    margin-top: 36px;
+  }
+}

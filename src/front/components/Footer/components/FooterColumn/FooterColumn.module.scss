@@ -1,0 +1,28 @@
+.FooterColumn {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  width: 220px;
+
+  .Label {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 1em;
+    line-height: 1.1;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+
+    .Row {
+      display: flex;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+  }
+}

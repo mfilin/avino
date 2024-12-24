@@ -1,0 +1,28 @@
+.CatalogFilterTreeItem {
+  display: flex;
+  flex-direction: column;
+
+  .Label {
+    display: flex;
+    font-family: Raleway, Manrope;
+    text-transform: uppercase;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.18px;
+    margin-bottom: 20px;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .MoreButton {
+    margin-top: 24px;
+    color: #ff5c21;
+    cursor: pointer;
+    //text-decoration: underline;
+  }
+}

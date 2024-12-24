@@ -1,0 +1,38 @@
+.CatalogMobileMenu {
+  .ToMenuBtn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 47px;
+    padding: 0 22px;
+    border-radius: 4px;
+    background: #f9f9fa;
+    margin-bottom: 13px;
+  }
+  .MenuCategories {
+    // display: flex;
+    // gap: 5px;
+    // flex-wrap: wrap;
+    // .SubCategoryWithImage {
+    //   width: 120px;
+    //   height: 120px;
+    //   background-color: #f9f9fa;
+    //   display: flex;
+    //   flex-direction: column;
+    //   padding: 15px 15px 12px;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   gap: 7px;
+    //   img {
+    //     max-height: 70px;
+    //     object-fit: contain;
+    //   }
+    // }
+    & > * {
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+  }
+}

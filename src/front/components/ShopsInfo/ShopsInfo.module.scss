@@ -1,0 +1,56 @@
+.ShopsInfo {
+  margin-top: 32px;
+  .Shop {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    .City {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+    .Map {
+      width: 100%;
+      height: 170px;
+      margin-bottom: 16px;
+      position: relative;
+      img {
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+    .Info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .InfoRow {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+    }
+  }
+  .Hint {
+    display: block;
+    margin-top: 24px;
+  }
+  &.DesktopView {
+    margin-top: 0;
+    padding: 12px 24px 24px;
+    width: 264px;
+    background-color: #fff;
+    .Shop {
+      margin-bottom: 12px;
+      .Map {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 16px;
+        position: relative;
+        img {
+          object-fit: contain;
+          object-position: left;
+        }
+      }
+    }
+  }
+}

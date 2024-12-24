@@ -1,0 +1,74 @@
+.CatalogBlocks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  .Label {
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #35393e;
+    margin-bottom: 20px;
+  }
+
+  .Blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 200px));
+    grid-template-rows: max-content;
+    grid-gap: 20px;
+  }
+
+  .Block {
+    //height: 220px;
+
+    .BlockLabel {
+      display: flex;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 15px;
+      color: #35393e;
+      margin-bottom: 24px;
+
+      & a {
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+      }
+    }
+
+    .BlockItems {
+      display: flex;
+      flex-direction: column;
+
+      .CatEntry {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 15px;
+        color: #797979;
+        // width: 300px;
+        // min-width: 200px;
+        cursor: pointer;
+
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+
+        & a {
+          text-decoration: none;
+          text-transform: capitalize;
+          color: inherit;
+          white-space: nowrap;
+        }
+      }
+
+      .MoreBtn {
+        margin-top: 10px;
+        color: #ec5c2a;
+        text-decoration: underline;
+        white-space: nowrap;
+      }
+    }
+  }
+}

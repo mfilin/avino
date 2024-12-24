@@ -1,0 +1,98 @@
+@import './fonts';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+body.scroll-freeze {
+  position: absolute;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  //margin-right: 5px;
+}
+
+@media screen and (max-width: 718px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 64px;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #bbbbbc;
+  border-radius: 20px;
+  width: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+:global(.noselect) {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+:global(.swipe) {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+
+:global(.swipe-wrap) {
+  overflow: hidden;
+  position: relative;
+}
+
+:global(.swipe-wrap) > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #bd4a22;
+}
+
+:global(.max-two-string-name) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

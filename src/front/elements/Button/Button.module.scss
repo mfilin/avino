@@ -1,0 +1,40 @@
+.Button {
+  padding: 13px 25px;
+  border-radius: 0 2px 2px 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.005em;
+  display: flex;
+
+  body & {
+    &[data-focus-visible=true] {
+      border-radius: 2px;
+      outline-color: #ff5c21 !important;
+    }
+  }
+
+  .icon {
+    display: flex;
+  }
+
+  .label {
+    margin-left: 13px;
+  }
+
+  &:global(.color_orange-fill) {
+    color: #ffffff;
+    background: #ff5c21;
+    border: 1px solid #ff5c21;
+  }
+
+  &:global(.color_orange-outline) {
+    background: transparent;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.15px;
+  }
+}

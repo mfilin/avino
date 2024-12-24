@@ -1,0 +1,80 @@
+.Wrapper {
+  margin-top: 39px;
+  max-width: 100%;
+
+  .CardHeader {
+    margin-bottom: 20px;
+
+    .Title {
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .DescriptionGroup {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      .Vendor {
+        padding: 4px 12px;
+        display: flex;
+        width: fit-content;
+        background: #f9f9fa;
+      }
+    }
+  }
+
+  .ImagesBlock {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 26px;
+
+    .Tags {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .ExtraButtons {
+      position: absolute;
+      top: 36px;
+      right: 0;
+    }
+  }
+
+  .Info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .Rating {
+      display: flex;
+      gap: 10px;
+    }
+
+    .ShowAllParams {
+      cursor: pointer;
+      margin-bottom: 28px;
+
+      svg {
+        vertical-align: middle;
+        margin-left: 13px;
+        display: inline;
+      }
+    }
+
+    .VintagesAndVolumes {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .Replacement {
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 41px;
+  }
+}

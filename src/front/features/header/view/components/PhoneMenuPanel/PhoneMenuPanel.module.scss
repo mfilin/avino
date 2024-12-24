@@ -1,0 +1,8 @@
+.PhoneMenuPanel {
+  display: flex;
+  align-items: center;
+
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}

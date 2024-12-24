@@ -1,0 +1,41 @@
+.CardOverlayWrapper {
+  background: rgba(53, 57, 62, 0.9);
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  .ElementsBlock {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .MarginsForBigCard {
+    max-width: 325px;
+    .Name {
+      margin: 43px 0 40px;
+    }
+    .Price {
+      margin-bottom: 69px;
+    }
+  }
+  .MarginsForSmallCard {
+    max-width: 325px;
+    .Name {
+      margin: 47px 0 41px;
+    }
+    .Price {
+      margin-bottom: 40px;
+    }
+  }
+  .Buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+  }
+}

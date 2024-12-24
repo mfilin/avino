@@ -1,0 +1,18 @@
+.CartMobileStickyBar {
+  position: fixed;
+  display: flex;
+  height: 68px;
+  width: 100%;
+  margin: 0 -10px;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  bottom: 64px;
+  left: 10px;
+  .SummaryPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}

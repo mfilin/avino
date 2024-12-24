@@ -1,0 +1,14 @@
+.LoadMoreBtn {
+  display: flex;
+  justify-content: center;
+  .Btn {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    span {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+}

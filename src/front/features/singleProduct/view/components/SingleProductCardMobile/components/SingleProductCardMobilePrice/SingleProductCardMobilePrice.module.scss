@@ -1,0 +1,23 @@
+.SingleProductCardMobilePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  flex-wrap: wrap;
+
+  .AboutPriceDecrease {
+    width: fit-content;
+    cursor: pointer;
+
+    .Group {
+      display: flex;
+      gap: 9px;
+    }
+
+    &:hover {
+      svg {
+        fill: #ff5c21;
+      }
+    }
+  }
+}

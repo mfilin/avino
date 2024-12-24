@@ -1,0 +1,82 @@
+.ProductCardMobile {
+  padding: 10px;
+  border: 1px solid #eee;
+  background-color: #fff;
+  max-width: 194px;
+  max-height: 362px;
+  position: relative;
+  .ImageBlock {
+    position: relative;
+    width: 173px;
+    height: 158px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: center;
+    &.SmallVariant {
+      height: 230px;
+    }
+    img {
+      height: 100%;
+    }
+    .CardHeader {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      .Group {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+      }
+    }
+    .RatingBlock {
+      position: absolute;
+      top: 27px;
+      left: 0;
+    }
+    .ExtraButtons {
+      top: 33px;
+      right: 11px;
+      position: absolute;
+    }
+  }
+  .InfoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .Name {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      min-height: 32px;
+    }
+    .Description {
+      min-height: 32px;
+    }
+  }
+
+  .Buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    button {
+      height: 34px;
+      padding: 0px;
+    }
+    & :global(.AddToCartBtn) {
+      background-color: #ff5c21;
+      color: #fff;
+    }
+  }
+  &.StretchedMode {
+    max-width: 100%;
+    .ImageBlock {
+      width: 100%;
+    }
+  }
+}

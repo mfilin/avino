@@ -1,0 +1,48 @@
+.FooterMobile {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  padding: 33px 10px 50px;
+  align-items: center;
+  .Social {
+    margin-bottom: 41px;
+  }
+  .Text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 210px;
+    text-align: center;
+    margin-bottom: 43px;
+  }
+  .SocialLinks {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+    path {
+      fill: #fff;
+    }
+  }
+  .Contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+    .Address {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .WriteDirector {
+    color: #fff;
+    margin-bottom: 39px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 14px 30px;
+  }
+}

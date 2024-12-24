@@ -1,0 +1,27 @@
+.CatalogFilterTreeRow {
+  display: flex;
+  align-items: center;
+
+  &:global(.bold) {
+    font-weight: bold;
+  }
+
+  .Checkbox {
+    margin-right: 10px;
+  }
+
+  & span.Count {
+    color: #bbbbbc;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+    letter-spacing: 0.06px;
+    margin-left: 16px;
+  }
+
+  .PlusMinus {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}

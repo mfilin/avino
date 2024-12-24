@@ -1,0 +1,75 @@
+.NotFound {
+  margin: 100px auto 0;
+  width: 1528px;
+  height: 592px;
+  padding-left: 180px;
+  padding-top: 67px;
+  position: relative;
+  .Info {
+    display: flex;
+    flex-direction: column;
+    .Title {
+      margin-bottom: 20px;
+      line-height: 36px;
+    }
+    .SubTitle {
+      line-height: 20px;
+      margin-bottom: 27px;
+      display: flex;
+      gap: 11px;
+      align-items: center;
+    }
+    .Description {
+      margin-bottom: 49px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    a {
+      width: fit-content;
+    }
+  }
+  img {
+    position: absolute;
+    left: 548px;
+    top: 0;
+    z-index: -1;
+  }
+
+  &.MobileView {
+    margin: 60px auto 60px;
+    width: 100%;
+    height: fit-content;
+    padding-left: 0;
+    padding-top: 0;
+    position: relative;
+    .Info {
+      display: flex;
+      flex-direction: column;
+      .Title {
+        margin-bottom: 12px;
+        line-height: 30px;
+      }
+      .SubTitle {
+        margin-bottom: 24px;
+        gap: 2px;
+      }
+      .Description {
+        margin-bottom: 32px;
+        gap: 8px;
+      }
+      a {
+        width: fit-content;
+      }
+    }
+    img {
+      margin-top: 40px;
+      position: relative;
+
+      left: -10px;
+      width: 100%;
+      top: 0;
+      z-index: 0;
+    }
+  }
+}

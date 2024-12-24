@@ -1,0 +1,41 @@
+.Tags {
+  display: flex;
+  gap: 8px;
+  .Tag {
+    font-family: Manrope;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    border: 1px solid;
+    padding: 4px 12px;
+    &.New {
+      color: #4065d6;
+      border-color: #4065d6;
+    }
+    &.Sale {
+      color: #ff151f;
+      border-color: #ff151f;
+      padding: 4px 6px;
+    }
+    &.BuyersChoice {
+      color: #00a300;
+      border-color: #00a300;
+    }
+    &.Mobile {
+      color: #fff;
+      border-radius: 2px;
+      padding: 4px 6px;
+      &.New {
+        background-color: #4065d6;
+      }
+      &.Sale {
+        background-color: #ff151f;
+      }
+      &.BuyersChoice {
+        background-color: #00a300;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.CatalogFilterBlockDropdown {
+  display: flex;
+  flex-direction: column;
+  .Header {
+    padding: 16px 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    svg {
+      transition: all 0.3s ease-in;
+    }
+  }
+  &.Opened {
+    border-radius: 4px;
+    background: #f9f9fa;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  .DropdownContent {
+    padding: 10px;
+  }
+}

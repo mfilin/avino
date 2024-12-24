@@ -1,0 +1,74 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 480px;
+  img {
+    // width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .SelectedImage {
+    min-width: 480px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+    &:hover {
+      .ZoomedImage {
+        display: block;
+      }
+    }
+
+    .ZoomedImage {
+      display: none;
+      position: absolute;
+      left: 110%;
+      top: 50px;
+      width: 480px;
+      height: 500px;
+      border-radius: 8px;
+      z-index: 10;
+      background-size: 175%;
+      background-color: #fff;
+      background-repeat: no-repeat;
+    }
+  }
+  .ImagesList {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    .Image {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      background-color: #fbfbfd;
+      border-radius: 2px;
+      justify-content: center;
+      cursor: pointer;
+      &.Selected {
+        border: 1px solid #efefef;
+      }
+    }
+  }
+
+  &.GalleryMobileView {
+    gap: 10px;
+    width: 320px;
+
+    .SelectedImage {
+      min-width: 320px;
+      height: 270px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+    }
+  }
+}

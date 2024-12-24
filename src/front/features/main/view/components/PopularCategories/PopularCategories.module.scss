@@ -1,0 +1,68 @@
+.PopularCategories {
+  padding: 110px 135px;
+  margin: 0 -135px;
+  background: #f9f9fa;
+  .List {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 30px;
+    .Category {
+      padding: 26px 32px;
+      width: 330px;
+      min-width: 330px;
+      height: 420px;
+      border-radius: 4px;
+      background: #fff;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      cursor: pointer;
+      .Name {
+        display: flex;
+        gap: 10px;
+        svg {
+          fill: #35393e;
+        }
+      }
+      &:hover {
+        span {
+          color: #ff5c21;
+        }
+        svg {
+          fill: #ff5c21;
+        }
+      }
+      img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        object-fit: cover;
+      }
+    }
+  }
+  &.MobileView {
+    margin: 0 -10px;
+    padding: 48px 10px;
+    .List {
+      margin-top: 24px;
+      gap: 5px;
+      .Category {
+        padding: 8px 12px;
+        width: 167px;
+        min-width: 167px;
+        height: 167px;
+        border-radius: 4px;
+        background: #fff;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        .Name {
+        }
+      }
+    }
+  }
+}

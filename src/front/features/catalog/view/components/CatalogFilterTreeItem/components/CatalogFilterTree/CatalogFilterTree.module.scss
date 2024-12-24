@@ -1,0 +1,14 @@
+.CatalogFilterTree {
+  display: flex;
+  flex-direction: column;
+
+  .Childs {
+    display: none;
+    padding-left: 10px;
+
+    &_visible {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.Wrapper {
+  // flex-direction: row-reverse;
+  .Blocks {
+    display: flex;
+    margin-top: 56px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .Block {
+      height: 220px;
+      width: 375px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      &:not(:last-child) {
+        margin-left: -40px;
+      }
+      .Info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        width: fit-content;
+        max-width: 240px;
+        text-align: center;
+        gap: 12px;
+        z-index: 10;
+        align-items: center;
+        .Title {
+          max-width: 210px;
+          min-height: 36px;
+        }
+      }
+      .StartBuying {
+        position: absolute;
+        bottom: -24px;
+        left: 105px;
+        z-index: 5;
+        button {
+          background-color: #fff;
+        }
+      }
+      img {
+        position: absolute;
+        z-index: 1;
+      }
+    }
+  }
+}
+.WrapperMobileView {
+  margin: 60px auto;
+  max-width: 370px;
+  .Blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    min-width: 370px;
+    margin-top: 20px;
+    .Block {
+      height: 198px;
+      width: 185px;
+      padding: 20px 8px 16px;
+      border-radius: 8px;
+      justify-content: flex-start;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      background: #f9f9fa;
+      display: flex;
+      svg {
+        min-height: 50px;
+      }
+      .BlockTitle {
+        margin: 6px 0 4px;
+      }
+      &:first-child,
+      &:last-child {
+        background: #fff;
+        z-index: 3;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .StartBuyButton {
+    margin-top: 23px;
+    button {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.07px;
+      color: #35393e;
+      background-color: #fff;
+    }
+  }
+}

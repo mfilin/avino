@@ -1,0 +1,46 @@
+.CatalogFilterModalContent {
+  display: flex;
+
+  .RowsFrame {
+    display: flex;
+    height: 220px;
+    max-height: 220px;
+    padding-right: 40px;
+    justify-content: space-between;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      //box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #797979;
+      //background: transparent;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #797979;
+      //background: transparent;
+    }
+  }
+}
+
+.CatalogFilterModalContentFooter {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+
+  .ClearButton {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body style="box-sizing: border-box;">
+<p style='width: 100%; text-align: center;'>{{{svg
+    'vinogradnevi-logo'
+    }}}</p>
+<p style='width: 100%; text-align: center;'>На сайте vinogradnevinovat.ru поступил новый заказ
+    <span style='color: #f00; font-weight: bold;'>{{info.orderNum}}</span></p>
+<p>
+<table>
+    <tbody>
+    <tr>
+        <td>На имя:</td>
+        <td>{{order.name}}</td>
+    </tr>
+    <tr>
+        <td>Номер телефона:</td>
+        <td>{{order.phone}}</td>
+    </tr>
+    <tr>
+        <td>Адрес почты:</td>
+        <td>{{order.email}}</td>
+    </tr>
+    <tr>
+        <td>Дата и время заказа:</td>
+        <td>{{info.dateTime}}</td>
+    </tr>
+    <tr>
+        <td>IP адрес:</td>
+        <td>{{info.ip}}</td>
+    </tr>
+    </tbody>
+</table>
+</p>
+
+<p>{{> order/table}}</p>
+
+</body>
+</html>

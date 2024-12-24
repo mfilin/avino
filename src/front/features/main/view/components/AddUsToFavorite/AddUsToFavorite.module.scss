@@ -1,0 +1,138 @@
+.AddUsToFavorite {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .LeftBlocks {
+    display: flex;
+    min-width: 700px;
+    flex-wrap: wrap;
+    gap: 0;
+    .Block {
+      height: 200px;
+      width: 346px;
+      display: flex;
+      padding: 32px 53px;
+      justify-content: center;
+      position: relative;
+      border-radius: 8px;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      background: #f9f9fa;
+      .BlockTitle {
+        margin: 12px 0 7px;
+      }
+      &:first-child,
+      &:last-child {
+        background: #fff;
+        z-index: 3;
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
+      }
+      .SubscribeButton {
+        position: absolute;
+        bottom: -24px;
+        left: 55px;
+        button {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.07px;
+          color: #35393e;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .InfoRight {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    .Info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 36px;
+      grid-row-gap: 50px;
+      .InfoBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 300px;
+        .InfoTitle {
+          color: #ff5c21;
+          font-size: 50px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 40px;
+        }
+        .InfoText {
+          max-width: 235px;
+        }
+      }
+    }
+  }
+  &.MobileView {
+    flex-direction: column;
+    gap: 60px;
+    .LeftBlocks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      min-width: 370px;
+      .Block {
+        height: 198px;
+        width: 185px;
+        padding: 20px 8px 16px;
+        border-radius: 8px;
+        justify-content: flex-start;
+        svg {
+          min-height: 50px;
+        }
+        .BlockTitle {
+          margin: 6px 0 4px;
+        }
+        &:first-child,
+        &:last-child {
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+    .SubscribeButton {
+      margin-top: 15px;
+      button {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.07px;
+        color: #35393e;
+        background-color: #fff;
+      }
+    }
+    .InfoRight {
+      gap: 28px;
+      .Info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 36px;
+        grid-row-gap: 50px;
+        .InfoBlock {
+          gap: 8px;
+          width: 164px;
+          .InfoTitle {
+            color: #ff5c21;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 32px;
+          }
+          .InfoText {
+            max-width: 165px;
+          }
+        }
+      }
+    }
+  }
+}

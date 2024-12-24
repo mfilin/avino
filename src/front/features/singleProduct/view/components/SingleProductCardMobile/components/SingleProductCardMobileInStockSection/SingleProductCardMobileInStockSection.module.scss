@@ -1,0 +1,37 @@
+.SingleProductCardMobileInStockSection {
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  .StoreAddresses {
+    margin-top: 9px;
+    margin-bottom: 28px;
+    padding: 8px 16px 12px;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    background: #fff;
+
+    .Visible {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .Extendable {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+
+      .Group {
+        display: flex;
+      }
+    }
+  }
+}

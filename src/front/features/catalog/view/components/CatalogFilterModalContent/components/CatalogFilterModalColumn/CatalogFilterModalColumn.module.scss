@@ -1,0 +1,41 @@
+.CatalogFilterModalColumn {
+  display: flex;
+  flex-direction: column;
+
+  .Row {
+    display: flex;
+    color: #35393e;
+    font-family: Manrope;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.15px;
+
+    .CheckBox {
+      margin-right: 4px;
+    }
+
+    & span.Count {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.06px;
+      margin-left: 16px;
+      color: #bbbbbc;
+    }
+  }
+  &.MobileView {
+    .Row {
+      margin-bottom: 10px;
+      align-items: center;
+      label {
+        display: block;
+        height: 13px;
+      }
+      .Count {
+        line-height: 12px;
+      }
+    }
+  }
+}

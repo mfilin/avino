@@ -1,0 +1,32 @@
+.Wrapper {
+  position: relative;
+  min-width: 200px;
+
+  .CartButton {
+    display: flex;
+    gap: 16px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+    .Icon {
+      padding: 8px;
+      position: relative;
+      .Count {
+        min-width: 16px;
+        min-height: 16px;
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        border-radius: 50%;
+        text-align: center;
+        background-color: #ff5c21;
+        line-height: 0px;
+        padding: 1px 3px;
+      }
+    }
+    .Summary {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+}

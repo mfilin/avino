@@ -1,0 +1,61 @@
+.BottomHeadMenuCatalogBlocks {
+  display: flex;
+  flex: 1;
+
+  .Label {
+    color: #000;
+    font-size: 16px;
+    //font-family: Raleway;
+    //font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.18px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    //& a {
+    //}
+  }
+
+  .LeftPart {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    //border: 1px solid #0ff;
+    //border-top: 1px solid #0ff;
+    //border-right: 1px solid #EFEFEF;
+    padding-right: 30px;
+
+    .Content {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+
+      .CatalogMenuBlockContent {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .Bottom {
+      display: flex;
+      margin-top: 52px;
+    }
+  }
+
+  .RightPart {
+    display: flex;
+    flex-direction: column;
+    //border-top: 1px solid #f0f;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    user-select: none;
+
+    .RightPartTopBar {
+      display: flex;
+      position: relative;
+    }
+  }
+}

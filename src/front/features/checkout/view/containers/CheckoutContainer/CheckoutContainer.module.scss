@@ -1,0 +1,152 @@
+.CheckoutContainer {
+  margin-top: 50px;
+  .Title {
+    margin-bottom: 50px;
+  }
+  .Content {
+    display: flex;
+    justify-content: space-between;
+    .LeftSide {
+      width: 450px;
+      form {
+        margin-top: 28px;
+        .Inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-bottom: 20px;
+        }
+        .Row {
+          display: flex;
+          gap: 4px;
+          margin-left: 20px;
+          align-items: center;
+        }
+        .Entity {
+          cursor: pointer;
+          margin-top: 28px;
+          margin-bottom: 40px;
+          & > span {
+            &:first-child {
+              & > label {
+                vertical-align: sub;
+              }
+            }
+          }
+        }
+      }
+    }
+    .RightSide {
+      height: fit-content;
+      border-radius: 4px;
+      border: 2px solid var(--unnamed, #efefef);
+      background: #fff;
+      width: 420px;
+      .Top {
+        padding: 24px 30px 46px;
+        .RowGroup {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .Prices {
+          padding-bottom: 30px;
+          border-bottom: 1px solid #efefef;
+
+          .Items {
+            margin-bottom: 12px;
+          }
+          .Discount {
+            margin-bottom: 12px;
+          }
+        }
+        .Summary {
+          margin-top: 36px;
+        }
+      }
+      .DropdownHeader {
+        display: flex;
+        justify-content: space-between;
+        background: #f9f9fa;
+        padding: 24px 24px 24px 30px;
+        align-items: center;
+        cursor: pointer;
+        .Indicator {
+          transition: all 0.3s ease-in;
+          transform: rotate(180deg);
+          & path {
+            stroke: #ff5c21;
+          }
+          &_expanded {
+            & path {
+              stroke: #35393e;
+            }
+            transform: rotate(0deg);
+          }
+        }
+      }
+      .ProductsList {
+        padding: 25px;
+        .Border {
+          display: block;
+          height: 25px;
+          margin-top: 25px;
+          border-top: 1px solid #efefef;
+        }
+      }
+    }
+  }
+  &.MobileView {
+    margin: 25px 0;
+    .Title {
+      margin-bottom: 36px;
+    }
+    .Content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .LeftSide {
+        width: 100%;
+        form {
+          margin-top: 16px;
+          .Inputs {
+            gap: 12px;
+            margin-bottom: 16px;
+          }
+          .Row {
+            margin-left: 0;
+          }
+          .Entity {
+            margin-top: 28px;
+            margin-bottom: 24px;
+          }
+        }
+      }
+      .RightSide {
+        height: fit-content;
+        border: none;
+        background: #fff;
+        width: 100%;
+        .Top {
+          padding: 0;
+          margin-bottom: 24px;
+          .Summary {
+            margin-top: 28px;
+          }
+        }
+        .DropdownHeader {
+          margin: 0 -10px;
+        }
+        .ProductsList {
+          padding: 25px 0;
+          .Border {
+            display: block;
+            height: 25px;
+            margin-top: 25px;
+            border-top: 1px solid #efefef;
+          }
+        }
+      }
+    }
+  }
+}

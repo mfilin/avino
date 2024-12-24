@@ -1,0 +1,18 @@
+.Title {
+  position: relative;
+  &.WithOrangeLine {
+    padding-bottom: 20px;
+    &.MobileView {
+      padding-bottom: 12px;
+    }
+    &::after {
+      content: '';
+      width: 90px;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #ff5c21;
+    }
+  }
+}

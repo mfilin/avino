@@ -1,0 +1,35 @@
+.MiddleHeaderBar {
+  display: flex;
+  flex: 1;
+  // padding: 28px 255px;
+  padding: 28px 120px;
+  justify-content: center;
+
+  .Content {
+    display: flex;
+    flex: 1;
+    max-width: 1440px;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .catalogButton {
+    display: flex;
+    margin-left: 24px;
+    position: relative;
+  }
+
+  .searchBar {
+    display: flex;
+    flex: 1;
+    border: 1px solid #797979;
+    border-radius: 2px;
+    margin-left: 10px;
+  }
+  .searchButton {
+    margin-left: 10px;
+    margin-right: 28px;
+  }
+}

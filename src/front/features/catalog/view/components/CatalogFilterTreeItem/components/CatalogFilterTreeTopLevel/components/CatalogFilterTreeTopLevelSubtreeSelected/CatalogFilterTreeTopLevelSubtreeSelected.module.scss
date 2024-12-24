@@ -1,0 +1,9 @@
+.CatalogFilterTreeTopLevelSubtreeSelected {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+
+  .Childs {
+    margin-left: 10px;
+  }
+}

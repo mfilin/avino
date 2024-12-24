@@ -1,0 +1,87 @@
+.AmountStatusWrapper {
+  font-family: Manrope;
+  .AmountStatus {
+    color: #191919;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.06px;
+    .StatusTooltip {
+      display: none;
+      background-color: #fff;
+      position: absolute;
+      z-index: 2;
+      padding: 12px;
+      flex-direction: column;
+      gap: 20px;
+      border-radius: 4px;
+      box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.1);
+      bottom: calc(100% + 9px);
+      left: -24px;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 20px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+      }
+      .OrderRow {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        gap: 8px;
+        .Info {
+          display: flex;
+          gap: 8px;
+        }
+      }
+    }
+    &:hover {
+      .StatusTooltip {
+        display: flex;
+      }
+    }
+  }
+  .Status {
+    position: relative;
+    padding-left: 10px;
+    display: flex;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 40%;
+      left: 0px;
+      width: 3px;
+      height: 3px;
+      border-radius: 50px;
+    }
+    &.Mobile {
+      height: 6px;
+      &::before {
+        top: 0;
+        height: 6px;
+        width: 6px;
+      }
+    }
+  }
+  .available {
+    &.TextColored {
+      color: #00a300;
+    }
+    &::before {
+      background-color: #00a300;
+    }
+  }
+  .unavailable {
+    &.TextColored {
+      color: #d90e24;
+    }
+    &::before {
+      background-color: #d90e24;
+    }
+  }
+}

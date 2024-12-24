@@ -1,0 +1,10 @@
+.ProductSuggestionRow {
+  display: flex;
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+

@@ -1,0 +1,31 @@
+.InputSuggestion {
+  display: flex;
+}
+
+body .SelectContainer {
+  display: flex;
+  flex: 1;
+  border: none;
+}
+
+body .Control {
+  display: flex;
+  flex: 1;
+  border: none;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+body .Placeholder {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  color: #bbbbbc;
+}

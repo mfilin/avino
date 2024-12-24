@@ -1,0 +1,56 @@
+.PopularProductCarousel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 314px;
+  min-height: 260px;
+  user-select: none;
+
+  .Product {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+
+    .Image {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      min-height: 124px;
+      position: relative;
+      margin-bottom: 24px;
+
+      & img {
+        height: 124px;
+      }
+    }
+
+    .Description {
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.15px;
+    }
+
+    .Subtitle {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0.06px;
+    }
+
+    .Price {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px; /* 90% */
+      letter-spacing: 0.2px;
+    }
+  }
+}

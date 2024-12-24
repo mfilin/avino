@@ -1,0 +1,165 @@
+.Wrapper {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    align-items: center;
+    & > div {
+      display: block;
+      height: 100%;
+      padding: 18px 28px;
+      cursor: pointer;
+    }
+    .First {
+      border-bottom: 2px solid #efefef;
+      &.Active {
+        pointer-events: none;
+        border-radius: 4px;
+        border: 2px solid #efefef;
+        border-bottom: none;
+        border-bottom-right-radius: 0;
+      }
+    }
+    .Second {
+      flex: 1;
+      border-bottom: 2px solid #efefef;
+      &.Active {
+        pointer-events: none;
+        border-radius: 4px;
+        border: 2px solid #efefef;
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  .Content {
+    border: 2px solid #efefef;
+    border-top: none;
+    padding: 18px 30px 38.5px;
+    .FirstView {
+      .RowGroup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .Items {
+        margin-top: 30px;
+        margin-bottom: 12px;
+      }
+      .Discount {
+        margin-bottom: 12px;
+      }
+      .CodeDiscount {
+        margin-bottom: 26px;
+      }
+      form {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 28px;
+        & > div {
+          flex: 1;
+        }
+        button {
+          width: 48px;
+          height: 48px;
+          background-color: #efefef;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:enabled {
+            background-color: #ff5c21;
+          }
+        }
+      }
+      .MinimumOrderPrice {
+        background: #f9f9fa;
+        display: flex;
+        padding: 20px 25px;
+        align-items: flex-start;
+        margin-bottom: 13px;
+        svg {
+          min-width: 40px;
+          margin-right: 7px;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-right: 10px;
+        }
+      }
+      .Summary {
+        margin-bottom: 32px;
+      }
+      .ShareListTip {
+        margin-top: 40px;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+    .SecondView {
+      .TextGroup {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 22px;
+      }
+      form {
+        .Inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+  &.MobileView {
+    width: inherit;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+
+    .Header {
+      display: flex;
+      justify-content: space-between;
+      height: fit-content;
+      align-items: center;
+      & > div {
+        padding: 0;
+      }
+      .First {
+        border: none;
+        &.Active {
+          border: none;
+        }
+      }
+      .Second {
+        flex: inherit;
+        border: none;
+        &.Active {
+          pointer-events: none;
+          border: none;
+        }
+      }
+    }
+    .Content {
+      border: none;
+      border-top: none;
+      padding: 0;
+      margin-top: 30px;
+      .FirstView {
+        .Items {
+          margin-top: 0;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

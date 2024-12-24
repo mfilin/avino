@@ -1,0 +1,62 @@
+.Counter {
+  display: flex;
+  font-family: Manrope;
+  justify-content: space-between;
+  width: 128px;
+  height: 44px;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.17px;
+  align-items: center;
+  .AddToCartBtn {
+    font-family: Manrope;
+    padding: 14px 26px;
+    border-radius: 2px;
+    border: 2px solid #ff5c21;
+    color: #ff5c21;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.07px;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: #ff5c21;
+      color: #fff;
+    }
+  }
+  .CalcBtn {
+    width: 34px;
+    height: 34px;
+    background-color: #f9f9fa;
+    border-radius: 2px;
+    border: transparent;
+    color: #35393e;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      color: #ff5c21;
+    }
+  }
+  &.WhiteMode {
+    color: #fff;
+    .CalcBtn {
+      background-color: #fff;
+    }
+  }
+  &.BigMode {
+    width: 159px;
+    .CalcBtn {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  &.StretchedMode {
+    width: 100%;
+  }
+}

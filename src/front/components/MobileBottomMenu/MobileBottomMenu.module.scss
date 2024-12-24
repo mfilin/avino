@@ -1,0 +1,53 @@
+.MobileBottomMenu {
+  display: flex;
+  padding: 12px 19px 8px;
+  justify-content: space-around;
+  background: #f9f9fa;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  .MenuItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.05px;
+    align-items: center;
+    white-space: nowrap;
+    height: 44px;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    path {
+      fill: #35393e;
+    }
+    .Count {
+      min-width: 15px;
+      min-height: 15px;
+      position: absolute;
+      right: 5px;
+      top: -8px;
+      border-radius: 50%;
+      text-align: center;
+      background-color: #ff5c21;
+      line-height: 0px;
+      padding: 0 3px;
+      color: #fff;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 160% */
+      letter-spacing: 0.05px;
+    }
+    &.Active {
+      color: #ff5c21;
+      path {
+        fill: #ff5c21;
+      }
+    }
+  }
+}

@@ -1,0 +1,1895 @@
+{
+  "champagne-and-sparkling-wines": {
+    "asti": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    },
+    "cava": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "champagne": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Сорт Винограда",
+          "type": "text",
+          "slug": "psort"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    },
+    "cremant": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "franciacorta": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "lambrusco": {
+      "props": [
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "nonalcoholic": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "prosecco": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    },
+    "sparkling-wines": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    }
+  },
+  "cognac-all": {
+    "armagnac": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Кислотность",
+          "type": "number",
+          "slug": "kislotnost"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Проц соотношение",
+          "type": "text",
+          "slug": "perc"
+        },
+        {
+          "name": "Метод производства",
+          "type": "integer",
+          "slug": "production_method"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Сорт Винограда",
+          "type": "text",
+          "slug": "psort"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Сырьё",
+          "type": "text",
+          "slug": "syre"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Тип отжима",
+          "type": "text",
+          "slug": "tip-otzhima"
+        }
+      ]
+    },
+    "armyanskiy-konyak": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        },
+        {
+          "name": "Объем (посуды)",
+          "type": "number",
+          "slug": "volume"
+        }
+      ]
+    },
+    "brandy": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    },
+    "calvados": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "cognac": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Фильтрация",
+          "type": "text",
+          "slug": "filtering"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Материал",
+          "type": "text",
+          "slug": "material"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Высота",
+          "type": "integer",
+          "slug": "pheight"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Сырьё",
+          "type": "text",
+          "slug": "syre"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    }
+  },
+  "drugie_napitki": {
+    "olivkovoe-maslo": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "sirop": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        }
+      ]
+    },
+    "tonik": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    }
+  },
+  "mixology": {
+    "aperitive": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        }
+      ]
+    },
+    "balzam": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "bitter": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "liqueur": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Фильтрация",
+          "type": "text",
+          "slug": "filtering"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    },
+    "nastoika": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "vermouth": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    }
+  },
+  "spirits": {
+    "absinth": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        }
+      ]
+    },
+    "gin": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "grappa": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Сырьё",
+          "type": "text",
+          "slug": "syre"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "kashasa": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        }
+      ]
+    },
+    "mezcal": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        }
+      ]
+    },
+    "rum": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Проц соотношение",
+          "type": "text",
+          "slug": "perc"
+        },
+        {
+          "name": "Метод производства",
+          "type": "integer",
+          "slug": "production_method"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Сырьё",
+          "type": "text",
+          "slug": "syre"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "sambuca": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "tequila": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    }
+  },
+  "vodka-all": {
+    "chacha": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        }
+      ]
+    },
+    "polugar": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "raki": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        }
+      ]
+    },
+    "sake": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "vodka": {
+      "props": [
+        {
+          "name": "Выдержка в бочках",
+          "type": "text",
+          "slug": "Aging_in_barrels"
+        },
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Фильтрация",
+          "type": "text",
+          "slug": "filtering"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Материал",
+          "type": "text",
+          "slug": "material"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Высота",
+          "type": "integer",
+          "slug": "pheight"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        }
+      ]
+    }
+  },
+  "whisky": {
+    "american whiskey": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Высота",
+          "type": "integer",
+          "slug": "pheight"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "armenian whiskey": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "australian whiskey": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        }
+      ]
+    },
+    "french whiskey": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Сорт",
+          "type": "text",
+          "slug": "sort"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        }
+      ]
+    },
+    "Irish Whiskey": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Фильтрация",
+          "type": "text",
+          "slug": "filtering"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Высота",
+          "type": "integer",
+          "slug": "pheight"
+        },
+        {
+          "name": "Метод производства",
+          "type": "integer",
+          "slug": "production_method"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Сорт",
+          "type": "text",
+          "slug": "sort"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        },
+        {
+          "name": "Тип отжима",
+          "type": "text",
+          "slug": "tip-otzhima"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "japanese whiskey": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Сорт",
+          "type": "text",
+          "slug": "sort"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        },
+        {
+          "name": "Тип отжима",
+          "type": "text",
+          "slug": "tip-otzhima"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "russian whiskey": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "scotch whiskey": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Выдержка в бочках",
+          "type": "text",
+          "slug": "Aging_in_barrels"
+        },
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Диаметр",
+          "type": "integer",
+          "slug": "Diameter"
+        },
+        {
+          "name": "Фильтрация",
+          "type": "text",
+          "slug": "filtering"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Кислотность",
+          "type": "number",
+          "slug": "kislotnost"
+        },
+        {
+          "name": "Материал",
+          "type": "text",
+          "slug": "material"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Проц соотношение",
+          "type": "text",
+          "slug": "perc"
+        },
+        {
+          "name": "Высота",
+          "type": "integer",
+          "slug": "pheight"
+        },
+        {
+          "name": "Метод производства",
+          "type": "integer",
+          "slug": "production_method"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тип",
+          "type": "text",
+          "slug": "ptype"
+        },
+        {
+          "name": "Объем",
+          "type": "number",
+          "slug": "pval"
+        },
+        {
+          "name": "Год урожая",
+          "type": "integer",
+          "slug": "pyear"
+        },
+        {
+          "name": "Сорт",
+          "type": "text",
+          "slug": "sort"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Сахар",
+          "type": "text",
+          "slug": "sugar"
+        },
+        {
+          "name": "Сырьё",
+          "type": "text",
+          "slug": "syre"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Вкус",
+          "type": "text",
+          "slug": "taste"
+        },
+        {
+          "name": "Тип отжима",
+          "type": "text",
+          "slug": "tip-otzhima"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        },
+        {
+          "name": "Объем (посуды)",
+          "type": "number",
+          "slug": "volume"
+        }
+      ]
+    },
+    "slovak whiskey": {
+      "props": [
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Способ обработки",
+          "type": "text",
+          "slug": "sposob-obrabotki"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        },
+        {
+          "name": "Винтаж",
+          "type": "integer",
+          "slug": "vintage"
+        }
+      ]
+    },
+    "spanish whiskey": {
+      "props": [
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        }
+      ]
+    }
+  },
+  "wine-all": {
+    "bezalkogolnoe_vino": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "jerez": {
+      "props": [
+        {
+          "name": "Выдержка",
+          "type": "integer",
+          "slug": "age"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "marsala": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "orange-wine": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "plodovoe-vino": {
+      "props": [
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        }
+      ]
+    },
+    "portwein": {
+      "props": [
+        {
+          "name": "Выдержка в бочках",
+          "type": "text",
+          "slug": "Aging_in_barrels"
+        },
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Кислотность",
+          "type": "number",
+          "slug": "kislotnost"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    },
+    "wine": {
+      "props": [
+        {
+          "name": "Цвет",
+          "type": "text",
+          "slug": "color"
+        },
+        {
+          "name": "Газация",
+          "type": "boolean",
+          "slug": "gazaciya"
+        },
+        {
+          "name": "Назначение",
+          "type": "text",
+          "slug": "naznachenie"
+        },
+        {
+          "name": "Упаковка",
+          "type": "text",
+          "slug": "pack"
+        },
+        {
+          "name": "Кол-во в упаковке",
+          "type": "integer",
+          "slug": "packval"
+        },
+        {
+          "name": "Класс",
+          "type": "text",
+          "slug": "pclass"
+        },
+        {
+          "name": "Подборки",
+          "type": "text",
+          "slug": "promo_package"
+        },
+        {
+          "name": "Крепость",
+          "type": "text",
+          "slug": "strength"
+        },
+        {
+          "name": "Тара",
+          "type": "text",
+          "slug": "tara"
+        }
+      ]
+    }
+  }
+}

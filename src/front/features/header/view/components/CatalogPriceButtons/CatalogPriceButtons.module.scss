@@ -1,0 +1,31 @@
+.CatalogPriceButtons {
+  display: flex;
+  gap: 14px;
+
+  .Button {
+    display: flex;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.15px;
+    border-radius: 2px;
+    border: 2px solid #35393e;
+    transition: all 0.2s ease-in;
+    white-space: nowrap;
+
+    &:hover {
+      background: #35393e;
+      color: #fff;
+    }
+
+    &_other {
+      border-color: #ec5c2a;
+      margin-left: 140px;
+
+      &:hover {
+        background: #ec5c2a;
+      }
+    }
+  }
+}

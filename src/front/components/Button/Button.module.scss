@@ -1,0 +1,74 @@
+.DefaultButton {
+  padding: 14px 28px;
+  border-radius: 2px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.28px;
+  width: fit-content;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  &.black-outline {
+    border: 1px solid #35393e;
+    color: #35393e;
+  }
+
+  &.black-fill {
+    color: #fff;
+    background-color: #080808;
+  }
+
+  &.white-outline {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  &.orange-outline {
+    border: 2px solid #ff5c21;
+    color: #ff5c21;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.08px;
+  }
+
+  &.orange-black-outline {
+    border: 2px solid #ff5c21;
+    color: #35393e;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.07px;
+  }
+
+  &.orange-fill {
+    background-color: #ff5c21;
+    color: #fff;
+  }
+
+  &.Stretched {
+    width: 100%;
+  }
+  &:disabled {
+    border: none;
+    background: #efefef;
+    color: #797979;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: auto;
+  }
+  &.MobileView {
+    // padding: 10px 14px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 15px;
+    svg {
+      // position: absolute;
+      font-size: 12px;
+    }
+  }
+}

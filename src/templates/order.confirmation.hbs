@@ -1,0 +1,25 @@
+<html>
+  <head>
+      <style type="text/css">
+          * {
+            box-sizing: border-box;
+          }
+      </style>
+  </head>
+  <body style="box-sizing: border-box;">
+    <p style='width: 100%; text-align: center;'>{{{svg
+        'vinogradnevi-logo'
+      }}}</p>
+    <p style='width: 100%; text-align: center;'>Благодарим за оформление заявки
+      на нашем сайте! Ваш номер заказа
+      <span style='color: #f00; font-weight: bold;'>{{info.orderNum}}</span></p>
+    <p>{{> order/table}}</p>
+
+    <p>В ближайшее время мы свяжемся с вами, чтобы уточнить детали заказа и</p>
+    <p>подтвердить его. Мы будем звонить по номеру {{order.phone}}.</p>
+
+    <p>Если у вас другой номер или вы хотите изменить или отменить заказ,</p>
+    <p>пожалуйста, сообщите об этом в ответном письме или позвоните по номеру +7
+      (926) 0180707</p>
+  </body>
+</html>

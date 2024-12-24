@@ -1,0 +1,74 @@
+@keyframes slideInFromRight {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.CatalogMenu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  // padding: 80px 275px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-direction: row;
+  // max-height: 640px;
+  //max-height: 660px;
+  justify-content: center;
+  z-index: 110;
+  transform-origin: top;
+  animation: 0.3s ease-out 0s 1 slideInFromRight;
+
+  &_visible {
+    display: flex;
+  }
+
+  .MenuList {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+  }
+
+  .Row {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 300px;
+    padding: 10px 14px 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &_selected {
+      background: #f9f9fa;
+    }
+  }
+
+  .Icon {
+    display: flex;
+    width: 22px;
+  }
+
+  .Caption {
+    display: flex;
+    padding-left: 14px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 15px;
+    color: #35393e;
+  }
+
+  .SelectedIndicator {
+    position: absolute;
+    right: 10px;
+  }
+
+  .Blocks {
+    display: flex;
+    flex: 0 50%;
+    // position: relative;
+  }
+}

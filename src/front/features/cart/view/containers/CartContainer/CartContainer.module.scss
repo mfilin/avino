@@ -1,0 +1,94 @@
+.CartContainer {
+  display: flex;
+  gap: 85px;
+  margin-top: 50px;
+  justify-content: space-between;
+  position: relative;
+  .LeftSide {
+    max-width: 680px;
+    .CartHeader {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .Title {
+        position: relative;
+        .Count {
+          position: absolute;
+          top: 3px;
+          right: -25px;
+        }
+      }
+    }
+    .ClearCartBtn {
+      cursor: pointer;
+    }
+    .EmptyCartBlock {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      max-width: 380px;
+    }
+    .ProductsInCartList {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .RemovedItemsBLock {
+      margin-top: 110px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .ShowMore {
+        cursor: pointer;
+      }
+    }
+  }
+  .RightSide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.MobileView {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 370px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    .LeftSide {
+      max-width: inherit;
+      .ClearCartBtn {
+        cursor: pointer;
+      }
+      .EmptyCartBlock {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        max-width: 380px;
+      }
+      .ProductsInCartList {
+        margin-top: 44px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+    }
+    .RemovedItemsBLock {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      .ShowMore {
+        margin-top: -20px;
+        cursor: pointer;
+      }
+    }
+    .RightSide {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

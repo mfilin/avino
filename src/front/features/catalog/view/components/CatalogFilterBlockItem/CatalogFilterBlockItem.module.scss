@@ -1,0 +1,65 @@
+.CatalogFilterBlockItem {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  .Label {
+    display: flex;
+    font-family: Raleway, Manrope;
+    text-transform: uppercase;
+    color: #797979;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.18px;
+    margin-bottom: 20px;
+  }
+
+  .Content {
+    display: flex;
+    flex-direction: column;
+
+    .Row {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      & span.RowLabel {
+        margin-left: 10px;
+        max-width: 150px;
+        white-space: wrap;
+        line-height: initial;
+      }
+
+      & span.Count {
+        color: #bbbbbc;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 0.06px;
+        margin-left: 16px;
+      }
+    }
+  }
+  &.MobileView {
+    .Content {
+      .Row {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        label {
+          display: block;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .MoreButton {
+    margin-top: 24px;
+    color: #ff5c21;
+    cursor: pointer;
+    //text-decoration: underline;
+  }
+}

@@ -1,0 +1,16 @@
+.FooterColumnCenter {
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  width: 1200px;
+  padding: 0 14px;
+
+  .Row {
+    display: flex;
+    justify-content: flex-start;
+
+    &:not(:first-child) {
+      margin-top: 64px;
+    }
+  }
+}

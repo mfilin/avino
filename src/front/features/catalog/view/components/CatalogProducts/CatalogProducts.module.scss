@@ -1,0 +1,10 @@
+.List {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 20px auto;
+  &.MobileView {
+    max-width: 390px;
+    margin: 0 -10px 26px;
+  }
+}

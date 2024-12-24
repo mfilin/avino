@@ -1,0 +1,120 @@
+.CatalogControlPanel {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #797979;
+
+  .TopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #efefef;
+    background: #f9f9fa;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px; /* 100% */
+    letter-spacing: 0.15px;
+    &.Expanded {
+      border-radius: 8px 8px 0 0;
+    }
+    .LabelPart {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      gap: 10px;
+    }
+
+    .Switchers {
+      display: flex;
+      gap: 10px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.28px;
+    }
+  }
+
+  .TransparentButton {
+    display: flex;
+    color: #797979;
+    padding: 14px 24px;
+    border-radius: 2px;
+    border: 1px solid #797979;
+    cursor: pointer;
+
+    &_checked {
+      color: #35393e;
+      border: 2px solid #35393e;
+    }
+  }
+
+  .FilterExpander {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px 14px 27px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.07px;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+
+    & path {
+      fill: #797979;
+    }
+
+    &_expanded {
+      color: #ffffff;
+      border-radius: 2px;
+      background: #080808;
+    }
+
+    .Indicator {
+      transition: all 0.3s ease-in;
+
+      &_expanded {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.MobileView {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #797979;
+    margin-bottom: 16px;
+    min-width: fit-content;
+    .TopBar {
+      padding: 20px 10px;
+      &.Expanded {
+        border-radius: 8px 8px 0 0;
+      }
+      .LabelPart {
+        margin-right: 0;
+        svg {
+          min-width: 24px;
+        }
+      }
+    }
+
+    .FilterExpander {
+      color: #ffffff;
+      border-radius: 2px;
+      background: #080808;
+      padding: 14px 16px;
+      & path {
+        fill: #fff;
+      }
+
+      .Indicator {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
