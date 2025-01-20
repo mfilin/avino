@@ -4,6 +4,8 @@ import memoize from 'fast-memoize';
 import { Taxons } from '../../../../../../api/database/models/Taxons';
 import ShallowLink from '../../../../../elements/ShallowLink';
 
+import Link, { LinkProps } from 'next/link';
+
 import styles from './BottomHeaderBar.module.scss';
 
 interface IOwnProps {
@@ -21,6 +23,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
   }, [props.onMouseEnter]);
 
   return (
+/*
     <div className={styles.BottomHeaderBar} onClick={props.onClick}>
       {(props.categories || []).map((category) => {
         return (
@@ -37,6 +40,21 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
           </ShallowLink>
         );
       })}
+    </div>
+*/
+    <div className={styles.BottomHeaderBarMobile} onClick={props.onClick}>
+      <Link href="111">
+        link1
+      </Link>
+      <Link href="222">
+        link2
+      </Link>
+      <Link href="333">
+        link3
+      </Link>
+      <Link href="444">
+        link4
+      </Link>
     </div>
   );
 };
