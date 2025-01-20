@@ -23,7 +23,6 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
   }, [props.onMouseEnter]);
 
   return (
-/*
     <div className={styles.BottomHeaderBar} onClick={props.onClick}>
       {(props.categories || []).map((category) => {
         return (
@@ -41,8 +40,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
         );
       })}
     </div>
-*/
-    <div className={styles.BottomHeaderBarMobile} onClick={props.onClick}>
+    /*<div className={styles.BottomHeaderBarMobile} onClick={props.onClick}>
       <Link href="111">
         link1
       </Link>
@@ -56,6 +54,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
         link4
       </Link>
     </div>
+    */
   );
 };
 
