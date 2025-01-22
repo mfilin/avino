@@ -23,16 +23,16 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
   }, [props.onMouseEnter]);
 
   return (
-    <div classname={styles.bottomheaderbar} onclick={props.onclick}>
+    <div className={styles.BottomHeaderBar} onClick={props.onClick}>
       {(props.categories || []).map((category) => {
         return (
           <ShallowLink key={category.slug} href={`/${category.slug}`}>
             <div
-              classname={clsx(styles.menuitem, {
-                [styles.menuitem_selected]:
-                  category.slug === props.currentcategory,
+              className={clsx(styles.MenuItem, {
+                [styles.MenuItem_selected]:
+                  category.slug === props.currentCategory,
               })}
-              onmouseenter={mouseEnterHandler(category.slug)}
+              onMouseEnter={mouseEnterHandler(category.slug)}
             >
               {category.title_menu}
             </div>
