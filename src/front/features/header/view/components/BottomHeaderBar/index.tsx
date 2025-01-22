@@ -24,38 +24,38 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
 
   return (
 
-    // <div className={styles.BottomHeaderBar} onClick={props.onClick}>
-    //   {(props.categories || []).map((category) => {
-    //     return (
-    //       <ShallowLink key={category.slug} href={`/${category.slug}`}>
-    //         <div
-    //           className={clsx(styles.MenuItem, {
-    //             [styles.MenuItem_selected]:
-    //               category.slug === props.currentCategory,
-    //           })}
-    //           onMouseEnter={mouseEnterHandler(category.slug)}
-    //         >
-    //           {category.title_menu}
-    //         </div>
-    //       </ShallowLink>
-    //     );
-    //   })}
-    // </div>
-
-    <div className={styles.BottomHeaderBarMobile} onClick={props.onClick}>
-      <Link href={"111"}>
-        {"link1"}
-      </Link>
-      <Link href={"222"}>
-        {"link2"}
-      </Link>
-      <Link href={"333"}>
-        {"link3"}
-      </Link>
-      <Link href={"444"}>
-        {"link4"}
-      </Link>
+    <div classname={styles.bottomheaderbar} onclick={props.onclick}>
+      {(props.categories || []).map((category) => {
+        return (
+          <ShallowLink key={category.slug} href={`/${category.slug}`}>
+            <div
+              classname={clsx(styles.menuitem, {
+                [styles.menuitem_selected]:
+                  category.slug === props.currentcategory,
+              })}
+              onmouseenter={mouseEnterHandler(category.slug)}
+            >
+              {category.title_menu}
+            </div>
+          </ShallowLink>
+        );
+      })}
     </div>
+
+    // <div className={styles.BottomHeaderBarMobile} onClick={props.onClick}>
+    //   <Link href={"111"}>
+    //     {"link1"}
+    //   </Link>
+    //   <Link href={"222"}>
+    //     {"link2"}
+    //   </Link>
+    //   <Link href={"333"}>
+    //     {"link3"}
+    //   </Link>
+    //   <Link href={"444"}>
+    //     {"link4"}
+    //   </Link>
+    // </div>
   );
 };
 
