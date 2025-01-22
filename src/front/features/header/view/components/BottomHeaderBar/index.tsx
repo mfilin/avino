@@ -39,7 +39,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
           </ShallowLink>
         );
       })}
-    </div>    
+    </div>
   );
 };
 
