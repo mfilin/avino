@@ -27,5 +27,4 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     </div>
   );
 };
-
 export default BottomHeaderBar;
