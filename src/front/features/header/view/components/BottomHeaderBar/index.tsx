@@ -21,26 +21,31 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
       props.onMouseEnter(slug);
     });
   }, [props.onMouseEnter]);
-
   return (
     <div className={styles.BottomHeaderBar} onClick={props.onClick}>
-      {(props.categories || []).map((category) => {
-        return (
-          <ShallowLink key={category.slug} href={`/${category.slug}`}>
-            <div
-              className={clsx(styles.MenuItem, {
-                [styles.MenuItem_selected]:
-                  category.slug === props.currentCategory,
-              })}
-              onMouseEnter={mouseEnterHandler(category.slug)}
-            >
-              {category.title_menu}
-            </div>
-          </ShallowLink>
-        );
-      })}
+      dddd
     </div>
   );
 };
 
 export default BottomHeaderBar;
+
+// return (
+//   <div classname={styles.bottomheaderbar} onclick={props.onclick}>
+//     {(props.categories || []).map((category) => {
+//       return (
+//         <shallowlink key={category.slug} href={`/${category.slug}`}>
+//           <div
+//             classname={clsx(styles.menuitem, {
+//               [styles.menuitem_selected]:
+//                 category.slug === props.currentcategory,
+//             })}
+//             onmouseenter={mouseenterhandler(category.slug)}
+//           >
+//             {category.title_menu}
+//           </div>
+//         </shallowlink>
+//       );
+//     })}
+//   </div>
+// );
