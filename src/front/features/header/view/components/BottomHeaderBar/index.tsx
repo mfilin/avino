@@ -23,7 +23,10 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
   }, [props.onMouseEnter]);
   return (
     <div className={styles.BottomHeaderBar} onClick={props.onClick}>
-      dddd
+      <Link href="111" title="link1" />
+      <Link href="222" title="link2" />
+      <Link href="333" title="link3" />
+      <Link href="444" title="link4" />
     </div>
   );
 };
