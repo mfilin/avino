@@ -43,6 +43,7 @@ const PagesMenu: React.FC<IOwnProps> = (props) => {
         {/*<NavigationPointerIcon/>*/}
       </div>
       <div className={styles.pages}>
+        {/*
         {(items || []).map((item) => {
           return (
             <div key={item.slug} className={styles.pageItem}>
@@ -52,6 +53,10 @@ const PagesMenu: React.FC<IOwnProps> = (props) => {
             </div>
           );
         })}
+          */}
+        <Link href="/whisky/single-malt/" target="_blank" title="Виски" />
+        <Link href="/cognac/" target="_blank" title="Коньяк" />
+        <Link href="/grappa/" target="_blank" title="Граппа" />
       </div>
       <div>
         <SelectLocation />
