@@ -38,7 +38,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
           </ShallowLink>
         );
       })}
-     </div>
+    </div>
   );
 };
 export default BottomHeaderBar;
