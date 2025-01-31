@@ -54,9 +54,12 @@ const PagesMenu: React.FC<IOwnProps> = (props) => {
           );
         })}
           */}
-        <Link href="/whisky/single-malt/" target="_blank" title="Виски" />
-        <Link href="/cognac/" target="_blank" title="Коньяк" />
-        <Link href="/grappa/" target="_blank" title="Граппа" />
+        {/* prettier-ignore */}
+        <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
+        {/* prettier-ignore */}
+        <Link href="/cognac/" target="_blank">Коньяк</Link>
+        {/* prettier-ignore */}
+        <Link href="/grappa/" target="_blank">Граппа</Link>
       </div>
       <div>
         <SelectLocation />
