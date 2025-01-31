@@ -28,7 +28,7 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
       <a href="3" className={styles.BottomHeaderBar}></a>
       <a href="4" className={styles.BottomHeaderBar}></a>
       <a href="5" className={styles.BottomHeaderBar}></a>
-    </>    
+    </>
   );
 };
 export default BottomHeaderBar;
