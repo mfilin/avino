@@ -22,13 +22,23 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     });
   }, [props.onMouseEnter]);
   return (
-    <>
-      <a href="1" className={styles.BottomHeaderBar}></a>
-      <a href="2" className={styles.BottomHeaderBar}></a>
-      <a href="3" className={styles.BottomHeaderBar}></a>
-      <a href="4" className={styles.BottomHeaderBar}></a>
-      <a href="5" className={styles.BottomHeaderBar}></a>
-    </>
+    <div className={styles.bottomheaderbar} onClick={props.onClick}>
+      {(props.categories || []).map((category) => {
+        return (
+          <ShallowLink key={category.slug} href={`/${category.slug}`}>
+            <div
+              className={clsx(styles.menuitem, {
+                [styles.menuitem_selected]:
+                  category.slug === props.currentCategory,
+              })}
+              onMouseEnter={mouseEnterHandler(category.slug)}
+            >
+              {category.title_menu}
+            </div>
+          </ShallowLink>
+        );
+      })}
+     </div>
   );
 };
 export default BottomHeaderBar;
