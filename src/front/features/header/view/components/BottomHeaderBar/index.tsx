@@ -20,45 +20,47 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     });
   }, [props.onMouseEnter]);
   return (
-    <div className={styles.BottomHeaderBar} onClick={props.onClick}>
-      {(props.categories || []).map((category) => {
-        return (
-          // <ShallowLink key={category.slug} href={`/${category.slug}`}>
-          //   <div
-          //     className={clsx(styles.MenuItem, {
-          //       [styles.MenuItem_selected]:
-          //         category.slug === props.currentCategory,
-          //     })}
-          //     onMouseEnter={mouseEnterHandler(category.slug)}
-          //   >
-          //     {category.title_menu}
-          //   </div>
-          // </ShallowLink>
-          <>
-            {/* prettier-ignore */}
-            <Link href="/wine/" target="_blank">Вино</Link>
-            {/* prettier-ignore */}
-            <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
-            {/* prettier-ignore */}
-            <Link href="/cognac/" target="_blank">Коньяк</Link>
-            {/* prettier-ignore */}
-            <Link href="/armagnac/" target="_blank">Арманьяк</Link>
-            {/* prettier-ignore */}
-            <Link href="/brandy/" target="_blank">Бренди</Link>
-            {/* prettier-ignore */}
-            <Link href="/calvados/" target="_blank">Кальвадос</Link>
-            {/* prettier-ignore */}
-            <Link href="/chacha/" target="_blank">Чача</Link>
-            {/* prettier-ignore */}
-            <Link href="/polugar/" target="_blank">Полугар</Link>
-            {/* prettier-ignore */}
-            <Link href="/sake/" target="_blank">Саке</Link>
-            {/* prettier-ignore */}
-            <Link href="/raki/" target="_blank">Раки</Link>
-          </>
-        );
-      })}
-    </div>
+    <>
+      <div className={styles.BottomHeaderBar} onClick={props.onClick}>
+        {/* prettier-ignore */}
+        <Link href="/wine/" target="_blank">Вино</Link>
+        {/* prettier-ignore */}
+        <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
+        {/* prettier-ignore */}
+        <Link href="/cognac/" target="_blank">Коньяк</Link>
+        {/* prettier-ignore */}
+        <Link href="/armagnac/" target="_blank">Арманьяк</Link>
+        {/* prettier-ignore */}
+        <Link href="/brandy/" target="_blank">Бренди</Link>
+        {/* prettier-ignore */}
+        <Link href="/calvados/" target="_blank">Кальвадос</Link>
+        {/* prettier-ignore */}
+        <Link href="/chacha/" target="_blank">Чача</Link>
+        {/* prettier-ignore */}
+        <Link href="/polugar/" target="_blank">Полугар</Link>
+        {/* prettier-ignore */}
+        <Link href="/sake/" target="_blank">Саке</Link>
+        {/* prettier-ignore */}
+        <Link href="/raki/" target="_blank">Раки</Link>
+      </div>
+    </>
+    // <div className={styles.BottomHeaderBar} onClick={props.onClick}>
+    //   {(props.categories || []).map((category) => {
+    //     return (
+    //       <shallowlink key={category.slug} href={`/${category.slug}`}>
+    //         <div
+    //           classname={clsx(styles.menuitem, {
+    //             [styles.menuitem_selected]:
+    //               category.slug === props.currentcategory,
+    //           })}
+    //           onmouseenter={mouseenterhandler(category.slug)}
+    //         >
+    //           {category.title_menu}
+    //         </div>
+    //       </shallowlink>
+    //     );
+    //   })}
+    // </div>
   );
 };
 export default BottomHeaderBar;
