@@ -23,43 +23,43 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     <>
       <div className={styles.BottomHeaderBar} onClick={props.onClick}>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/wine/" target="_blank">Вино</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
         <Link href="/cognac/" target="_blank">Коньяк</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
         <Link href="/armagnac/" target="_blank">Арманьяк</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/brandy/" target="_blank">Бренди</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/calvados/" target="_blank">Кальвадос</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/chacha/" target="_blank">Чача</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/polugar/" target="_blank">Полугар</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/sake/" target="_blank">Саке</Link>
         </div>
         {/* prettier-ignore */}
-        <div className={styles.menuitem}>
+        <div className={styles.MenuItem}>
           <Link href="/raki/" target="_blank">Раки</Link>
         </div>
       </div>
@@ -69,8 +69,8 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     //     return (
     //       <shallowlink key={category.slug} href={`/${category.slug}`}>
     //         <div
-    //           classname={clsx(styles.menuitem, {
-    //             [styles.menuitem_selected]:
+    //           classname={clsx(styles.MenuItem, {
+    //             [styles.MenuItem_selected]:
     //               category.slug === props.currentcategory,
     //           })}
     //           onmouseenter={mouseenterhandler(category.slug)}
