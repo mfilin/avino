@@ -43,7 +43,6 @@ const PagesMenu: React.FC<IOwnProps> = (props) => {
         {/*<NavigationPointerIcon/>*/}
       </div>
       <div className={styles.pages}>
-        {/*
         {(items || []).map((item) => {
           return (
             <div key={item.slug} className={styles.pageItem}>
@@ -53,13 +52,6 @@ const PagesMenu: React.FC<IOwnProps> = (props) => {
             </div>
           );
         })}
-          */}
-        {/* prettier-ignore */}
-        <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
-        {/* prettier-ignore */}
-        <Link href="/cognac/" target="_blank">Коньяк</Link>
-        {/* prettier-ignore */}
-        <Link href="/grappa/" target="_blank">Граппа</Link>
       </div>
       <div>
         <SelectLocation />
