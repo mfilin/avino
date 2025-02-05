@@ -23,25 +23,45 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
     <>
       <div className={styles.BottomHeaderBar} onClick={props.onClick}>
         {/* prettier-ignore */}
-        <Link href="/wine/" target="_blank">Вино</Link>
+        <div className={styles.menuitem}>
+          <Link href="/wine/" target="_blank">Вино</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
+        <div className={styles.menuitem}>
+          <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
+        </div>
         {/* prettier-ignore */}
+        <div className={styles.menuitem}>
         <Link href="/cognac/" target="_blank">Коньяк</Link>
+        </div>
         {/* prettier-ignore */}
+        <div className={styles.menuitem}>
         <Link href="/armagnac/" target="_blank">Арманьяк</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/brandy/" target="_blank">Бренди</Link>
+        <div className={styles.menuitem}>
+          <Link href="/brandy/" target="_blank">Бренди</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/calvados/" target="_blank">Кальвадос</Link>
+        <div className={styles.menuitem}>
+          <Link href="/calvados/" target="_blank">Кальвадос</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/chacha/" target="_blank">Чача</Link>
+        <div className={styles.menuitem}>
+          <Link href="/chacha/" target="_blank">Чача</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/polugar/" target="_blank">Полугар</Link>
+        <div className={styles.menuitem}>
+          <Link href="/polugar/" target="_blank">Полугар</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/sake/" target="_blank">Саке</Link>
+        <div className={styles.menuitem}>
+          <Link href="/sake/" target="_blank">Саке</Link>
+        </div>
         {/* prettier-ignore */}
-        <Link href="/raki/" target="_blank">Раки</Link>
+        <div className={styles.menuitem}>
+          <Link href="/raki/" target="_blank">Раки</Link>
+        </div>
       </div>
     </>
     // <div className={styles.BottomHeaderBar} onClick={props.onClick}>
