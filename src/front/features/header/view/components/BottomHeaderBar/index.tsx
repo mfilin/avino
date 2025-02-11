@@ -28,7 +28,11 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/whisky/single-malt/" target="_blank">Виски</Link>
+          <Link href="/bubbles/" target="_blank">Шампанское</Link>
+        </div>
+        {/* prettier-ignore */}
+        <div className={styles.MenuItem}>
+          <Link href="/whisky/" target="_blank">Виски</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
@@ -36,31 +40,31 @@ const BottomHeaderBar: React.FC<IOwnProps> = (props) => {
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-        <Link href="/armagnac/" target="_blank">Арманьяк</Link>
+        <Link href="/vodka/" target="_blank">Водка</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/brandy/" target="_blank">Бренди</Link>
+          <Link href="/spirits/" target="_blank">Крепкие напитки</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/calvados/" target="_blank">Кальвадос</Link>
+          <Link href="/mixology/" target="_blank">Ликеры</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/chacha/" target="_blank">Чача</Link>
+          <Link href="/drugie_napitki/" target="_blank">Прочее</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/polugar/" target="_blank">Полугар</Link>
+          <Link href="/glass-all/" target="_blank">Стекло</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/sake/" target="_blank">Саке</Link>
+          <Link href="/accessory/" target="_blank">Аксессуары</Link>
         </div>
         {/* prettier-ignore */}
         <div className={styles.MenuItem}>
-          <Link href="/raki/" target="_blank">Раки</Link>
+          <Link href="/promo/" target="_blank">Акции</Link>
         </div>
       </div>
     </>
