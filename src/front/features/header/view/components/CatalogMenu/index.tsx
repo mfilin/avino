@@ -15,11 +15,11 @@ interface IOwnProps {
   isVisible: boolean;
 }
 const catalogSlugOrdered = [
-  'wine',
-  'bubblies',
+  'wine-all',
+  'bubbles',
   'whisky',
-  'cognac',
-  'vodka',
+  'cognac-all',
+  'vodka-all',
   'spirits',
   'mixology',
   'drugie_napitki',
