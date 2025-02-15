@@ -4,12 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+html {
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+}
 body {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  font-family: Montserrat, Roboto, Helvetica Neue, Arial, sans-serif;
+  min-height: 100%;
+  color: var(--black);
+  background-color: var(--white);
+  font-family: var(--font-primary);
+  font-size: rel(16);
 }
 
 body.scroll-freeze {
@@ -25,6 +30,84 @@ body.scroll-freeze {
     padding-top: 0;
     padding-bottom: 64px;
   }
+}
+
+// Typography
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    line-height: 1.2;
+    font-family: var(--font-secondary);
+}
+
+h1, .h1 {
+    font-size: rel(36);
+    margin-bottom: rel(20);
+}
+
+h2, .h2 {
+    font-size: rel(32);
+    margin-bottom: rel(24);
+}
+
+h3, .h3 {
+    font-size: rel(24);
+    margin-bottom: rel(20);
+}
+
+h4, .h4 {
+    font-size: rel(20);
+    margin-bottom: rel(20);
+}
+
+h5, .h5 {
+    font-size: rel(16);
+    margin-bottom: rel(20);
+}
+
+h6, .h6 {
+    font-size: rel(14);
+    margin-bottom: rel(20);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--orange);
+        text-decoration: none;
+    }
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: rel(20);
+}
+
+// Lists
+
+ol,
+ul {
+    padding-left: rel(32);
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: rel(20);
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
 }
 
 *::-webkit-scrollbar {
