@@ -8,7 +8,7 @@ import MobileBottomMenu from '../components/MobileBottomMenu';
 import featureHeader from '../features/header';
 import featureMain from '../features/main';
 
-const { TopMenuContainer } = featureHeader.containers;
+const { HeaderContainer } = featureHeader.containers;
 const { MainPageContainer } = featureMain.containers;
 
 const IndexPage: NextPage = () => {
@@ -25,7 +25,7 @@ const IndexPage: NextPage = () => {
         <LoadingIndicator />
       ) : (
         <>
-          <TopMenuContainer pageProps={pageProps} />
+          <HeaderContainer pageProps={pageProps} />
           <FadeLayout>
             <MainPageContainer pageProps={pageProps} />
 
