@@ -11,7 +11,7 @@ import MobileHeader from '../../components/MobileHeader/index';
 import { useScrollDirection } from 'src/front/hooks/useScrollDirection';
 import { useDeviceInfo } from '../../../../../hooks/device';
 
-import styles from './TopMenuContainer.module.scss';
+import styles from './HeaderContainer.module.scss';
 import { BodyControlContext } from '../../../../../providers/BodyControlProvider/BodyControlContext';
 import WorkOnSiteDisclaimer from '../../../../../components/WorkOnSiteDisclaimer';
 
