@@ -101,7 +101,7 @@ const TopMenuContainer: React.FC<IOwnProps> = (props) => {
 
   return (
     <>
-      <div className={styles.HeaderContainer}>
+      <header className="header">
         <div className="container">
           <div className="header__row">
             <div className="header__group header__group--left">
@@ -237,7 +237,7 @@ const TopMenuContainer: React.FC<IOwnProps> = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </header>
       <div className="header-trigger"></div>
     </>
   );
