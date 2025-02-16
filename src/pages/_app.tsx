@@ -21,6 +21,7 @@ import BodyControlProvider from '../front/providers/BodyControlProvider';
 import '../front/styles/global.scss';
 import 'rc-pagination/assets/index.less';
 import 'react-range-slider-input/dist/style.css';
+import '../front/styles/main.css';
 import { useRouter } from 'next/router';
 
 const queryClient = new QueryClient({
