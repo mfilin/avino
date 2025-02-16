@@ -2035,7 +2035,7 @@ html.with-fancybox body.hide-scrollbar {
 
 @font-face {
   font-family: "TildaSans";
-  src: url("../fonts/TildaSans-VF/TildaSans-VF.woff2") format("woff2");
+  src: url("fonts/TildaSans-VF/TildaSans-VF.woff2") format("woff2");
   font-weight: 350 900;
   font-stretch: 75% 200%;
 }
