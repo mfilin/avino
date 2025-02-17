@@ -1,5 +1,4 @@
 const withLess = require('next-with-less');
-const path = require('path');
 
 module.exports = withLess({
   distDir: '/.next',
@@ -23,10 +22,5 @@ module.exports = withLess({
     API_PREFIX: process.env.API_PREFIX,
     BASE_PATH: process.env.BASE_PATH,
     YANDEX_COUNTER_ID: process.env.YANDEX_COUNTER_ID,
-  },
-
-  // sassOptions: {
-  //   includePaths: [path.resolve(__dirname, 'src/front/styles/scss',)],
-  //   prependData: `@import "main.scss";`,
-  // },
+  },  
 });
