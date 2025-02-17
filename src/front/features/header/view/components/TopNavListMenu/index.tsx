@@ -1,6 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
-import memoize from 'fast-memoize';
 import { Taxons } from '../../../../../../api/database/models/Taxons';
 import Link, { LinkProps } from 'next/link';
 import styles from './TopNavListMenu.module.scss';
@@ -10,7 +8,7 @@ interface IOwnProps {
   currentCategory?: string;
 }
 
-const TopNavListMenu: React.FC<IOwnProps> = (props) => {  
+const TopNavListMenu: React.FC<IOwnProps> = (props) => {
   return (
     <>
       <ul className="top-nav__menu">
@@ -60,23 +58,6 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
         </li>
       </ul>
     </>
-    // <li className={styles.BottomHeaderBar} onClick={props.onClick}>
-    //   {(props.categories || []).map((category) => {
-    //     return (
-    //       <shallowlink key={category.slug} href={`/${category.slug}`}>
-    //         <li
-    //           classname={clsx(styles.MenuItem, {
-    //             [styles.MenuItem_selected]:
-    //               category.slug === props.currentcategory,
-    //           })}
-    //           onmouseenter={mouseenterhandler(category.slug)}
-    //         >
-    //           {category.title_menu}
-    //         </li>
-    //       </shallowlink>
-    //     );
-    //   })}
-    // </li>
   );
 };
 export default TopNavListMenu;
