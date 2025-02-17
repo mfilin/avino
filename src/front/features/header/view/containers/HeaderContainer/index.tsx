@@ -13,6 +13,7 @@ import { useDeviceInfo } from '../../../../../hooks/device';
 
 import styles from './HeaderContainer.module.scss';
 import { BodyControlContext } from '../../../../../providers/BodyControlProvider/BodyControlContext';
+import TopNavListMenu from '../../components/TopNavListMenu';
 import WorkOnSiteDisclaimer from '../../../../../components/WorkOnSiteDisclaimer';
 
 interface IOwnProps {
@@ -239,6 +240,10 @@ const TopMenuContainer: React.FC<IOwnProps> = (props) => {
         </div>
       </header>
       <div className="header-trigger"></div>
+      <TopNavListMenu
+        categories={pageProps.topMenuItems}
+        currentCategory={currentCategory}
+      />
     </>
   );
 };
