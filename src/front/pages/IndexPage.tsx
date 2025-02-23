@@ -26,12 +26,12 @@ const IndexPage: NextPage = () => {
       ) : (
         <>
           <HeaderContainer pageProps={pageProps} />
-          <FadeLayout>
-            <MainPageContainer pageProps={pageProps} />
 
+          {/* <FadeLayout>
+            <MainPageContainer pageProps={pageProps} />
             <MobileBottomMenu />
             <Footer pageProps={pageProps} />
-          </FadeLayout>
+          </FadeLayout> */}
         </>
       )}
     </div>
