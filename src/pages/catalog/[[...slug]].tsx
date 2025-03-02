@@ -33,7 +33,14 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
         <LoadingIndicator />
       ) : (
         <>
-          <TopMenuContainer pageProps={pageProps} />
+          <Layout>
+            <CatalogContainer
+              pageProps={pageProps}
+              baseCatalog={props.catalog}
+              filterSlug={props.filters}
+            />
+          </Layout>
+          {/* <TopMenuContainer pageProps={pageProps} />
           <Layout>
             <CatalogContainer
               pageProps={pageProps}
@@ -42,7 +49,7 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
             />
           </Layout>
           <MobileBottomMenu />
-          <Footer pageProps={pageProps} />
+          <Footer pageProps={pageProps} /> */}
         </>
       )}
     </div>
