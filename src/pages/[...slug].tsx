@@ -26,6 +26,7 @@ import { routeSlugToArray } from '../front/utils/slug';
 import { IDecodePortalSlugResult } from '../front/api/types/portal';
 
 const { TopMenuContainer } = featureHeader.containers;
+const { HeaderContainer } = featureHeader.containers;
 const { CatalogContainer, MobileCatalogContainer } = featureCatalog.containers;
 const { SingleProductContainer } = featureSingleProduct.containers;
 
@@ -57,7 +58,32 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
         <LoadingIndicator />
       ) : (
         <>
-          <TopMenuContainer pageProps={pageProps} />
+          <HeaderContainer pageProps={pageProps} />
+          {pageType === 'product' ? (
+            <SingleProductContainer
+              pageProps={pageProps}
+              productId={Number(id)}
+            />
+          ) : null}
+          {pageType === 'catalog' ? (
+            <Layout>
+              {isMobile ? (
+                <MobileCatalogContainer
+                  pageProps={pageProps}
+                  baseCatalog={props.catalog}
+                  filterSlug={decodedSlugs}
+                />
+              ) : (
+                <CatalogContainer
+                  pageProps={pageProps}
+                  baseCatalog={props.catalog}
+                  filterSlug={decodedSlugs}
+                />
+              )}
+            </Layout>
+          ) : null}
+
+          {/* <TopMenuContainer pageProps={pageProps} />
           <FadeLayout>
             {pageType === 'product' ? (
               <SingleProductContainer
@@ -84,7 +110,7 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
             ) : null}
             <MobileBottomMenu />
             <Footer pageProps={pageProps} />
-          </FadeLayout>
+          </FadeLayout> */}
         </>
       )}
     </div>
