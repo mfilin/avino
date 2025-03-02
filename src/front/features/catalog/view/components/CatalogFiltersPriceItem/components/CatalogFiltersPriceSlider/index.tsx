@@ -60,7 +60,7 @@ const CatalogFiltersPriceSlider: React.FC<IOwnProps> = (props) => {
           className={styles.Slider}
           min={min}
           max={max}
-          value={value}
+          value={[value[0], value[1]]}
           onChange={priceControl.setMinMax}
         />
       </div>

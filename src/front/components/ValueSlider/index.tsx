@@ -4,7 +4,7 @@ import ReactSlider from 'react-range-slider-input';
 interface IOwnProps {
   min: number;
   max: number;
-  value: number[];
+  value: [number, number];
   className?: string;
   onChange: (value: number[]) => void;
 }
