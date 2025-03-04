@@ -20,7 +20,7 @@ interface IOwnProps {
   pageProps: IPageProps;
 }
 
-const TopMenuContainer: React.FC<IOwnProps> = (props) => {
+const HeaderContainer: React.FC<IOwnProps> = (props) => {
   const { pageProps } = props;
   const { isMobile } = useDeviceInfo();
 
@@ -248,4 +248,4 @@ const TopMenuContainer: React.FC<IOwnProps> = (props) => {
   );
 };
 
-export default TopMenuContainer;
+export default HeaderContainer;
