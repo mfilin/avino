@@ -35,7 +35,7 @@ const IndexPage: NextPage = () => {
           </FadeLayout> */}
         </>
       )}
-      <Script type="text/javascript" src="./public/js/components/nav.js" />
+      <Script src="/js/components/nav.js" />
     </div>
   );
 };
