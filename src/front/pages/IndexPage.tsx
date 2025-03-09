@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import { usePortalStatic } from '../hooks/usePortalStatic';
 import { FadeLayout, Footer, LoadingIndicator } from '../components';
 import MobileBottomMenu from '../components/MobileBottomMenu';
@@ -34,6 +35,7 @@ const IndexPage: NextPage = () => {
           </FadeLayout> */}
         </>
       )}
+      <Script type="text/javascript" src="./public/js/components/nav.js" />
     </div>
   );
 };
