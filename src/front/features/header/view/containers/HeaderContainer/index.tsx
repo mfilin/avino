@@ -243,6 +243,14 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
       <TopNavListMenu
         categories={pageProps.topMenuItems}
         currentCategory={currentCategory}
+        onChangeCatalogState={function (isOpen: boolean): void {
+          if (isOpen) {
+            document.body.classList.add('nav-open');
+          } else {
+            document.body.classList.remove('nav-open');
+          }
+        }}
+        isCatalogOpen={false}
       />
     </>
   );

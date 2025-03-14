@@ -4,13 +4,29 @@ import Link, { LinkProps } from 'next/link';
 import CatalogMenu from '../../components/CatalogMenu';
 import styles from './TopNavListMenu.module.scss';
 import CategoryMenu from '../CategoryMenu';
+import { BodyControlContext } from '../../../../../providers/BodyControlProvider/BodyControlContext';
 
 interface IOwnProps {
   categories: Taxons[];
   currentCategory?: string;
+  onChangeCatalogState: (isOpen: boolean) => void;
+  isCatalogOpen: boolean;
+  defaultValue?: string;
 }
 
 const TopNavListMenu: React.FC<IOwnProps> = (props) => {
+  const { isCatalogOpen, onChangeCatalogState, defaultValue } = props;
+  const { setScrollableMode } = React.useContext(BodyControlContext);
+
+  const handleHamburgerClick = React.useMemo(() => {
+    let openedState = false;
+    return () => {
+      openedState = !openedState;
+      onChangeCatalogState(openedState);
+      setScrollableMode(!openedState);
+    };
+  }, [onChangeCatalogState, setScrollableMode]);
+
   return (
     <>
       <nav className="top-nav">
@@ -18,7 +34,7 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
           <ul className="top-nav__menu">
             {/* prettier-ignore */}
             <li className="top-nav__item">
-              <button type="button" className="nav-toggle" data-catalog-toggle>
+              <button type="button" className="nav-toggle" data-catalog-toggle onClick={handleHamburgerClick}>
                 <i className="nav-toggle__icon"></i>
                 <span className="nav-toggle__text">Каталог</span>
               </button>
