@@ -42,26 +42,76 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
   return (
     <div className="nav__primary">
       <ul className="nav-menu">
-        {catalogSlugOrdered.map((code) => {
-          const item = cache?.catalog[code];
-          if (!item) {
-            return null;
-          }
-          const selected = code === selectedSlug;
-          return (
-            <li
-              key={code}
-              className={selected ? 'active' : ''}
-              onMouseEnter={connectSlugSelector(code)}
-            >
-              <a href="#">
-                <CatalogIcon icon={code as TIcon} />
-                <span>{item.label}</span>
-                {selected && <RightBracket />}
-              </a>
-            </li>
-          );
-        })}
+        {catalogSlugOrdered.map((slug) => (
+          <li
+            key={slug}
+            className={`nav-menu__item`}
+            onClick={connectSlugSelector(slug)}
+          >
+            <a href="#" className="nav-menu__link">
+              <span>{cache[slug]?.name || slug}</span>
+              <i>
+                <img src={RightBracket} alt="Arrow" />
+              </i>
+            </a>
+            {selectedSlug === slug && (
+              <div className="nav-menu__secondary">
+                {cache[slug]?.children && (
+                  <ul className="nav-menu">
+                    {Object.keys(cache[slug].children).map((childSlug) => (
+                      <li key={childSlug} className="nav-menu__item">
+                        <a href="#" className="nav-menu__link">
+                          <span>{cache[slug].children[childSlug].name}</span>
+                          {cache[slug].children[childSlug].children && (
+                            <i>
+                              <img src={RightBracket} alt="Arrow" />
+                            </i>
+                          )}
+                        </a>
+                        {cache[slug].children[childSlug].children && (
+                          <div className="nav-menu__secondary">
+                            <ul className="nav-menu">
+                              {Object.keys(
+                                cache[slug].children[childSlug].children,
+                              ).map((grandChildSlug) => (
+                                <li
+                                  key={grandChildSlug}
+                                  className="nav-menu__item"
+                                >
+                                  <a href="#" className="nav-menu__link">
+                                    <span>
+                                      {
+                                        cache[slug].children[childSlug]
+                                          .children[grandChildSlug].name
+                                      }
+                                    </span>
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
+                            <div className="nav-menu__button">
+                              <a
+                                href="#"
+                                className="btn btn-sm w-100 btn-primary"
+                              >
+                                <span>Показать все</span>
+                              </a>
+                            </div>
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="nav-menu__button">
+                  <a href="#" className="btn btn-sm w-100 btn-primary">
+                    <span>Показать все</span>
+                  </a>
+                </div>
+              </div>
+            )}
+          </li>
+        ))}
       </ul>
     </div>
   );

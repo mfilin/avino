@@ -39,50 +39,25 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
                 <span className="nav-toggle__text">Каталог</span>
               </button>
             </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/wine/" target="_blank">Вино</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/bubbles/" target="_blank">Шампанское</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/whisky/" target="_blank">Виски</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/cognac/" target="_blank">Коньяк</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/vodka/" target="_blank">Водка</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/spirits/" target="_blank">Крепкие напитки</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/mixology/" target="_blank">Ликеры</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/drugie_napitki/" target="_blank">Прочее</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/glass-all/" target="_blank">Стекло</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/accessory/" target="_blank">Аксессуары</Link>
-            </li>
-            {/* prettier-ignore */}
-            <li className="top-nav__item">
-              <Link href="/promo/" target="_blank">Акции</Link>
-            </li>
+            {[
+              { url: '/wine', linkText: 'Вино' },
+              { url: '/bubbles', linkText: 'Шампанское' },
+              { url: '/whisky', linkText: 'Виски' },
+              { url: '/cognac', linkText: 'Коньяк' },
+              { url: '/vodka', linkText: 'Водка' },
+              { url: '/spirits', linkText: 'Крепкие напитки' },
+              { url: '/mixology', linkText: 'Ликеры' },
+              { url: '/drugie_napitki', linkText: 'Прочее' },
+              { url: '/glass-all', linkText: 'Стекло' },
+              { url: '/accessory', linkText: 'Аксессуары' },
+              { url: '/promo', linkText: 'Акции' },
+            ].map((item, index) => (
+              <li className="top-nav__item" key={index}>
+                <Link href={item.url} target="_blank">
+                  {item.linkText}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
@@ -97,7 +72,7 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
         <div className="container">
           <div className="nav__container">
             <div className="nav__main">
-              <CategoryMenu cache={undefined} />
+              <CategoryMenu cache={props.categories} />
             </div>
             <div className="nav__media">
               <div className="nav__wrap">
