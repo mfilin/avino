@@ -42,7 +42,26 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
   return (
     <div className="nav__primary">
       <ul className="nav-menu">
-
+        {catalogSlugOrdered.map((code) => {
+          const item = cache?.catalog[code];
+          if (!item) {
+            return null;
+          }
+          const selected = code === selectedSlug;
+          return (
+            <li
+              key={code}
+              className={selected ? 'active' : ''}
+              onMouseEnter={connectSlugSelector(code)}
+            >
+              <a href="#">
+                <CatalogIcon icon={code as TIcon} />
+                <span>{item.label}</span>
+                {selected && <RightBracket />}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
