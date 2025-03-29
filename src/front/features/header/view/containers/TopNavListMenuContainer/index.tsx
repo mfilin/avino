@@ -66,8 +66,7 @@ const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
           <div className="nav__container">
             <div className="nav__main">
               <CategoryMenu
-                //cache={pageProps.settings?.categories}
-                cache={undefined}
+                cache={pageProps.settings?.categories}
                 onSelect={closecatalog}
                 isVisible={true}
               />
