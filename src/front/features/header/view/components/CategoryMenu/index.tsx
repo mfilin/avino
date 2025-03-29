@@ -2,18 +2,16 @@ import React from 'react';
 import clsx from 'clsx';
 import memoize from 'fast-memoize';
 import { IClientCatalog } from '../../../../../../types/portal/client';
-import { CatalogIcon } from '../../../../../elements';
-import CatalogBlocks from '../CatalogBlocks';
 import RightBracket from '../../../../../images/right-bracket.svg';
-import { TIcon } from '../../../../../elements/CatalogIcon';
 
 import styles from './CategoryMenu.module.scss';
 
 interface IOwnProps {
   cache: IClientCatalog;
-  // onSelect(): void;
-  // isVisible: boolean;
+  onSelect(): void;
+  isVisible: boolean;
 }
+
 const catalogSlugOrdered = [
   'wine-all',
   'bubbles',

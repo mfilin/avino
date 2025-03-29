@@ -13,8 +13,10 @@ import { useDeviceInfo } from '../../../../../hooks/device';
 
 import styles from './HeaderContainer.module.scss';
 import { BodyControlContext } from '../../../../../providers/BodyControlProvider/BodyControlContext';
-import TopNavListMenu from '../../components/TopNavListMenu';
+import TopNavListMenu from '../../containers/TopNavListMenuContainer';
 import WorkOnSiteDisclaimer from '../../../../../components/WorkOnSiteDisclaimer';
+import TopMenuContainer from '../TopMenuContainer';
+import TopNavListMenuContainer from '../../containers/TopNavListMenuContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -240,7 +242,8 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
         </div>
       </header>
       <div className="header-trigger"></div>
-      <TopNavListMenu
+      <TopNavListMenuContainer
+        pageProps={pageProps}
         categories={pageProps.topMenuItems}
         currentCategory={currentCategory}
         onChangeCatalogState={function (isOpen: boolean): void {

@@ -14,6 +14,7 @@ interface IOwnProps {
   onSelect(): void;
   isVisible: boolean;
 }
+
 const catalogSlugOrdered = [
   'wine-all',
   'bubbles',

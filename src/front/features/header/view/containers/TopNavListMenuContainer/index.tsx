@@ -1,40 +1,33 @@
 import React from 'react';
-import { Taxons } from '../../../../../../api/database/models/Taxons';
 import Link, { LinkProps } from 'next/link';
-import CatalogMenu from '../../components/CatalogMenu';
-import styles from './TopNavListMenu.module.scss';
-import CategoryMenu from '../CategoryMenu';
-import { BodyControlContext } from '../../../../../providers/BodyControlProvider/BodyControlContext';
+import CategoryMenu from '../../components/CategoryMenu';
+import { IPageProps } from '../../../../../../types/portal/server';
+
+import styles from './TopNavListMenuContainer.module.scss';
+import { Taxons } from 'src/api/database/models/Taxons';
 
 interface IOwnProps {
+  pageProps: IPageProps;
   categories: Taxons[];
-  currentCategory?: string;
-  onChangeCatalogState: (isOpen: boolean) => void;
+  currentCategory: string;
+  onChangeCatalogState(boolean): void;
   isCatalogOpen: boolean;
-  defaultValue?: string;
 }
 
-const TopNavListMenu: React.FC<IOwnProps> = (props) => {
-  const { isCatalogOpen, onChangeCatalogState, defaultValue } = props;
-  const { setScrollableMode } = React.useContext(BodyControlContext);
+const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
+  const { pageProps } = props;
 
-  const handleHamburgerClick = React.useMemo(() => {
-    let openedState = false;
-    return () => {
-      openedState = !openedState;
-      onChangeCatalogState(openedState);
-      setScrollableMode(!openedState);
-    };
-  }, [onChangeCatalogState, setScrollableMode]);
+  function closecatalog(): void {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <>
       <nav className="top-nav">
         <div className="container">
           <ul className="top-nav__menu">
-            {/* prettier-ignore */}
             <li className="top-nav__item">
-              <button type="button" className="nav-toggle" data-catalog-toggle onClick={handleHamburgerClick}>
+              <button type="button" className="nav-toggle" data-catalog-toggle>
                 <i className="nav-toggle__icon"></i>
                 <span className="nav-toggle__text">Каталог</span>
               </button>
@@ -72,7 +65,12 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
         <div className="container">
           <div className="nav__container">
             <div className="nav__main">
-              <CategoryMenu cache={props.categories} />
+              <CategoryMenu
+                //cache={pageProps.settings?.categories}
+                cache={undefined}
+                onSelect={closecatalog}
+                isVisible={true}
+              />
             </div>
             <div className="nav__media">
               <div className="nav__wrap">
@@ -270,4 +268,4 @@ const TopNavListMenu: React.FC<IOwnProps> = (props) => {
     </>
   );
 };
-export default TopNavListMenu;
+export default TopNavListMenuContainer;
