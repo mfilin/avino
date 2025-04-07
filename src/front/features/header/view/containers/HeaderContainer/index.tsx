@@ -89,6 +89,17 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
     searchBarControl.pushSearchRoute();
   }, [searchBarControl]);
 
+  const handleCatalogToggle = React.useCallback((isOpen: boolean) => {
+    setCatalogOpen(isOpen);
+    setScrollableMode(!isOpen); // Disable scrolling when catalog is open
+    
+    if (isOpen) {
+      document.body.classList.add('nav-open');
+    } else {
+      document.body.classList.remove('nav-open');
+    }
+  }, [setScrollableMode]);
+
   if (isMobile) {
     return (
       <>
@@ -246,14 +257,8 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
         pageProps={pageProps}
         categories={pageProps.topMenuItems}
         currentCategory={currentCategory}
-        onChangeCatalogState={function (isOpen: boolean): void {
-          if (isOpen) {
-            document.body.classList.add('nav-open');
-          } else {
-            document.body.classList.remove('nav-open');
-          }
-        }}
-        isCatalogOpen={false}
+        onChangeCatalogState={handleCatalogToggle}
+        isCatalogOpen={isCatalogOpen}
       />
     </>
   );
