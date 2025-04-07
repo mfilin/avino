@@ -17,8 +17,15 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "typeRoots": ["./types", "node_modules/@types"],
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "typeRoots": [
+      "./types",
+      "node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "esModuleInterop": true,
     "jsx": "preserve",
     "allowJs": true,
@@ -32,11 +39,15 @@
     "next-env.d.ts",
     "src/api/**/*.ts",
     "src/front/**/*.ts",
+    "src/front/**/*.tsx",
     "src/types/**/*.ts",
     "src/app.module.ts",
     "src/console.ts",
     "src/main.ts",
     "src/front/providers/userDataStoreProvider.tsx"
   ],
-  "exclude": ["node_modules", "src/pages"]
+  "exclude": [
+    "node_modules",
+    "src/pages"
+  ]
 }

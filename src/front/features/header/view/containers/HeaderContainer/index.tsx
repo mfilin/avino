@@ -89,16 +89,19 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
     searchBarControl.pushSearchRoute();
   }, [searchBarControl]);
 
-  const handleCatalogToggle = React.useCallback((isOpen: boolean) => {
-    setCatalogOpen(isOpen);
-    setScrollableMode(!isOpen); // Disable scrolling when catalog is open
-    
-    if (isOpen) {
-      document.body.classList.add('nav-open');
-    } else {
-      document.body.classList.remove('nav-open');
-    }
-  }, [setScrollableMode]);
+  const handleCatalogToggle = React.useCallback(
+    (isOpen: boolean) => {
+      setCatalogOpen(isOpen);
+      setScrollableMode(!isOpen); // Disable scrolling when catalog is open
+
+      if (isOpen) {
+        document.body.classList.add('nav-open');
+      } else {
+        document.body.classList.remove('nav-open');
+      }
+    },
+    [setScrollableMode],
+  );
 
   if (isMobile) {
     return (
