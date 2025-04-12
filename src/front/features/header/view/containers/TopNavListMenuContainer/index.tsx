@@ -18,8 +18,10 @@ const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
   const { pageProps } = props;
 
   function closecatalog(): void {
-    throw new Error('Function not implemented.');
+    console.log('Function not implemented.');
   }
+
+  console.log(pageProps.settings?.categories);
 
   return (
     <>
