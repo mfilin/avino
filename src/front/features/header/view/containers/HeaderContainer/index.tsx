@@ -91,7 +91,6 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
 
   const handleCatalogToggle = React.useCallback(
     (isOpen: boolean) => {
-      alert('open event');
       setCatalogOpen(isOpen);
       setScrollableMode(!isOpen); // Disable scrolling when catalog is open
 
