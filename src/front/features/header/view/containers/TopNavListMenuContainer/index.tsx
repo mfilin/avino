@@ -21,8 +21,6 @@ const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
     console.log('Function not implemented.');
   }
 
-  console.log(pageProps.settings?.categories);
-
   return (
     <>
       <nav className="top-nav">
@@ -70,7 +68,7 @@ const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
               <CategoryMenu
                 cache={pageProps.settings?.categories}
                 onSelect={closecatalog}
-                isVisible={true}
+                isVisible={props.isCatalogOpen}
               />
             </div>
             <div className="nav__media">
