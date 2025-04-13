@@ -27,7 +27,12 @@ const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
         <div className="container">
           <ul className="top-nav__menu">
             <li className="top-nav__item">
-              <button type="button" className="nav-toggle" data-catalog-toggle>
+              <button
+                type="button"
+                className="nav-toggle"
+                data-catalog-toggle
+                onClick={() => props.onChangeCatalogState(!props.isCatalogOpen)}
+              >
                 <i className="nav-toggle__icon"></i>
                 <span className="nav-toggle__text">Каталог</span>
               </button>
