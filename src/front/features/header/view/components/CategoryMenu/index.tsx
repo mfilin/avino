@@ -43,7 +43,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
       <ul className="nav-menu">
         {catalogSlugOrdered.map((code) => {
           const item = cache?.catalog[code];
-          console.log(item);
+          // console.log(item);
           return (
             <li
               key={code}
@@ -51,7 +51,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
               onClick={connectSlugSelector(code)}
             >
               <a href="#" className="nav-menu__link">
-                <span>{cache[code]?.name || code}</span>
+                <span>{item?.label || code}</span>
                 <i>
                   <img src={RightBracket} alt="Arrow" />
                 </i>
