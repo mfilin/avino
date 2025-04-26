@@ -17,6 +17,8 @@ interface IOwnProps {
 const TopNavListMenuContainer: React.FC<IOwnProps> = (props) => {
   const { pageProps } = props;
 
+  console.log(pageProps);
+
   function closecatalog(): void {
     console.log('Function not implemented.');
   }
