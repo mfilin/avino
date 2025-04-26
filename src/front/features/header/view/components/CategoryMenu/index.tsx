@@ -58,12 +58,12 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
               </a>
               {selectedSlug === code && (
                 <div className="nav-menu__secondary">
-                  {cache[code]?.children && (
+                  {cache[code]?.items && (
                     <ul className="nav-menu">
-                      {Object.keys(cache[code].children).map((childSlug) => (
+                      {Object.keys(cache[code].items).map((childSlug) => (
                         <li key={childSlug} className="nav-menu__item">
                           <a href="#" className="nav-menu__link">
-                            <span>{cache[code].children[childSlug].name}</span>
+                            <span>{cache[code].items[childSlug].label}</span>
                             {cache[code].children[childSlug].children && (
                               <i>
                                 <img src={RightBracket} alt="Arrow" />
