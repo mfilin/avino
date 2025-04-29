@@ -84,7 +84,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
                                       <span>
                                         {
                                           cache[code].children[childSlug]
-                                            .children[grandChildSlug].name
+                                            .children[grandChildSlug].label
                                         }
                                       </span>
                                     </a>
