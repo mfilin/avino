@@ -43,7 +43,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
       <ul className="nav-menu">
         {catalogSlugOrdered.map((code) => {
           const item = cache?.catalog[code];
-          // console.log(cache?.catalog['cognac-all']);
+          console.log(cache?.catalog['cognac-all']);
           return (
             <li
               key={code}
