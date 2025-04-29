@@ -43,7 +43,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
       <ul className="nav-menu">
         {catalogSlugOrdered.map((code) => {
           const item = cache?.catalog[code];
-          console.log(cache?.catalog['cognac-all']);
+          // console.log(cache?.catalog['cognac-all']);
           return (
             <li
               key={code}
@@ -58,13 +58,13 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
               </a>
               {selectedSlug === code && (
                 <div className="nav-menu__secondary">
-                  {cache[code]?.items && (
+                  {cache.catalog[code]?.items && (
                     <ul className="nav-menu">
-                      {Object.keys(cache[code].items).map((childSlug) => (
+                      {Object.keys(cache.catalog[code].items).map((childSlug) => (
                         <li key={childSlug} className="nav-menu__item">
                           <a href="#" className="nav-menu__link">
-                            <span>{cache[code].items[childSlug].label}</span>
-                            {cache[code].children[childSlug].children && (
+                            <span>{cache.catalog[code].items[childSlug].label}</span>
+                            {cache.catalog[code].items[childSlug] && (
                               <i>
                                 <img src={RightBracket} alt="Arrow" />
                               </i>
