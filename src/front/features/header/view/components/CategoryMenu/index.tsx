@@ -57,53 +57,23 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
                 </i>
               </a>
               <div className="nav-menu__secondary">
-                {cache.catalog[code]?.items && (
+                {item.items?.['taxons.category'] && (
                   <ul className="nav-menu">
-                    {Object.keys(cache.catalog[code].items).map((childSlug) => (
-                      <li key={childSlug} className="nav-menu__item">
-                        <a href="#" className="nav-menu__link">
-                          <span>
-                            {cache.catalog[code].items[childSlug].label}
-                          </span>
-                          {cache.catalog[code].items[childSlug] && (
-                            <i>
-                              <img src={RightBracket} alt="Arrow" />
-                            </i>
-                          )}
-                        </a>
-                        {cache[code]?.children?.[childSlug]?.children && (
-                          <div className="nav-menu__secondary">
-                            <ul className="nav-menu">
-                              {Object.keys(
-                                cache[code].children[childSlug].children,
-                              ).map((grandChildSlug) => (
-                                <li
-                                  key={grandChildSlug}
-                                  className="nav-menu__item"
-                                >
-                                  <a href="#" className="nav-menu__link">
-                                    <span>
-                                      {
-                                        cache[code].children[childSlug]
-                                          .children[grandChildSlug].label
-                                      }
-                                    </span>
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                            <div className="nav-menu__button">
-                              <a
-                                href="#"
-                                className="btn btn-sm w-100 btn-primary"
-                              >
-                                <span>Показать все</span>
-                              </a>
-                            </div>
-                          </div>
-                        )}
-                      </li>
-                    ))}
+                    {Object.entries(item.items?.['taxons.category'] || {}).map(
+                      ([childSlug, childItem]) => (
+                        <li key={childSlug} className="nav-menu__item">
+                          <a href="#" className="nav-menu__link">
+                            <span>{childItem.label || childSlug}</span>
+                            {childItem.items &&
+                              Object.keys(childItem.items).length > 0 && (
+                                <i>
+                                  <img src={RightBracket} alt="Arrow" />
+                                </i>
+                              )}
+                          </a>
+                        </li>
+                      ),
+                    )}
                   </ul>
                 )}
                 <div className="nav-menu__button">
