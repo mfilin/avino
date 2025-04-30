@@ -59,21 +59,20 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
               <div className="nav-menu__secondary">
                 {item.items?.['taxons.category'] && (
                   <ul className="nav-menu">
-                    {Object.entries(item.items?.['taxons.category'] || {}).map(
-                      ([childSlug, childItem]) => (
-                        <li key={childSlug} className="nav-menu__item">
-                          <a href="#" className="nav-menu__link">
-                            <span>{childItem.label || childSlug}</span>
-                            {childItem.items &&
-                              Object.keys(childItem.items).length > 0 && (
-                                <i>
-                                  <img src={RightBracket} alt="Arrow" />
-                                </i>
-                              )}
-                          </a>
-                        </li>
-                      ),
-                    )}
+                    {Object.entries(
+                      item.items?.['taxons.category']?.items || {},
+                    ).map(([childSlug, childItem]) => (
+                      <li key={childSlug} className="nav-menu__item">
+                        <a href="#" className="nav-menu__link">
+                          <span>{childItem.label || childSlug}</span>
+                          {childItem && Object.keys(childItem).length > 0 && (
+                            <i>
+                              <img src={RightBracket} alt="Arrow" />
+                            </i>
+                          )}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 )}
                 <div className="nav-menu__button">
