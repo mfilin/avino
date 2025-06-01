@@ -52,8 +52,8 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
             >
               <a href="#" className="nav-menu__link">
                 <span>{item?.label || code}</span>
-                <i>
-                  <img src={RightBracket} alt="Arrow" />
+                <i className={styles.arrowIcon}>
+                  <img src={RightBracket} alt="Arrow" width="10" height="10" />
                 </i>
               </a>
               <div className="nav-menu__secondary">
@@ -66,8 +66,13 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
                         <a href="#" className="nav-menu__link">
                           <span>{childItem.label || childSlug}</span>
                           {childItem && Object.keys(childItem).length > 0 && (
-                            <i>
-                              <img src={RightBracket} alt="Arrow" />
+                            <i className={styles.arrowIcon}>
+                              <img
+                                src={RightBracket}
+                                alt="Arrow"
+                                width="10"
+                                height="10"
+                              />
                             </i>
                           )}
                         </a>
