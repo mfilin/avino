@@ -1,11 +1,7 @@
 import React from 'react';
-import clsx from 'clsx';
 import memoize from 'fast-memoize';
 import { IClientCatalog } from '../../../../../../types/portal/client';
-import RightBracket from '../../../../../images/right-bracket.svg';
-import { getCategoryURL } from '../../../../../utils/category';
-
-import styles from './CategoryMenu.module.scss';
+import ArrowIcon from '../ArrowIcon';
 
 interface IOwnProps {
   cache: IClientCatalog;
@@ -52,9 +48,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
             >
               <a href="#" className="nav-menu__link">
                 <span>{item?.label || code}</span>
-                <i className={styles.arrowIcon}>
-                  <img src={RightBracket} alt="Arrow" width="10" height="10" />
-                </i>
+                <ArrowIcon />
               </a>
               <div className="nav-menu__secondary">
                 {item.items?.['taxons.category'] && (
@@ -66,14 +60,7 @@ const CategoryMenu: React.FC<IOwnProps> = (props) => {
                         <a href="#" className="nav-menu__link">
                           <span>{childItem.label || childSlug}</span>
                           {childItem && Object.keys(childItem).length > 0 && (
-                            <i className={styles.arrowIcon}>
-                              <img
-                                src={RightBracket}
-                                alt="Arrow"
-                                width="10"
-                                height="10"
-                              />
-                            </i>
+                            <ArrowIcon />
                           )}
                         </a>
                       </li>
