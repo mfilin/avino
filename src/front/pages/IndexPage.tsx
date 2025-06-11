@@ -149,9 +149,8 @@ const IndexPage: NextPage = () => {
           <div className="section section--first">
               <div className="container">
                   <Swiper
-                      ref={swiperRef}
                       modules={[Navigation, Pagination, Autoplay]}
-                      spaceBetween={20}
+                      spaceBetween={72}
                       slidesPerView={"auto"}
                       navigation
                       pagination={{ clickable: true }}
