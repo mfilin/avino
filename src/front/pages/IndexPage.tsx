@@ -43,6 +43,109 @@ const IndexPage: NextPage = () => {
         <>
           <HeaderContainer pageProps={pageProps} />
 
+          <div className="primary">
+            <Swiper
+              className="swiper"
+              modules={[Navigation, Pagination, Autoplay]}
+              pagination={{
+                el: '.primary__pagination',
+                clickable: true
+              }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false
+              }}
+            >
+              <SwiperSlide>
+                <div className="primary__item">
+                  <div className="primary__main">
+                    <div className="primary__wrap">
+                      <div className="container">
+                        <h1 className="primary__header">
+                          Продукция винокурни<br />
+                          Castle & Key Distillery
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="primary__media primary__media--sm">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" style={{objectPosition: '100% 50%'}} alt="" />
+                  </div>
+                  <div className="primary__media primary__media--xl">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" alt="" />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="primary__item">
+                  <div className="primary__main">
+                    <div className="primary__wrap">
+                      <div className="container">
+                        <h1 className="primary__header">
+                          Продукция винокурни<br />
+                          Castle & Key Distillery
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="primary__media primary__media--sm">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" style={{objectPosition: '100% 50%'}} alt="" />
+                  </div>
+                  <div className="primary__media primary__media--xl">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" alt="" />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="primary__item">
+                  <div className="primary__main">
+                    <div className="primary__wrap">
+                      <div className="container">
+                        <h1 className="primary__header">
+                          Продукция винокурни<br />
+                          Castle & Key Distillery
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="primary__media primary__media--sm">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" style={{objectPosition: '100% 50%'}} alt="" />
+                  </div>
+                  <div className="primary__media primary__media--xl">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" alt="" />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="primary__item">
+                  <div className="primary__main">
+                    <div className="primary__wrap">
+                      <div className="container">
+                        <h1 className="primary__header">
+                          Продукция винокурни<br />
+                          Castle & Key Distillery
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="primary__media primary__media--sm">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" style={{objectPosition: '100% 50%'}} alt="" />
+                  </div>
+                  <div className="primary__media primary__media--xl">
+                    <img src="images/primary_image_xl__01.jpg" className="img-cover" alt="" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            <div className="primary__control">
+              <div className="container">
+                <div className="primary__wrapper">
+                  <div className="primary__pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>{/*<-- .section main-swiper -->*/}
+
           <div className="section section--first">
               <div className="container">
                   <Swiper
@@ -138,7 +241,7 @@ const IndexPage: NextPage = () => {
                       </SwiperSlide>
                   </Swiper>
               </div>
-          </div>{/*<-- .section swiper -->*/}
+          </div>{/*<-- .section first-swiper -->*/}
 
 
           {/* <FadeLayout>
