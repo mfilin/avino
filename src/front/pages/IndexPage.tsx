@@ -242,6 +242,57 @@ const IndexPage: NextPage = () => {
               </div>
           </div>{/*<-- .section first-swiper -->*/}
 
+          <div className="section">
+            <div className="container">
+                <div className="section__header">
+                    <h2 className="section__title">Популярные категории</h2>
+                    <div className="d-flex align-center column-gap-30">
+                        <button type="button" className="btn-nav" data-categories-prev>
+                            <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="img/sprites/sprite.svg#nav_prev" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </button>
+                        <button type="button" className="btn-nav" data-categories-next>
+                            <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
+                                <use xlinkHref="img/sprites/sprite.svg#nav_next" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>               
+
+                <Swiper
+                    modules={[Navigation]}
+                    spaceBetween={30}
+                    slidesPerView={"auto"}
+                    navigation={{
+                        prevEl: '[data-categories-prev]',
+                        nextEl: '[data-categories-next]'
+                    }}
+                    className="swiper"
+                    data-categories
+                >
+                    {[
+                        { title: "ВИНО", image: "img/content/category_item_image_01.jpg", size: "sm" },
+                        { title: "ВИСКИ", image: "img/content/category_item_image_02.jpg", size: "md" },
+                        { title: "КОНЬЯК", image: "img/content/category_item_image_03.jpg", size: "md" },
+                        { title: "КРЕПКИЕ НАПИТКИ (РОМ, ТЕКИЛЛА, ДЖИН, ГРАППА, САМБУКА, И ДР.)", image: "img/content/category_item_image_04.jpg", size: "sm" },
+                        { title: "ЛИКЕРЫ", image: "img/content/category_item_image_05.jpg", size: "sm" },
+                        { title: "ШАМПАНСКОЕ", image: "img/content/category_item_image_06.jpg", size: "md" },
+                        { title: "ВОДКА", image: "img/content/category_item_image_07.jpg", size: "sm" }
+                    ].map((category, index) => (
+                        <SwiperSlide key={index}>
+                            <a href="#" className={`category-item category-item--${category.size}`}>
+                                <i className="category-item__image">
+                                    <img src={category.image} className="img-fluid" alt="" />
+                                </i>
+                                <span className="category-item__title">{category.title}</span>
+                            </a>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+          </div>{/*<-- .section popular-category-swiper -->*/}
+
 
           {/* <FadeLayout>
             <MainPageContainer pageProps={pageProps} />
