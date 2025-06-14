@@ -249,12 +249,12 @@ const IndexPage: NextPage = () => {
                     <div className="d-flex align-center column-gap-30">
                         <button type="button" className="btn-nav" data-categories-prev>
                             <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
-                                <use xlinkHref="img/sprites/sprite.svg#nav_prev" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                                <use xlinkHref="images/sprites/sprite.svg#nav_prev" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
                             </svg>
                         </button>
                         <button type="button" className="btn-nav" data-categories-next>
                             <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
-                                <use xlinkHref="img/sprites/sprite.svg#nav_next" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                                <use xlinkHref="images/sprites/sprite.svg#nav_next" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
                             </svg>
                         </button>
                     </div>
@@ -272,13 +272,13 @@ const IndexPage: NextPage = () => {
                     data-categories
                 >
                     {[
-                        { title: "ВИНО", image: "img/content/category_item_image_01.jpg", size: "sm" },
-                        { title: "ВИСКИ", image: "img/content/category_item_image_02.jpg", size: "md" },
-                        { title: "КОНЬЯК", image: "img/content/category_item_image_03.jpg", size: "md" },
-                        { title: "КРЕПКИЕ НАПИТКИ (РОМ, ТЕКИЛЛА, ДЖИН, ГРАППА, САМБУКА, И ДР.)", image: "img/content/category_item_image_04.jpg", size: "sm" },
-                        { title: "ЛИКЕРЫ", image: "img/content/category_item_image_05.jpg", size: "sm" },
-                        { title: "ШАМПАНСКОЕ", image: "img/content/category_item_image_06.jpg", size: "md" },
-                        { title: "ВОДКА", image: "img/content/category_item_image_07.jpg", size: "sm" }
+                        { title: "ВИНО", image: "images/content/category_item_image_01.jpg", size: "sm" },
+                        { title: "ВИСКИ", image: "images/content/category_item_image_02.jpg", size: "md" },
+                        { title: "КОНЬЯК", image: "images/content/category_item_image_03.jpg", size: "md" },
+                        { title: "КРЕПКИЕ НАПИТКИ (РОМ, ТЕКИЛЛА, ДЖИН, ГРАППА, САМБУКА, И ДР.)", image: "images/content/category_item_image_04.jpg", size: "sm" },
+                        { title: "ЛИКЕРЫ", image: "images/content/category_item_image_05.jpg", size: "sm" },
+                        { title: "ШАМПАНСКОЕ", image: "images/content/category_item_image_06.jpg", size: "md" },
+                        { title: "ВОДКА", image: "images/content/category_item_image_07.jpg", size: "sm" }
                     ].map((category, index) => (
                         <SwiperSlide key={index}>
                             <a href="#" className={`category-item category-item--${category.size}`}>
