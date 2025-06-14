@@ -340,8 +340,25 @@ const IndexPage: NextPage = () => {
 
                 <Swiper
                     modules={[Navigation]}
-                    spaceBetween={50}
+                    observer={true}
+                    observeParents={true}
                     slidesPerView={"auto"}
+                    spaceBetween={10}
+                    speed={800}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 'auto',
+                            spaceBetween: 20,
+                        },
+                        1240: {
+                            slidesPerView: 6,
+                            spaceBetween: 30,
+                        },
+                        1600: {
+                            slidesPerView: 6,
+                            spaceBetween: 50,
+                        },
+                    }}
                     className="swiper"
                     data-brands
                 >
