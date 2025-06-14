@@ -337,7 +337,21 @@ const IndexPage: NextPage = () => {
                   <div className="section__header">
                       <h2 className="section__title">Популярные бренды</h2>
                   </div>
-                  
+
+                  <div className="swiper" data-brands>
+                      <div className="swiper-wrapper">
+                          {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                              <div className="swiper-slide" key={num}>
+                                  <div className="brand">
+                                      <div className="brand__logo">
+                                          <img src={`images/content/brands/brand_logo__${num.toString().padStart(2, '0')}.png`}
+                                            className="img-contain" alt="" />
+                                      </div>
+                                  </div>
+                              </div>
+                          ))}
+                      </div>
+                  </div>                  
               </div>
           </div> {/* Популярные бренды */}
 

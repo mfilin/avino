@@ -5,11 +5,11 @@ const WineLibraryBanner: React.FC = () => {
         <>
             <div className="wine-library">
                 <div className="wine-library__bg">
-                    <img src="img/wine_library.jpg" className="img-cover" alt="" />
+                    <img src="images/wine_library.jpg" className="img-cover" alt="" />
                 </div>
                 <div className="wine-library__media">
                     <div className="wine-library__icon">
-                        <img src="img/wine_library_icon.svg" className="img-fluid" alt="" />
+                        <img src="images/wine_library_icon.svg" className="img-fluid" alt="" />
                     </div>
                 </div>
                 <div className="wine-library__content">

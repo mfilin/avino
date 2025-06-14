@@ -6,7 +6,7 @@ const HowBuyBanner: React.FC = () => {
             <div className="how-buy">
                 <div className="how-buy__header">
                     <div className="how-buy__media">
-                        <img src="img/how_buy_image.jpg" className="img-fluid" alt="" />
+                        <img src="images/how_buy_image.jpg" className="img-fluid" alt="" />
                     </div>
                     <div className="how-buy__title">Как купить?</div>
                 </div>
