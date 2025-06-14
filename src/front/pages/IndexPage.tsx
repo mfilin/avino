@@ -332,149 +332,151 @@ const IndexPage: NextPage = () => {
           
           {/* Вас могут заинтересовать */}
 
-        <div className="section">
-            <div className="container">
-                <div className="section__header">
-                    <h2 className="section__title">Популярные бренды</h2>
-                </div>
+          <div className="section">
+              <div className="container">
+                  <div className="section__header">
+                      <h2 className="section__title">Популярные бренды</h2>
+                  </div>
 
-                <Swiper
-                    modules={[Navigation]}
-                    observer={true}
-                    observeParents={true}
-                    slidesPerView={"auto"}
-                    spaceBetween={10}
-                    speed={800}
-                    breakpoints={{
-                        768: {
-                            slidesPerView: 'auto',
-                            spaceBetween: 20,
-                        },
-                        1240: {
-                            slidesPerView: 6,
-                            spaceBetween: 30,
-                        },
-                        1600: {
-                            slidesPerView: 6,
-                            spaceBetween: 50,
-                        },
-                    }}
-                    className="swiper"
-                    data-brands
-                >
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-                        <SwiperSlide key={num}>
-                            <div className="brand">
-                                <div className="brand__logo">
-                                    <img src={`images/content/brands/brand_logo__${num.toString().padStart(2, '0')}.png`}
-                                      className="img-contain" alt="" />
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </div> {/* Популярные бренды */}
+                  <Swiper
+                      modules={[Navigation]}
+                      observer={true}
+                      observeParents={true}
+                      slidesPerView={"auto"}
+                      spaceBetween={10}
+                      speed={800}
+                      breakpoints={{
+                          768: {
+                              slidesPerView: 'auto',
+                              spaceBetween: 20,
+                          },
+                          1240: {
+                              slidesPerView: 6,
+                              spaceBetween: 30,
+                          },
+                          1600: {
+                              slidesPerView: 6,
+                              spaceBetween: 50,
+                          },
+                      }}
+                      className="swiper"
+                      data-brands
+                  >
+                      {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                          <SwiperSlide key={num}>
+                              <div className="brand">
+                                  <div className="brand__logo">
+                                      <img src={`images/content/brands/brand_logo__${num.toString().padStart(2, '0')}.png`}
+                                        className="img-contain" alt="" />
+                                  </div>
+                              </div>
+                          </SwiperSlide>
+                      ))}
+                  </Swiper>
+              </div>
+          </div> {/* Популярные бренды */}
 
-        <div className="section">
-            <div className="container">
-                <div className="section-wrapper">
-                    <HowBuyBanner />
-                    <WineLibraryBanner />
-                </div>
-            </div>
-        </div>{/* статьи */}
+          <div className="section">
+              <div className="container">
+                  <div className="section-wrapper">
+                      <HowBuyBanner />
+                      <WineLibraryBanner />
+                  </div>
+              </div>
+          </div>{/* статьи */}
 
-        <div className="section section--sm">
-            <div className="container">
-                <div className="lead">
-                    <span>Мы занимаемся подъемом вашего</span>
-                    <span>настроения и приносим радость</span>
-                    <span>в ваши дружные компании</span>
-                </div>
-                <div className="data">
-                    <div className="data__lead">10+ лет</div>
-                    <div className="data__features">
-                        <div className="data__item">
-                            <div className="data__value">90%</div>
-                            <div className="data__text">
-                                наших клиентов возвращаются к нам за покупками после первой покупки
-                            </div>
-                        </div>
-                        <div className="data__item">
-                            <div className="data__value">10 000+</div>
-                            <div className="data__text">
-                                наименований алкоголя уже на нашей витрине, и мы постоянно расширяем ассортимент
-                            </div>
-                        </div>
-                        <div className="data__item">
-                            <div className="data__value">15 секунд</div>
-                            <div className="data__text">
-                                максимальное время ожидания оператора
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>{/* контент */}
+          <div className="section section--sm">
+              <div className="container">
+                  <div className="lead">
+                      <span>Мы занимаемся подъемом вашего</span>
+                      <span>настроения и приносим радость</span>
+                      <span>в ваши дружные компании</span>
+                  </div>
+                  <div className="data">
+                      <div className="data__lead">10+ лет</div>
+                      <div className="data__features">
+                          <div className="data__item">
+                              <div className="data__value">90%</div>
+                              <div className="data__text">
+                                  наших клиентов возвращаются к нам за покупками после первой покупки
+                              </div>
+                          </div>
+                          <div className="data__item">
+                              <div className="data__value">10 000+</div>
+                              <div className="data__text">
+                                  наименований алкоголя уже на нашей витрине, и мы постоянно расширяем ассортимент
+                              </div>
+                          </div>
+                          <div className="data__item">
+                              <div className="data__value">15 секунд</div>
+                              <div className="data__text">
+                                  максимальное время ожидания оператора
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>{/* контент */}
 
-        <div className="section">
-            <div className="container">
-                <div className="section__header section__header--sm">
-                    <div className="section__title section__title--sm">Новости из мира алкоголя Виноград не Виноват</div>
-                    <div className="d-none d-xl-flex align-center column-gap-30">
-                        <button type="button" className="btn-nav" data-news-prev>
-                            <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
-                                <use xlinkHref="images/sprites/sprite.svg#nav_prev" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
-                            </svg>
-                        </button>
-                        <button type="button" className="btn-nav" data-news-next>
-                            <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
-                                <use xlinkHref="images/sprites/sprite.svg#nav_next" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                
-                <Swiper
-                    modules={[Navigation]}
-                    spaceBetween={30}
-                    slidesPerView={"auto"}
-                    navigation={{
-                        prevEl: '[data-news-prev]',
-                        nextEl: '[data-news-next]'
-                    }}
-                    className="swiper"
-                    data-news
-                >
-                    {[
-                        { id: 1, image: "images/content/news/news_image__01.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
-                        { id: 2, image: "images/content/news/news_image__02.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 3, image: "images/content/news/news_image__03.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 4, image: "images/content/news/news_image__04.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
-                        { id: 5, image: "images/content/news/news_image__05.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 6, image: "images/content/news/news_image__06.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 7, image: "images/content/news/news_image__01.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
-                        { id: 8, image: "images/content/news/news_image__02.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 9, image: "images/content/news/news_image__03.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 10, image: "images/content/news/news_image__04.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
-                        { id: 11, image: "images/content/news/news_image__05.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
-                        { id: 12, image: "images/content/news/news_image__06.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" }
-                    ].map((news) => (
-                        <SwiperSlide key={news.id}>
-                            <a href="#" className={`news-item${news.size ? ` news-item--${news.size}` : ''}`}>
-                                <i className="news-item__image">
-                                    <img src={news.image} className="img-fluid" alt="" />
-                                </i>
-                                <span className="news-item__title">
-                                    {news.title}
-                                </span>
-                            </a>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-        </div> {/* Новости */}
+          <div className="section">
+              <div className="container">
+                  <div className="section__header section__header--sm">
+                      <div className="section__title section__title--sm">Новости из мира алкоголя Виноград не Виноват</div>
+                      <div className="d-none d-xl-flex align-center column-gap-30">
+                          <button type="button" className="btn-nav" data-news-prev>
+                              <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
+                                  <use xlinkHref="images/sprites/sprite.svg#nav_prev" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                          </button>
+                          <button type="button" className="btn-nav" data-news-next>
+                              <svg className="ico-svg" viewBox="0 0 22 12" xmlns="http://www.w3.org/2000/svg">
+                                  <use xlinkHref="images/sprites/sprite.svg#nav_next" xmlnsXlink="http://www.w3.org/1999/xlink"></use>
+                              </svg>
+                          </button>
+                      </div>
+                  </div>
+                  
+                  <Swiper
+                      modules={[Navigation]}
+                      spaceBetween={30}
+                      slidesPerView={"auto"}
+                      navigation={{
+                          prevEl: '[data-news-prev]',
+                          nextEl: '[data-news-next]'
+                      }}
+                      className="swiper"
+                      data-news
+                  >
+                      {[
+                          { id: 1, image: "images/content/news/news_image__01.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
+                          { id: 2, image: "images/content/news/news_image__02.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 3, image: "images/content/news/news_image__03.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 4, image: "images/content/news/news_image__04.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
+                          { id: 5, image: "images/content/news/news_image__05.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 6, image: "images/content/news/news_image__06.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 7, image: "images/content/news/news_image__01.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
+                          { id: 8, image: "images/content/news/news_image__02.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 9, image: "images/content/news/news_image__03.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 10, image: "images/content/news/news_image__04.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "md" },
+                          { id: 11, image: "images/content/news/news_image__05.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" },
+                          { id: 12, image: "images/content/news/news_image__06.jpg", title: "Ирландские виски Bohemia. Изысканность в каждой капле.", size: "" }
+                      ].map((news) => (
+                          <SwiperSlide key={news.id}>
+                              <a href="#" className={`news-item${news.size ? ` news-item--${news.size}` : ''}`}>
+                                  <i className="news-item__image">
+                                      <img src={news.image} className="img-fluid" alt="" />
+                                  </i>
+                                  <span className="news-item__title">
+                                      {news.title}
+                                  </span>
+                              </a>
+                          </SwiperSlide>
+                      ))}
+                  </Swiper>
+              </div>
+          </div> {/* Новости */}
+
+          <Footer pageProps={pageProps} />
 
           {/* <FadeLayout>
             <MainPageContainer pageProps={pageProps} />

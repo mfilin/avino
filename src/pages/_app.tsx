@@ -70,7 +70,9 @@ export default function MyApp({ Component, pageProps }) {
                 {process.env.NODE_ENV === 'development' ? (
                   <ReactQueryDevtools />
                 ) : null}
+
                 <CatalogFiltersProvider pageProps={pageProps} />
+                
                 <SearchBarProvider>
                   <BodyControlProvider
                     onChangeScrollFreezeMode={changeScrollFreezeMode}
@@ -91,6 +93,7 @@ export default function MyApp({ Component, pageProps }) {
                     <Component {...pageProps} />
                   </BodyControlProvider>
                 </SearchBarProvider>
+                
               </DrawerProvider>
             </UserDataStoreProvider>
           </WindowSizeProvider>
