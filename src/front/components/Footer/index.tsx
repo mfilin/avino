@@ -96,7 +96,7 @@ const Footer: React.FC<IOwnProps> = (props) => {
                 <a href="#" className="footer-messenger">
                     <i>
                         <svg className="ico-svg" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
-                            <use xlinkHref="img/sprites/sprite.svg#whatsapp" />
+                            <use xlinkHref="images/sprites/sprite.svg#whatsapp" />
                         </svg>
                     </i>
                     <span>WhatsApp</span>
@@ -104,7 +104,7 @@ const Footer: React.FC<IOwnProps> = (props) => {
                 <a href="#" className="footer-messenger">
                     <i>
                         <svg className="ico-svg" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
-                            <use xlinkHref="img/sprites/sprite.svg#telegram" />
+                            <use xlinkHref="images/sprites/sprite.svg#telegram" />
                         </svg>
                     </i>
                     <span>Telegram</span>
