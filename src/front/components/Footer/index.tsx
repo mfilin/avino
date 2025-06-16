@@ -54,9 +54,9 @@ const Footer: React.FC<IOwnProps> = (props) => {
     return res;
   }, [catalog, topMenuItems]);
 
-  if (isMobile) {
-    return <FooterMobile />;
-  }
+  // if (isMobile) {
+  //   return <FooterMobile />;
+  // }
 
   return (
     <>
