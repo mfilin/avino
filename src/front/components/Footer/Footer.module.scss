@@ -1,34 +1,4 @@
-.Footer {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background: #111;
-  padding: 112px 0;
-  color: #fff;
-  margin-top: 200px;
-  justify-content: center;
-  //background: #111 url(/images/footer-bg.jpg) 50% 50% no-repeat;
 
-  .SpaceBar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .Columns {
-      display: flex;
-      justify-content: center;
-      //flex: 1;
-    }
-
-    .BottomBar {
-      display: flex;
-      //flex: 1;
-      justify-content: space-between;
-      margin-top: 24px;
-    }
-  }
-}
 .Warning {
   height: 135px;
   display: flex;

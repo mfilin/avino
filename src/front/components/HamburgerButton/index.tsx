@@ -4,6 +4,7 @@ import { Burger } from '../../elements';
 import styles from './HamburgerButton.module.scss';
 import clsx from 'clsx';
 
+
 interface IOwnProps {
   caption: string;
   isOpen: boolean;
