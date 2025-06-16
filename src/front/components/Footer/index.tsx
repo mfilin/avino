@@ -54,6 +54,8 @@ const Footer: React.FC<IOwnProps> = (props) => {
     return res;
   }, [catalog, topMenuItems]);
 
+  console.log(topMenuItems);
+
   if (isMobile) {
     return <FooterMobile />;
   }
@@ -110,7 +112,8 @@ const Footer: React.FC<IOwnProps> = (props) => {
                     <span>Telegram</span>
                 </a>
             </div>
-            <div className="footer__main">             
+            <div className="footer__main">
+
                 {topMenuItems?.map((item, index) => {
                   return (
                     <div className={`footer-nav footer-nav--${index + 1}`}>
