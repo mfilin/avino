@@ -34,6 +34,7 @@ const queryClient = new QueryClient({
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  
   // const [queryClient] = React.useState(
   //   () =>
   //     new QueryClient({
@@ -48,9 +49,11 @@ export default function MyApp({ Component, pageProps }) {
   const changeScrollFreezeMode = React.useMemo(() => {
     return (shouldFreezeScroll: boolean) => {
       if (shouldFreezeScroll) {
-        document.body.classList.add('scroll-freeze');
+        //document.body.classList.add('scroll-freeze');
+        document.body.classList.add('header-white', 'header-scroll');
       } else {
-        document.body.classList.remove('scroll-freeze');
+        //document.body.classList.remove('scroll-freeze');
+        document.body.classList.remove('header-white', 'header-scroll');
       }
     };
   }, []);
