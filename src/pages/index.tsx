@@ -6,7 +6,6 @@ export const getStaticProps = async (params) => {
   return {
     props: {
       ...props,
-      shouldFreezeScroll: true,
       isMobile: false, // DESKTOP LAYOUT
     },
     // revalidate: 30,

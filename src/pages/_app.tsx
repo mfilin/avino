@@ -49,11 +49,9 @@ export default function MyApp({ Component, pageProps }) {
   const changeScrollFreezeMode = React.useMemo(() => {
     return (shouldFreezeScroll: boolean) => {
       if (shouldFreezeScroll) {
-        //document.body.classList.add('scroll-freeze');
-        document.body.classList.add('header-white', 'header-scroll');
+        document.body.classList.add('scroll-freeze');        
       } else {
-        //document.body.classList.remove('scroll-freeze');
-        document.body.classList.remove('header-white', 'header-scroll');
+        document.body.classList.remove('scroll-freeze');        
       }
     };
   }, []);
@@ -69,7 +67,9 @@ export default function MyApp({ Component, pageProps }) {
           <WindowSizeProvider defaultIsMobile={pageProps.isMobile}>
             <UserDataStoreProvider>
               <DrawerProvider>
+
                 <AdultDisclaimer />
+
                 {process.env.NODE_ENV === 'development' ? (
                   <ReactQueryDevtools />
                 ) : null}
@@ -93,7 +93,9 @@ export default function MyApp({ Component, pageProps }) {
                         {null}
                       </YandexMetricaProvider>
                     ) : null}
+
                     <Component {...pageProps} />
+                    
                   </BodyControlProvider>
                 </SearchBarProvider>
                 

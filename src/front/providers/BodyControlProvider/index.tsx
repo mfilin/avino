@@ -7,9 +7,8 @@ interface IOwnProps {
   onChangeScrollFreezeMode(shouldFreezeScroll: boolean): void;
 }
 
-const BodyControlProvider: React.FC<React.PropsWithChildren<IOwnProps>> = (
-  props,
-) => {
+const BodyControlProvider: React.FC<React.PropsWithChildren<IOwnProps>> = ( props ) => {
+  
   const { onChangeScrollFreezeMode, children } = props;
 
   const control: IBodyControl = React.useMemo(() => {
