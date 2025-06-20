@@ -27,25 +27,6 @@ const IndexPage: NextPage = () => {
   const router = useRouter();
   const { pageProps } = usePortalStatic();  
   
-  // Add scroll event listener to add header classes when scrolled
-  //useEffect(() => {
-  //     const handleScroll = () => {
-  //       if (window.scrollY > 0) {
-  //         document.body.classList.add('header-white', 'header-scroll');
-  //       } else {
-  //         document.body.classList.remove('header-white', 'header-scroll');
-  //       }
-  //     };
-  //     // Add event listener
-  //     window.addEventListener('scroll', handleScroll);        
-  //     // Call once on mount to set initial state
-  //     handleScroll();
-  //     // Clean up
-  //     return () => {
-  //       window.removeEventListener('scroll', handleScroll);
-  //     };
-  //}, []);
-
   return (
     <div className="root">
       <NextSeo
