@@ -30,7 +30,7 @@ interface IOwnProps {
 
 const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
   const [currentPopularTab, setCurrentPopularTab] = React.useState('wine-all');
-  const { isMobile } = useDeviceInfo();
+  //const { isMobile } = useDeviceInfo();
 
   const { products: popularProducts, isLoading: popularProductsLoading } =
     usePopularProducts(currentPopularTab);
@@ -42,11 +42,11 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
   }, []);
   return (
     <>
-      <div
+      {/* <div
         className={clsx(styles.MainPageContainer, {
           [styles.MobileView]: isMobile,
         })}
-      >
+      > */}
 
             <div className="primary">
                 <Swiper
@@ -479,7 +479,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div> {/* Новости */}
 
-        
+
         {/* <MainBanners />
         <PopularCategories cache={pageProps.settings?.categories} />
         <AddUsToFavorite onSubscribe={() => console.log('subscribe!')} />
@@ -493,7 +493,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
         />
         <HowToCreateOrder /> */}
 
-      </div>
+      {/* </div> */}
     </>
   );
 };
