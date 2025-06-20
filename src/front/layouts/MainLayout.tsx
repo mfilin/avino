@@ -37,7 +37,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, haveHeadPanel = true 
   return (
     <>
       <HeaderContainer pageProps={pageProps} />
-      <main>{children}</main>
+      {children}
       <Footer pageProps={pageProps} />
     </>
   );
