@@ -29,8 +29,9 @@ import CatalogHeader from '../../components/CatalogHeader';
 import { Breadcrumbs } from '../../../../../components';
 import { useBreadcrumbedSlugs } from '../../../../../hooks/useBreadcrumbedSlugs';
 import { IBreadcrumb } from '../../../../../components/Breadcrumbs';
+import { useTaxonDescription } from '../../../../../hooks/useTaxonDescription';
 
-import styles from './CatalogContainer.module.scss';
+import styles from './Catalog2Container.module.scss';
 import {
   IBreadcrumbSlug,
   SlugControl,
@@ -50,6 +51,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
   const [listType, setListType] = React.useState<TCatalogListType>('blocks');
   const slugs = useRouteSlugsDecoded();
   const { decodedSlugs, parents } = useSlugDecode(slugs);
+  
 
   // TODO: Моргает когда меняешь категории в фильтрах! Нужно задерживать
   //  H1 заголовок при переключениях
@@ -132,6 +134,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
   const filters = pageProps.settings?.categories?.filters;
   const [queryCategory] = slugs;
+  const catalogKey = parents[queryCategory]?.[0] || queryCategory;
+  const { description } = useTaxonDescription(catalogKey);
 
   const filtersKey = parents[queryCategory]?.[0] || queryCategory;
 
@@ -144,16 +148,10 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
         nofollow={breadcrumbPathSize > 4 || hasSameCategory}
       />
 
-      <div className={styles.Breadcrumb}>
-        {breadCrumbs.length ? (
-          <Breadcrumbs withHome items={breadCrumbs} />
-        ) : (
-          <div className={styles.BreadcrumbPlaceholder}>{NBSP}</div>
-        )}
-      </div>
-
       <CatalogHeader
         label={slugControl.categoryLabel}
+        description={description?.[catalogKey]?.descr}
+        breadCrumbs={breadCrumbs}
         total={productsPage?.total}
       />
             

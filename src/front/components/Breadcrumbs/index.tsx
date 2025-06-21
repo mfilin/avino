@@ -21,23 +21,29 @@ const Breadcrumbs: React.FC<IOwnProps> = (props) => {
   const { items, withHome } = props;
 
   return (
-    <div>
-      <NextuiBreadcrumbs>
-        {withHome ? (
-          <BreadcrumbItem>
-            <ShallowLink href={Config.basePath || '/'}>
-              <HomeIconSvg />
-            </ShallowLink>
-          </BreadcrumbItem>
-        ) : null}
-        {items.map((item: IBreadcrumb, index: number) => {
-          return (
-            <BreadcrumbItem key={`breadcrumb-${index}`}>
-              <ShallowLink href={item.link}>{item.label}</ShallowLink>
+    <div className="heading__breadcrumb">
+      <ol className="breadcrumb breadcrumb--white">
+        <NextuiBreadcrumbs>
+          {withHome ? (
+            <BreadcrumbItem>
+              <li className="breadcrumb__item">
+                <ShallowLink href={Config.basePath || '/'}>
+                  Главная
+                </ShallowLink>
+              </li>
             </BreadcrumbItem>
-          );
-        })}
-      </NextuiBreadcrumbs>
+          ) : null}
+          {items.map((item: IBreadcrumb, index: number) => {
+            return (
+              <BreadcrumbItem key={`breadcrumb-${index}`}>
+                <li className="breadcrumb__item">
+                  <ShallowLink href={item.link}>{item.label}</ShallowLink>
+                </li>
+              </BreadcrumbItem>
+            );
+          })}
+        </NextuiBreadcrumbs>
+      </ol>
     </div>
   );
 };
