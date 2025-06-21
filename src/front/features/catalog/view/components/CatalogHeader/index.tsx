@@ -16,19 +16,6 @@ const CatalogHeader: React.FC<IOwnProps> = (props) => {
   const { label, description, breadCrumbs, total } = props;
 
   return (
-    // <div className={styles.CatalogHeader}>
-    //   <h1>{label ? label : NBSP}</h1>
-    //   <div className={styles.Total}>Найдено {total} записей</div>
-    // </div>
-
-    // <div className="heading__content">
-    //   <h1 className="heading__title">{label ? label : NBSP}</h1>
-    //   <div className="heading__text">
-    //     {description ? description : NBSP}
-    //   </div>
-    // </div>
-
-
     <div className="heading">
       <div className="heading__body">
         <div className="container">
@@ -41,7 +28,7 @@ const CatalogHeader: React.FC<IOwnProps> = (props) => {
               <div className="heading__content">
                   <h1 className="heading__title">{label ? label : NBSP}</h1>
                   <div className="heading__text">
-                    {description ? description : NBSP}
+                    {description ? <div dangerouslySetInnerHTML={{ __html: description }} /> : NBSP}
                   </div>
               </div>
             </div>

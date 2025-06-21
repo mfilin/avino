@@ -129,7 +129,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <use
-                    xlinkHref="img/sprites/sprite.svg#header_burger"
+                    xlinkHref="images/sprites/sprite.svg#header_burger"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                   ></use>
                 </svg>
@@ -142,7 +142,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_search"
+                      xlinkHref="images/sprites/sprite.svg#header_search"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
@@ -156,7 +156,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_pin"
+                      xlinkHref="images/sprites/sprite.svg#header_pin"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
@@ -202,7 +202,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_search"
+                      xlinkHref="images/sprites/sprite.svg#header_search"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
@@ -216,7 +216,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_heart"
+                      xlinkHref="images/sprites/sprite.svg#header_heart"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
@@ -230,7 +230,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_user"
+                      xlinkHref="images/sprites/sprite.svg#header_user"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
@@ -244,7 +244,7 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <use
-                      xlinkHref="img/sprites/sprite.svg#header_bag"
+                      xlinkHref="images/sprites/sprite.svg#header_bag"
                       xmlnsXlink="http://www.w3.org/1999/xlink"
                     ></use>
                   </svg>
