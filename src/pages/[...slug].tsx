@@ -58,7 +58,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
       {router.isFallback || isPortalStaticLoading ? (
         <LoadingIndicator />
       ) : (
-        <>
+        <div className="root">
           <HeaderContainer pageProps={pageProps} />
 
           {pageType === 'product' ? (
@@ -93,8 +93,8 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
                 
               )}
             </MainLayout>
-          ) : null}          
-        </>
+          ) : null}
+        </div>
       )}
     </>
   );
