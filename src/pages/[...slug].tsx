@@ -28,7 +28,7 @@ import MainLayout from '../front/layouts/MainLayout';
 
 const { TopMenuContainer } = featureHeader.containers;
 const { HeaderContainer } = featureHeader.containers;
-const { CatalogContainer, MobileCatalogContainer } = featureCatalog.containers;
+const { CatalogContainer, Catalog2Container, MobileCatalogContainer } = featureCatalog.containers;
 const { SingleProductContainer } = featureSingleProduct.containers;
 
 interface ICatalogPageProps {
@@ -53,47 +53,50 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
     return decodeAddrAndSlug(category, decodedSlugs, parents);
   }, [category, decodedSlugs]);
 
-  console.log(slugs, pageType, id);
-
   return (
-    <></>
+    <div>
+      {router.isFallback || isPortalStaticLoading ? (
+        <LoadingIndicator />
+      ) : (
+        <>
+          <HeaderContainer pageProps={pageProps} />
+          {pageType === 'product' ? (
+            <SingleProductContainer
+              pageProps={pageProps}
+              productId={Number(id)}
+            />
+          ) : null}
+          {pageType === 'catalog' ? (
+            <MainLayout haveHeadPanel={true}>
+              {isMobile ? (
+                <MobileCatalogContainer
+                  pageProps={pageProps}
+                  baseCatalog={props.catalog?.slug || ''}
+                  filterSlug={decodedSlugs}
+                />
+              ) : (
+                
+                (slugs as string[]).length === 1 ? (
+                  <Catalog2Container
+                    pageProps={pageProps}
+                    baseCatalog={props.catalog?.slug || ''}
+                    filterSlug={decodedSlugs}
+                  />
+                ) : (
+                  <CatalogContainer
+                    pageProps={pageProps}
+                    baseCatalog={props.catalog?.slug || ''}
+                    filterSlug={decodedSlugs}
+                  />
+                )
+                
+              )}
+            </MainLayout>
+          ) : null}          
+        </>
+      )}
+    </div>
   );
-
-  // return (
-  //   <div>
-  //     {router.isFallback || isPortalStaticLoading ? (
-  //       <LoadingIndicator />
-  //     ) : (
-  //       <>
-  //         <HeaderContainer pageProps={pageProps} />
-  //         {pageType === 'product' ? (
-  //           <SingleProductContainer
-  //             pageProps={pageProps}
-  //             productId={Number(id)}
-  //           />
-  //         ) : null}
-  //         {pageType === 'catalog' ? (
-  //           <MainLayout haveHeadPanel={true}>
-  //             {isMobile ? (
-  //               <MobileCatalogContainer
-  //                 pageProps={pageProps}
-  //                 baseCatalog={props.catalog?.slug || ''}
-  //                 filterSlug={decodedSlugs}
-  //               />
-  //             ) : (
-  //               <CatalogContainer
-  //                 pageProps={pageProps}
-  //                 baseCatalog={props.catalog?.slug || ''}
-  //                 filterSlug={decodedSlugs}
-  //               />
-  //             )}
-  //           </MainLayout>
-  //         ) : null}          
-  //       </>
-  //     )}
-  //   </div>
-  // );
-
 };
 
 // Revalidate cache (cache can be recreated directly for each route)
