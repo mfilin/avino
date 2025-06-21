@@ -70,9 +70,9 @@ export default function MyApp({ Component, pageProps }) {
 
                 <AdultDisclaimer />
 
-                {/* {process.env.NODE_ENV === 'development' ? ( */}
+                {process.env.NODE_ENV === 'development' ? (
                   <ReactQueryDevtools />
-                {/* ) : null} */}
+                ) : null}
 
                 <CatalogFiltersProvider pageProps={pageProps} />
                 
