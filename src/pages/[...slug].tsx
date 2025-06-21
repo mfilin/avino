@@ -26,8 +26,6 @@ import { routeSlugToArray } from '../front/utils/slug';
 import { IDecodePortalSlugResult } from '../front/api/types/portal';
 import MainLayout from '../front/layouts/MainLayout';
 
-import '../front/styles/main.css';
-
 const { TopMenuContainer } = featureHeader.containers;
 const { HeaderContainer } = featureHeader.containers;
 const { CatalogContainer, Catalog2Container, MobileCatalogContainer } = featureCatalog.containers;
@@ -56,7 +54,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
   }, [category, decodedSlugs]);
 
   return (
-    <div className="root">
+    <>
       {router.isFallback || isPortalStaticLoading ? (
         <LoadingIndicator />
       ) : (
@@ -98,7 +96,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
           ) : null}          
         </>
       )}
-    </div>
+    </>
   );
 };
 
