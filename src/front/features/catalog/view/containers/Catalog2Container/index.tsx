@@ -156,45 +156,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
         label={slugControl.categoryLabel}
         total={productsPage?.total}
       />
-      <FiltersContext.Provider value={filtersControl}>
-        <ModalsContext.Provider value={modalsControl}>
-          {Boolean(filters[filtersKey]) ? (
-            <>
-              <CatalogFilterModals
-                pageProps={pageProps}
-                controls={modalsControl}
-              />
-              <CatalogControlPanel
-                categoryKey={filtersKey}
-                category={filters[filtersKey]}
-                openFiltersDrawer={handleToggleFiltersDrawer}
-              />
-            </>
-          ) : null}
-          <CatalogSettingsBar
-            pageCountSetting={PAGE_COUNT_SETTING}
-            listType={listType}
-            pageSize={pageSize}
-            onChangePageSize={setPageSize}
-            onChangeListType={setListType}
-          />
-          <CatalogProducts
-            products={productsPage?.items}
-            listType={listType}
-            // onLoadMore={showLoadMore && handleLoadMore}
-          />
-          {productsPage ? (
-            <CatalogNaviBar
-              total={productsPage.total}
-              page={+productsPage.page}
-              pageSize={pageSize}
-              loaded={productsPage.items?.length}
-              onChangePage={handleChangePage}
-            />
-          ) : null}
-          <HowToCreateOrder />
-        </ModalsContext.Provider>
-      </FiltersContext.Provider>
+            
     </>
   );
 };
