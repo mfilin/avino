@@ -30,8 +30,6 @@ const IndexPage: NextPage = () => {
         <MainLayout haveHeadPanel={true}>
           <MainPageContainer pageProps={pageProps} />
 
-            <Footer pageProps={pageProps} />
-
             {/* <FadeLayout>
                 <MainPageContainer pageProps={pageProps} />
                 <MobileBottomMenu />
