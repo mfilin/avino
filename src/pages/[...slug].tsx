@@ -67,7 +67,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
             />
           ) : null}
           {pageType === 'catalog' ? (
-            <MainLayout>
+            <MainLayout haveHeadPanel={true}>
               {isMobile ? (
                 <MobileCatalogContainer
                   pageProps={pageProps}
@@ -82,36 +82,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
                 />
               )}
             </MainLayout>
-          ) : null}
-
-          {/* <TopMenuContainer pageProps={pageProps} />
-          <FadeLayout>
-            {pageType === 'product' ? (
-              <SingleProductContainer
-                pageProps={pageProps}
-                productId={Number(id)}
-              />
-            ) : null}
-            {pageType === 'catalog' ? (
-              <Layout>
-                {isMobile ? (
-                  <MobileCatalogContainer
-                    pageProps={pageProps}
-                    baseCatalog={props.catalog}
-                    filterSlug={decodedSlugs}
-                  />
-                ) : (
-                  <CatalogContainer
-                    pageProps={pageProps}
-                    baseCatalog={props.catalog}
-                    filterSlug={decodedSlugs}
-                  />
-                )}
-              </Layout>
-            ) : null}
-            <MobileBottomMenu />
-            <Footer pageProps={pageProps} />
-          </FadeLayout> */}
+          ) : null}          
         </>
       )}
     </div>
