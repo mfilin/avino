@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Breadcrumbs as NextuiBreadcrumbs,
-  BreadcrumbItem,
-} from '@nextui-org/react';
 import Config from '../../config';
-import HomeIconSvg from '../../images/home.svg';
 import ShallowLink from '../../elements/ShallowLink';
 
 export interface IBreadcrumb {
@@ -23,26 +18,21 @@ const Breadcrumbs: React.FC<IOwnProps> = (props) => {
   return (
     <div className="heading__breadcrumb">
       <ol className="breadcrumb breadcrumb--white">
-        <NextuiBreadcrumbs>
-          {withHome ? (
-            <BreadcrumbItem>
-              <li className="breadcrumb__item">
-                <ShallowLink href={Config.basePath || '/'}>
-                  Главная
-                </ShallowLink>
-              </li>
-            </BreadcrumbItem>
-          ) : null}
-          {items.map((item: IBreadcrumb, index: number) => {
-            return (
-              <BreadcrumbItem key={`breadcrumb-${index}`}>
-                <li className="breadcrumb__item">
-                  <ShallowLink href={item.link}>{item.label}</ShallowLink>
-                </li>
-              </BreadcrumbItem>
-            );
-          })}
-        </NextuiBreadcrumbs>
+        {withHome ? (
+          <li className="breadcrumb__item">
+            <ShallowLink href={Config.basePath || '/'} className="breadcrumb__link">
+              Главная
+            </ShallowLink>
+          </li>
+        ) : null}
+        
+        {items.map((item: IBreadcrumb, index: number) => (
+          <li key={`breadcrumb-${index}`} className="breadcrumb__item">
+            <ShallowLink href={item.link} className="breadcrumb__link">
+              {item.label}
+            </ShallowLink>
+          </li>
+        ))}
       </ol>
     </div>
   );

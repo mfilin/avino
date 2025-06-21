@@ -4,6 +4,7 @@ import Link, { LinkProps } from 'next/link';
 
 interface IOwnProps extends LinkProps {
   shallow?: boolean;
+  className?: string;
   openInNewTab?: boolean;
 }
 
@@ -12,6 +13,7 @@ const ShallowLink: React.FC<React.PropsWithChildren<IOwnProps>> = (props) => {
     children,
     href,
     shallow = true,
+    className,
     scroll,
     onClick,
     ...restProps
@@ -28,7 +30,7 @@ const ShallowLink: React.FC<React.PropsWithChildren<IOwnProps>> = (props) => {
   );
 
   return (
-    <Link {...restProps} href={href} onClick={handleClick} prefetch={false}>
+    <Link {...restProps} href={href} onClick={handleClick} prefetch={false} className={className ? className: ''}>
       {children}
     </Link>
   );
