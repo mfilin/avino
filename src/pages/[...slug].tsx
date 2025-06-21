@@ -24,6 +24,7 @@ import { PAGE_COUNT_SETTING } from '../const';
 import { useRouteSlugsDecoded } from '../front/hooks/useRouteSlugsDecoded';
 import { routeSlugToArray } from '../front/utils/slug';
 import { IDecodePortalSlugResult } from '../front/api/types/portal';
+import MainLayout from '../front/layouts/MainLayout';
 
 const { TopMenuContainer } = featureHeader.containers;
 const { HeaderContainer } = featureHeader.containers;
@@ -37,7 +38,7 @@ interface ICatalogPageProps {
   id?: string;
 }
 
-const CatalogPage: NextPage = (props: ICatalogPageProps) => {
+const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
   const router = useRouter();
   const slugs = useRouteSlugsDecoded();
 
@@ -66,21 +67,21 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
             />
           ) : null}
           {pageType === 'catalog' ? (
-            <Layout>
+            <MainLayout>
               {isMobile ? (
                 <MobileCatalogContainer
                   pageProps={pageProps}
-                  baseCatalog={props.catalog}
+                  baseCatalog={props.catalog?.slug || ''}
                   filterSlug={decodedSlugs}
                 />
               ) : (
                 <CatalogContainer
                   pageProps={pageProps}
-                  baseCatalog={props.catalog}
+                  baseCatalog={props.catalog?.slug || ''}
                   filterSlug={decodedSlugs}
                 />
               )}
-            </Layout>
+            </MainLayout>
           ) : null}
 
           {/* <TopMenuContainer pageProps={pageProps} />
@@ -256,7 +257,7 @@ export async function getServerSideProps(props: any) {
     );
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      console.error(new Error(`${error.message} for url ${error.config.url}`));
+      console.error(new Error(`${error.message} for url ${error.config?.url}`));
     } else {
       console.error(error);
     }
