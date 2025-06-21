@@ -54,12 +54,13 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
   }, [category, decodedSlugs]);
 
   return (
-    <div>
+    <div className="root">
       {router.isFallback || isPortalStaticLoading ? (
         <LoadingIndicator />
       ) : (
         <>
           <HeaderContainer pageProps={pageProps} />
+          
           {pageType === 'product' ? (
             <SingleProductContainer
               pageProps={pageProps}

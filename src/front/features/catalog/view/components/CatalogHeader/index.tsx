@@ -33,11 +33,11 @@ const CatalogHeader: React.FC<IOwnProps> = (props) => {
       <div className="heading__body">
         <div className="container">
             <div className="heading__main">
-                {breadCrumbs.length ? (
+               {breadCrumbs.length ? (
                   <Breadcrumbs withHome items={breadCrumbs} />
-                ) : (
-                  <div className={styles.BreadcrumbPlaceholder}>{NBSP}</div>
-                )}                    
+               ) : (
+                <div className={styles.BreadcrumbPlaceholder}>{NBSP}</div>
+               )}
               <div className="heading__content">
                   <h1 className="heading__title">{label ? label : NBSP}</h1>
                   <div className="heading__text">
