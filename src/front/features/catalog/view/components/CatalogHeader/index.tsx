@@ -51,7 +51,7 @@ const CatalogHeader: React.FC<IOwnProps> = (props) => {
           <img src="images/heading_image_sm.jpg" className="img-cover" alt="" />
       </div>
       <div className="heading__media heading__media--md">
-          <img src="imgages/heading_image.jpg" className="img-cover" alt="" />
+          <img src="images/heading_image.jpg" className="img-cover" alt="" />
       </div>
     </div>
   );
