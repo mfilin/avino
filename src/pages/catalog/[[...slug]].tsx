@@ -11,6 +11,7 @@ import featureHeader from '../../front/features/header';
 import featureCatalog from '../../front/features/catalog';
 import MobileBottomMenu from '../../front/components/MobileBottomMenu';
 import { PAGE_COUNT_SETTING } from '../../const';
+import MainLayout from '../../front/layouts/MainLayout';
 // import { IPageProps } from '../../types/portal/server';
 
 const { TopMenuContainer } = featureHeader.containers;
@@ -22,7 +23,8 @@ interface ICatalogPageProps {
   catalog?: Record<string, string>;
 }
 
-const CatalogPage: NextPage = (props: ICatalogPageProps) => {
+const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
+
   const router = useRouter();
 
   const { pageProps } = usePortalStatic();
@@ -33,13 +35,14 @@ const CatalogPage: NextPage = (props: ICatalogPageProps) => {
         <LoadingIndicator />
       ) : (
         <>
-          <Layout>
+          <MainLayout>
             <CatalogContainer
               pageProps={pageProps}
-              baseCatalog={props.catalog}
+              baseCatalog={props.catalog?.slug || ''}
               filterSlug={props.filters}
             />
-          </Layout>
+          </MainLayout>
+
           {/* <TopMenuContainer pageProps={pageProps} />
           <Layout>
             <CatalogContainer
@@ -99,6 +102,7 @@ export async function getStaticProps(props: any) {
     await queryClient.prefetchQuery(
       ['products', props.params.slug || ''],
       async () => {
+
         const result = await Api.instance.product.loadProducts(
           props.params.slug,
           {
@@ -134,6 +138,7 @@ export async function getStaticProps(props: any) {
       ['portal-static'],
       Api.instance.portal.loadPortalStatic,
     );
+
   } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error(new Error(`${error.message} for url ${error.config.url}`));
