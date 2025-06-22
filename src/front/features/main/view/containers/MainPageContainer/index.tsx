@@ -23,6 +23,7 @@ import HowBuyBanner from '../../components/HowBuyBanner';
 import WineLibraryBanner from '../../components/WineLibraryBanner';
 
 import styles from './MainPageContainer.module.scss';
+import CatalogLandingContainer from 'src/front/features/catalog/view/containers/CatalogLandingContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -151,101 +152,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div>{/*<-- .section main-swiper -->*/}
 
-            <div className="section section--first">
-                <div className="container">
-                    <Swiper
-                        modules={[Navigation, Pagination, Autoplay]}
-                        spaceBetween={72}
-                        slidesPerView={"auto"}
-                        navigation
-                        pagination={{ clickable: true }}
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
-                        className="swiper"
-                        data-links
-                    >
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__01.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Акции</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__02.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Как заказать</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__03.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Новинки</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__04.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Дегустация</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__05.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Коньяк</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__06.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Белое вино</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__07.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Портвейн</span>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <a href="#" className="link">
-                                <i className="link__media">
-                                    <i className="link__image">
-                                        <img src="images/links/link_image__08.jpg" className="img-cover" alt="" />
-                                    </i>
-                                </i>
-                                <span className="link__title">Красное вино</span>
-                            </a>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
-            </div>{/*<-- .section first-swiper -->*/}
+            <CatalogLandingContainer pageProps={pageProps} />
 
             <div className="section">
                 <div className="container">

@@ -36,6 +36,7 @@ import {
   IBreadcrumbSlug,
   SlugControl,
 } from '../../../../../../class/SlugControl';
+import CatalogLandingContainer from '../CatalogLandingContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -155,7 +156,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
         total={productsPage?.total}
       />
 
-      
+      <CatalogLandingContainer pageProps={pageProps} />
             
     </>
   );
