@@ -59,7 +59,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
         <LoadingIndicator />
       ) : (
         <div className="root">
-          
+
           <HeaderContainer pageProps={pageProps} />
 
           {pageType === 'product' ? (
@@ -68,10 +68,11 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
               productId={Number(id)}
             />
           ) : null}
+
           {pageType === 'catalog' ? (
             <MainLayout haveHeadPanel={true}>
                 
-                (slugs as string[]).length === 1 ? (
+                {(slugs as string[]).length === 1 ? (
                   <Catalog2Container
                     pageProps={pageProps}
                     baseCatalog={props.catalog?.slug || ''}
@@ -83,7 +84,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
                     baseCatalog={props.catalog?.slug || ''}
                     filterSlug={decodedSlugs}
                   />
-                )
+                )}
 
             </MainLayout>
           ) : null}
