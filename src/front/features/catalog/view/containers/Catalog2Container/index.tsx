@@ -154,6 +154,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
         breadCrumbs={breadCrumbs}
         total={productsPage?.total}
       />
+
+      
             
     </>
   );
