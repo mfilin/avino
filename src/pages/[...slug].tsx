@@ -46,7 +46,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
 
   const { decodedSlugs, parents, isLoading } = useSlugDecode(slugs);
 
-  const { isMobile } = useDeviceInfo();
+  //const { isMobile } = useDeviceInfo();
 
   const [category] = slugs;
   const [pageType, id]: [TPageType, string?] = React.useMemo(() => {
@@ -59,6 +59,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
         <LoadingIndicator />
       ) : (
         <div className="root">
+          
           <HeaderContainer pageProps={pageProps} />
 
           {pageType === 'product' ? (
@@ -69,13 +70,6 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
           ) : null}
           {pageType === 'catalog' ? (
             <MainLayout haveHeadPanel={true}>
-              {isMobile ? (
-                <MobileCatalogContainer
-                  pageProps={pageProps}
-                  baseCatalog={props.catalog?.slug || ''}
-                  filterSlug={decodedSlugs}
-                />
-              ) : (
                 
                 (slugs as string[]).length === 1 ? (
                   <Catalog2Container
@@ -90,8 +84,7 @@ const CatalogPage: NextPage<ICatalogPageProps> = (props) => {
                     filterSlug={decodedSlugs}
                   />
                 )
-                
-              )}
+
             </MainLayout>
           ) : null}
         </div>
