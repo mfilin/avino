@@ -24,7 +24,7 @@ interface IOwnProps {
 
 const HeaderContainer: React.FC<IOwnProps> = (props) => {
   const { pageProps } = props;
-  const { isMobile } = useDeviceInfo();
+  //const { isMobile } = useDeviceInfo();
 
   const router = useRouter();
 
@@ -103,18 +103,18 @@ const HeaderContainer: React.FC<IOwnProps> = (props) => {
     [setScrollableMode],
   );
 
-  if (isMobile) {
-    return (
-      <>
-        <WorkOnSiteDisclaimer isMobile={isMobile} />
-        <MobileHeader
-          catalog={pageProps.settings.categories['catalog']}
-          defaultValue={router.query.query as string}
-          onSearchBarEnter={handleSearchBarEnter}
-        />
-      </>
-    );
-  }
+  // if (isMobile) {
+  //   return (
+  //     <>
+  //       <WorkOnSiteDisclaimer isMobile={isMobile} />
+  //       <MobileHeader
+  //         catalog={pageProps.settings.categories['catalog']}
+  //         defaultValue={router.query.query as string}
+  //         onSearchBarEnter={handleSearchBarEnter}
+  //       />
+  //     </>
+  //   );
+  // }
 
   return (
     <>
