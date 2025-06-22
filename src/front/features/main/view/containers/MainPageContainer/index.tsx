@@ -23,7 +23,7 @@ import HowBuyBanner from '../../components/HowBuyBanner';
 import WineLibraryBanner from '../../components/WineLibraryBanner';
 
 import styles from './MainPageContainer.module.scss';
-import CatalogLandingContainer from 'src/front/features/catalog/view/containers/CatalogLandingContainer';
+import PromoContainer from 'src/front/features/promo/view/containers/PromoContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -152,7 +152,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div>{/*<-- .section main-swiper -->*/}
 
-            <CatalogLandingContainer pageProps={pageProps} />
+            <PromoContainer pageProps={pageProps} />
 
             <div className="section">
                 <div className="container">
