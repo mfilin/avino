@@ -8,3 +8,4 @@ export { default as LoadingIndicator } from './LoadingIndicator';
 export { default as Pagination } from './Pagination';
 export { default as ImageSafe } from './ImageSafe';
 export { default as Breadcrumbs } from './Breadcrumbs';
+export { default as ProductCard } from './ProductCard';

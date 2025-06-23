@@ -5,7 +5,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { IProduct } from '../api/types/product';
 import { PAGE_COUNT_SETTING } from '../../const';
 
-export function useNewProducts(pageSize: number = PAGE_COUNT_SETTING[0]) {
+export function useNewProducts(pageSize: number = PAGE_COUNT_SETTING[0], pageNumber: number = 1) {
   const queryClient = useQueryClient();
   const catalogKey = ['new-products', pageSize];
 
@@ -26,7 +26,7 @@ export function useNewProducts(pageSize: number = PAGE_COUNT_SETTING[0]) {
       }
 
       const result = await Api.instance.product.loadProducts([], {
-        page: 1,
+        page: pageNumber,
         order: 'is_new',
         size: pageSize,
       });

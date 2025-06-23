@@ -1,0 +1,8 @@
+.CatalogControlPanelOrderArrow {
+  display: flex;
+  flex-direction: column;
+
+  .ArrowDown {
+    transform: rotate(180deg);
+  }
+}

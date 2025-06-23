@@ -1,0 +1,28 @@
+.CatalogControlPanelSwitchers {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.28px;
+
+  .TransparentButton {
+    display: flex;
+    align-items: center;
+    color: #797979;
+    padding: 14px 24px;
+    border-radius: 2px;
+    border: 1px solid #797979;
+    cursor: pointer;
+
+    &_checked {
+      color: #35393e;
+      border: 2px solid #35393e;
+    }
+  }
+
+  .ArrowIcon {
+    margin-left: 10px;
+  }
+}

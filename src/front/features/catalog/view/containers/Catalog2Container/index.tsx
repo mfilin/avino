@@ -39,6 +39,7 @@ import {
 } from '../../../../../../class/SlugControl';
 import CatalogLandingContainer from '../CatalogLandingContainer';
 import NewProducts from '../NewProductsContainer';
+import CatalogBar from '../../components/CatalogBar';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -55,7 +56,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
   const slugs = useRouteSlugsDecoded();
   const { decodedSlugs, parents } = useSlugDecode(slugs);
 
-  const { products: newProducts, isLoading: newProductsLoading } = useNewProducts();
+  const { products: newProducts, isLoading: newProductsLoading } = useNewProducts(10);
+  const { products: newProducts2, isLoading: newProductsLoading2 } = useNewProducts(10, 2);
   
 
   // TODO: Моргает когда меняешь категории в фильтрах! Нужно задерживать
@@ -162,8 +164,19 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
       <CatalogLandingContainer pageProps={pageProps} />
 
-      <NewProducts products={newProducts} isFetching={newProductsLoading} />
-            
+      <div className="section" data-catalog="">
+        <CatalogBar categoryKey={catalogKey} category={filters[queryCategory]} openFiltersDrawer={handleToggleFiltersDrawer} />
+        <div className="container">
+            <div className="catalog-grid-v2">
+              <NewProducts products={newProducts} isFetching={newProductsLoading} />
+
+              {/* статья */}
+
+              <NewProducts products={newProducts2} isFetching={newProductsLoading2} />
+            </div>
+          </div>
+      </div>
+
     </>
   );
 };
