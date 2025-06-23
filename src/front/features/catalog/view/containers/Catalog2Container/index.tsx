@@ -168,10 +168,10 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
       <div className="section" data-catalog="">
 
-        <CatalogBar
+        {/* <CatalogBar
           categoryKey={catalogKey}
           category={filters[queryCategory === "wine" ? "wine-all" : queryCategory]}
-          openFiltersDrawer={handleToggleFiltersDrawer} />
+          openFiltersDrawer={handleToggleFiltersDrawer} /> */}
 
         <div className="container">
             <div className="catalog-grid-v2">
