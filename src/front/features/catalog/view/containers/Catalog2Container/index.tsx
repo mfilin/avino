@@ -146,7 +146,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
   const filtersKey = parents[queryCategory]?.[0] || queryCategory;
 
-  console.log(catalogKey, filters, queryCategory, filters[queryCategory]);
+  //console.log(catalogKey, filters, queryCategory, filters[queryCategory]);
 
   return (
     <>
@@ -168,7 +168,10 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
       <div className="section" data-catalog="">
 
-        {/* <CatalogBar categoryKey={catalogKey} category={filters[queryCategory]} openFiltersDrawer={handleToggleFiltersDrawer} /> */}
+        <CatalogBar
+          categoryKey={catalogKey}
+          category={filters[queryCategory === "wine" ? "wine-all" : queryCategory]}
+          openFiltersDrawer={handleToggleFiltersDrawer} />
 
         <div className="container">
             <div className="catalog-grid-v2">

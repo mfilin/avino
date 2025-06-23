@@ -30,7 +30,7 @@ const NewProducts: React.FC<IOwnProps> = ({ title, isFetching, products }) => {
         products?.map((product, index) =>
           <ProductCard 
             key={product.id}
-            productInfo={product} 
+            productInfo={product}
             noButtonsMode={false}
             additionalClassName={(index === 2 || index === 5) ? "item-xl" : undefined}
           />

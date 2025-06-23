@@ -76,15 +76,17 @@ const ProductCard: React.FC<IDefaultCardProps & IOwnProps> = ({
         [id],
       );
 
+      console.log(productInfo);
+
       return(        
-        <div className={clsx("item", { additionalClassName: additionalClassName })}>
+        <div className={clsx("item", additionalClassName)}>
             <div className="item__media">
                 <div className="item__image">
-                <ImageSafe
-                    src={getProductImages(media)?.[0]}
-                    className="img-contain"
-                    alt={name || ""}
-                />
+                    <ImageSafe
+                        src={getProductImages(media)?.[0]}
+                        className="img-contain"
+                        alt={name || ""}
+                    />
                 </div>
                 <div className="item__info">
                 {taxons?.country?.value && (
