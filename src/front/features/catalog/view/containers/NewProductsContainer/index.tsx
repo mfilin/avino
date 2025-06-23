@@ -1,8 +1,8 @@
 import React from 'react';
 import { IProduct } from '../../../../../api/types/product';
 import Title from '../../../../../components/Typography/Title';
-import ProductCard from '../../../../../components/ProductCard/ProductCard';
-import { LoadingIndicator } from 'src/front/components';
+
+import { LoadingIndicator, ProductCard } from 'src/front/components';
 import { useDeviceInfo } from '../../../../../hooks/device';
 
 import styles from './NewProducts.module.scss';
