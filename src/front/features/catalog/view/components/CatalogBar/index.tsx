@@ -15,7 +15,7 @@ import { useDeviceInfo } from '../../../../../hooks/device';
 import CatalogControlPanelSwitchers from './components/CatalogControlPanelSwitchers';
 import { IFiltersControl, IOrderControl } from '../../../../../types/filters';
 
-import styles from './CatalogControlPanel.module.scss';
+import styles from './CatalogBar.module.scss';
 
 const sortTypes = [
   {

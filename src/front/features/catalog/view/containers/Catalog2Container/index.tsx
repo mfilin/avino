@@ -146,6 +146,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
   const filtersKey = parents[queryCategory]?.[0] || queryCategory;
 
+  console.log(catalogKey, filters, queryCategory, filters[queryCategory]);
+
   return (
     <>
       <NextSeo
@@ -165,7 +167,9 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
       <CatalogLandingContainer pageProps={pageProps} />
 
       <div className="section" data-catalog="">
-        <CatalogBar categoryKey={catalogKey} category={filters[queryCategory]} openFiltersDrawer={handleToggleFiltersDrawer} />
+
+        {/* <CatalogBar categoryKey={catalogKey} category={filters[queryCategory]} openFiltersDrawer={handleToggleFiltersDrawer} /> */}
+
         <div className="container">
             <div className="catalog-grid-v2">
               <NewProducts products={newProducts} isFetching={newProductsLoading} />
