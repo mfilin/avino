@@ -7,7 +7,7 @@ import { LoadingIndicator } from 'src/front/components';
 import DefaultMobileProductCard from '../../../../../components/DefaultMobileProductCard/index';
 import { useDeviceInfo } from '../../../../../hooks/device';
 
-import styles from './NewArrivals.module.scss';
+import styles from './NewProducts.module.scss';
 
 interface IOwnProps {
   title?: string;
