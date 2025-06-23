@@ -56,8 +56,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
   const slugs = useRouteSlugsDecoded();
   const { decodedSlugs, parents } = useSlugDecode(slugs);
 
-  const { products: newProducts, isLoading: newProductsLoading } = useNewProducts(10);
-  const { products: newProducts2, isLoading: newProductsLoading2 } = useNewProducts(10, 2);
+  //const { products: newProducts, isLoading: newProductsLoading } = useNewProducts(10);
+  //const { products: newProducts2, isLoading: newProductsLoading2 } = useNewProducts(10, 2);
   
 
   // TODO: Моргает когда меняешь категории в фильтрах! Нужно задерживать
@@ -120,12 +120,19 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
   );
 
   const { toggleDrawer } = React.useContext(DrawerContext);
-  const { productsPage } = useCatalogProducts(
+  const productsPage = useCatalogProducts(
     currentFilters as string[],
-    router.query?.page as string,
+    '1',
     router.query?.order as string,
     router.query?.orderDesc as string,
-    pageSize,
+    10,
+  );
+  const productsPage2 = useCatalogProducts(
+    currentFilters as string[],
+    '2',
+    router.query?.order as string,
+    router.query?.orderDesc as string,
+    10,
   );
 
   const handleChangePage = React.useCallback(
@@ -160,8 +167,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
       <CatalogHeader
         label={slugControl.categoryLabel}
         description={description?.[catalogKey]?.descr}
-        breadCrumbs={breadCrumbs} 
-        total={productsPage?.total}
+        breadCrumbs={breadCrumbs}
       />
 
       <CatalogLandingContainer pageProps={pageProps} />
@@ -175,11 +181,11 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
 
         <div className="container">
             <div className="catalog-grid-v2">
-              <NewProducts products={newProducts} isFetching={newProductsLoading} />
+              <NewProducts products={productsPage?.productsPage} isFetching={productsPage?.isLoading} />
 
               {/* статья */}
 
-              <NewProducts products={newProducts2} isFetching={newProductsLoading2} />
+              <NewProducts products={productsPage2?.productsPage} isFetching={productsPage2?.isLoading} />
             </div>
           </div>
       </div>

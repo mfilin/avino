@@ -91,7 +91,7 @@ const ProductCard: React.FC<IDefaultCardProps & IOwnProps> = ({
                 <div className="item__info">
                 {taxons?.country?.value && (
                     <div className="item__flag">
-                        <img src={`/images/flag_${taxons.country.value.toLowerCase()}.svg`} className="img-cover" alt={taxons.country.value} />
+                        <img src={`/images/flag_${taxons.country.slug.toLowerCase()}.svg`} className="img-cover" alt={taxons.country.value} />
                     </div>
                 )}
                 {properties?.strength?.[0].value && (
