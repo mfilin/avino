@@ -28,23 +28,27 @@ const CatalogLandingContainer: React.FC<IOwnProps> = (props) => {
   ];
   
   return(
-        <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            slidesPerView={"auto"}
-            className="swiper"
-            data-catalog-list
-        >
-            {catalogItems.map((item, index) => (
-                <SwiperSlide key={index}>
-                    <a href={item.href} className="catalog-item" data-stories-item>
-                        <i className="catalog-item__image">
-                            <img src={item.image} className="img-cover" alt="" />
-                        </i>
-                        <span className="catalog-item__text">{item.title}</span>
-                    </a>
-                </SwiperSlide>
-            ))}
-        </Swiper>
+    <div className="section section--first section--md">
+        <div className="container">
+            <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                slidesPerView={"auto"}
+                className="swiper"
+                data-catalog-list
+            >
+                {catalogItems.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <a href={item.href} className="catalog-item" data-stories-item>
+                            <i className="catalog-item__image">
+                                <img src={item.image} className="img-cover" alt="" />
+                            </i>
+                            <span className="catalog-item__text">{item.title}</span>
+                        </a>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    </div>
   )
 };
 

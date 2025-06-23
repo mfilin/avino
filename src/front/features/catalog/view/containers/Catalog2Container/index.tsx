@@ -30,6 +30,7 @@ import { Breadcrumbs } from '../../../../../components';
 import { useBreadcrumbedSlugs } from '../../../../../hooks/useBreadcrumbedSlugs';
 import { IBreadcrumb } from '../../../../../components/Breadcrumbs';
 import { useTaxonDescription } from '../../../../../hooks/useTaxonDescription';
+import { useNewProducts } from '../../../../../hooks/useNewProducts';
 
 import styles from './Catalog2Container.module.scss';
 import {
@@ -37,6 +38,7 @@ import {
   SlugControl,
 } from '../../../../../../class/SlugControl';
 import CatalogLandingContainer from '../CatalogLandingContainer';
+import NewProducts from '../NewProductsContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -52,6 +54,8 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
   const [listType, setListType] = React.useState<TCatalogListType>('blocks');
   const slugs = useRouteSlugsDecoded();
   const { decodedSlugs, parents } = useSlugDecode(slugs);
+
+  const { products: newProducts, isLoading: newProductsLoading } = useNewProducts();
   
 
   // TODO: Моргает когда меняешь категории в фильтрах! Нужно задерживать
@@ -152,11 +156,13 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
       <CatalogHeader
         label={slugControl.categoryLabel}
         description={description?.[catalogKey]?.descr}
-        breadCrumbs={breadCrumbs}
+        breadCrumbs={breadCrumbs} 
         total={productsPage?.total}
       />
 
       <CatalogLandingContainer pageProps={pageProps} />
+
+      <NewProducts products={newProducts} isFetching={newProductsLoading} />
             
     </>
   );

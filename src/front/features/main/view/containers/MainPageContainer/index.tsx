@@ -35,8 +35,8 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
 
   const { products: popularProducts, isLoading: popularProductsLoading } =
     usePopularProducts(currentPopularTab);
-  const { products: newProducts, isLoading: newProductsLoading } =
-    useNewProducts();
+//   const { products: newProducts, isLoading: newProductsLoading } =
+//     useNewProducts();
 
   const handleChangePopularTab = React.useCallback((tab: string) => {
     setCurrentPopularTab(tab);
