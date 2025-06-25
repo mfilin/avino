@@ -1,3 +1,7 @@
+// блок Swiper для карусели с ссылками на разделы каталога
+// TODO: 
+
+
 import React from 'react';
 import { IPageProps } from 'src/types/portal/server';
 

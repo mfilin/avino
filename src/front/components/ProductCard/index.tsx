@@ -76,7 +76,7 @@ const ProductCard: React.FC<IDefaultCardProps & IOwnProps> = ({
         [id],
       );
 
-      console.log(productInfo);
+      //console.log(productInfo);
 
       return(        
         <div className={clsx("item", additionalClassName)}>
@@ -91,7 +91,8 @@ const ProductCard: React.FC<IDefaultCardProps & IOwnProps> = ({
                 <div className="item__info">
                 {taxons?.country?.value && (
                     <div className="item__flag">
-                        <img src={`/images/flag_${taxons.country.slug.toLowerCase()}.svg`} className="img-cover" alt={taxons.country.value} />
+                        // TODO проверить флаги
+                        {/* <img src={`/images/flag_${taxons.country.slug.toLowerCase()}.svg`} className="img-cover" alt={taxons.country.value} /> */}
                     </div>
                 )}
                 {properties?.strength?.[0].value && (

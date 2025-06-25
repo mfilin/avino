@@ -24,6 +24,7 @@ import WineLibraryBanner from '../../components/WineLibraryBanner';
 
 import styles from './MainPageContainer.module.scss';
 import PromoContainer from 'src/front/features/promo/view/containers/PromoContainer';
+import { PromoArticleContainer } from 'src/front/features/promo/view/containers';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -210,6 +211,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
             {/* товары со скидкой */}
 
             {/* Неделя континентальной Австралии */}
+            <PromoArticleContainer pageProps={pageProps} />
 
             <div className="section">
                 <div className="action">
