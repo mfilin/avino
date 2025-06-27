@@ -40,7 +40,7 @@ import {
 import CatalogLandingContainer from '../CatalogLandingContainer';
 import NewProducts from '../NewProductsContainer';
 import CatalogBar from '../../components/CatalogBar';
-import { PromoArticleContainer } from 'src/front/features/promo/view/containers';
+import PromoCategoryArticleContainer from 'src/front/features/promo/view/containers/PromoCategoryArticleContainer';
 
 interface IOwnProps {
   pageProps: IPageProps;
@@ -186,7 +186,7 @@ const Catalog2Container: React.FC<IOwnProps> = (props) => {
               <NewProducts products={productsPage?.productsPage} isFetching={productsPage?.isLoading} />
 
               {/* статья */}
-              <PromoArticleContainer pageProps={pageProps} />
+              <PromoCategoryArticleContainer pageProps={pageProps} />
 
               // TODO пересмотреть выборку, пока просто забираю что есть в категори
               <NewProducts products={productsPage2?.productsPage} isFetching={productsPage2?.isLoading} />
