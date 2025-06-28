@@ -91,7 +91,6 @@ const ProductCard: React.FC<IDefaultCardProps & IOwnProps> = ({
                 <div className="item__info">
                 {taxons?.country?.value && (
                     <div className="item__flag">
-                        // TODO проверить флаги
                         {/* <img src={`/images/flag_${taxons.country.slug.toLowerCase()}.svg`} className="img-cover" alt={taxons.country.value} /> */}
                     </div>
                 )}
