@@ -23,6 +23,7 @@ import Button from 'src/front/components/Button';
 import { useDeviceInfo } from '../../../../../hooks/device';
 
 import styles from './SingleProductContainer.module.scss';
+import MainLayout from 'src/front/layouts/MainLayout';
 
 interface IOwnProps {
   productId: number;
@@ -183,6 +184,7 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
     },
     [checkedProduct],
   );
+
   const handleBuyNow = React.useCallback((e?) => {
     e.stopPropagation();
   }, []);
@@ -195,7 +197,28 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
   if (!checkedProduct) {
     return null;
   }
+
   return (
+    <MainLayout haveHeadPanel={true}>
+      <div>
+        {checkedProduct && (
+          <>
+            {Boolean(productGroup) ? (
+              <ProductCard
+                productInfo={checkedProduct}
+                propertiesDictionary={pageProps.settings?.dict}
+                recommendedReplacement={recommendedReplacement}
+                volumesAndVintages={volumesAndVintages}
+                onAddToCart={updateCartWithProduct} 
+                onScrollToAllParams={handleScrollToAllParams}
+              />
+            ) : null}
+          </>
+        )}
+      </div>
+    </MainLayout>
+    
+    /*
     <Layout>
       <div
         className={clsx(styles.SingleProductContainer, {
@@ -216,6 +239,7 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
             ) : null}
           </>
         )}
+
         <TastingNotes tastingNotes={tastingNotesWithText} />
 
         <div className={styles.AboutProduct}>
@@ -224,6 +248,7 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
             <ParsedHTMLElement htmlText={checkedProduct.description} />
           </div>
         </div>
+
         {aboutBrandFactory && (
           <>
             {isNotShampagneOrWine &&
@@ -289,6 +314,7 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
         )}
       </div>
     </Layout>
+    */
   );
 };
 
