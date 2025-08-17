@@ -163,7 +163,8 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
   ].includes(checkedProduct?.taxons?.root.slug);
 
   const isNotVodka = checkedProduct?.taxons?.root.slug !== 'vodka-all';
-  const ProductCard = isMobile ? SingleProductCardMobile : SingleProductCard;
+  //const ProductCard = isMobile ? SingleProductCardMobile : SingleProductCard;
+  const ProductCard = SingleProductCard;
 
   const tastingNotesWithText = tastingNotes.map((note) => ({
     ...note,
@@ -200,22 +201,20 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
 
   return (
     <MainLayout haveHeadPanel={true}>
-      <div>
-        {checkedProduct && (
-          <>
-            {Boolean(productGroup) ? (
-              <ProductCard
-                productInfo={checkedProduct}
-                propertiesDictionary={pageProps.settings?.dict}
-                recommendedReplacement={recommendedReplacement}
-                volumesAndVintages={volumesAndVintages}
-                onAddToCart={updateCartWithProduct} 
-                onScrollToAllParams={handleScrollToAllParams}
-              />
-            ) : null}
-          </>
-        )}
-      </div>
+      {checkedProduct && (
+        <>
+          {Boolean(productGroup) ? (
+            <ProductCard
+              productInfo={checkedProduct}
+              propertiesDictionary={pageProps.settings?.dict}
+              recommendedReplacement={recommendedReplacement}
+              volumesAndVintages={volumesAndVintages}
+              onAddToCart={updateCartWithProduct} 
+              onScrollToAllParams={handleScrollToAllParams}
+            />
+          ) : null}
+        </>
+      )}      
     </MainLayout>
     
     /*

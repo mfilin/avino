@@ -99,251 +99,152 @@ const SingleProductCard: React.FC<IOwnProps> = ({
   }
 
   return (
-    <div className={styles.Wrapper}>
-      <div className={styles.CardHeader}>
-        <Title className={styles.Title} as="h2">
-          {isRussianProduct ? name_ru : name_en}
-        </Title>
-        <div className={styles.DescriptionGroup}>
-          <div className={styles.Vendor}>
-            <Text level="s13h16w400" colorMode="grey">
-              Артикул: {sku2 || '12345'}
-            </Text>
-          </div>
-          <Text level="s13h16w400" colorMode="grey">
-            {isRussianProduct ? name_en : name_ru}
-          </Text>
-        </div>
-      </div>
-      <div className={styles.ContentBlock}>
-        <div className={styles.FirstBlock}>
-          <ProductImagesGallery images={images} />
-          <div className={styles.Info}>
-            <div className={styles.ExtraButtons}>
-              <CardExtraButtons
-                singleProductMode
-                isInFavorite={in_favorite}
-                onShare={() => true}
-                onAddToFavorite={() => true}
-                onAddToComparison={() => true}
-              />
-            </div>
-            <div className={styles.Rating}>
-              <CardSocialRating grade={(productInfo as any).grade} />
-              <CardVivinoRating rating={(productInfo as any).rating} />
-            </div>
-            <div className={styles.Params}>
-              {productInfo?.taxons &&
-                Object.entries(taxons).map(([key, value]) => {
-                  if (key === 'root' || key === 'importer') {
-                    return null;
-                  }
-                  return (
-                    <div key={key} className={styles.ParamRow}>
-                      <Text level="s15h15w500" colorMode="grey">
-                        {propertiesDictionary?.[`taxons.${key}`] || key}:
-                      </Text>
-                      <Text level="s15h15w500">{value?.value}</Text>
-                    </div>
-                  );
-                })}
-              {productInfo?.properties &&
-                Object.entries(properties).map(([key, value]) => {
-                  if (key === 'perc') {
-                    return null;
-                  }
-                  let name = propertiesDictionary?.[`properties.${key}`] || key;
-                  let values = value;
-                  if (key === 'psort') {
-                    name = 'Виноград';
-                    values = value.map((val) => {
-                      const perc = properties.perc?.find(
-                        (x) => x.sorted === val.sorted,
-                      );
-                      return {
-                        ...val,
-                        value: `${val.value}${perc ? `: ${perc.value}` : ''}`,
-                      };
-                    });
-                  }
-                  return (
-                    <div key={key} className={styles.ParamRow}>
-                      <Text level="s15h15w500" colorMode="grey">
-                        {name}:
-                      </Text>
-                      <div className={styles.RowValues}>
-                        {values.map((val) => (
-                          <Text level="s15h15w500">{val.value}</Text>
-                        ))}
-                      </div>
-                    </div>
-                  );
-                })}
-            </div>
-            <div className={styles.ShowAllParams} onClick={onScrollToAllParams}>
-              <Text level="s14h18w800" colorMode="orange">
-                Смотреть все характеристики <ArrowDownIcon />
-              </Text>
-            </div>
-            {(Object.keys(volumesAndVintages.volumes).length > 1 ||
-              Object.keys(volumesAndVintages.vintages).length > 1) && (
-              <div className={styles.VintagesAndVolumes}>
-                <Text level="s18h15w600">Винтажи и объемы</Text>
-                <VolumesOrVintagesList
-                  title="Объем"
-                  items={volumesAndVintages.volumes}
-                  showMoreText="Остальные объемы"
-                  productSlug={slug}
-                  units="л"
-                  productIsAvailable={!!in_stock}
-                />
-                <VolumesOrVintagesList
-                  title="Винтаж"
-                  items={volumesAndVintages.vintages}
-                  showMoreText="Остальные винтажи"
-                  productSlug={slug}
-                  units="г"
-                  productIsAvailable={!!in_stock}
-                />
-              </div>
-            )}
-          </div>
-        </div>
-        {(!!in_stock || recommendedReplacement) && (
-          <div className={styles.SecondBlock}>
-            {in_stock ? (
-              <>
-                {!!tags?.length && (
-                  <div className={styles.Tags}>
-                    <CardTags tags={tags} discount={discount} />
-                  </div>
-                )}
-                <div className={styles.PriceBlock}>
-                  <Text level="s36hnw800">{formatPriceString(price)}</Text>
-                </div>
-                <div className={styles.AboutPriceDecrease}>
-                  <Tooltip text="Подписаться и добавить в избранное">
-                    <div className={styles.Group}>
-                      <BellIcon fill="#797979" />
-                      <Text level="s13h16w400" colorMode="grey">
-                        Узнать о снижении цены
-                      </Text>
-                    </div>
-                  </Tooltip>
-                </div>
-                <div className={styles.Buttons}>
-                  {!!count_in_cart && (
-                    <>
-                      <ShallowLink href="/cart">
-                        <Button color="orange-fill">
-                          <Text level="s16h17w700" colorMode="white">
-                            В корзине
-                          </Text>
-                          <Text level="s16h17w500" colorMode="white">
-                            перейти
-                          </Text>
-                        </Button>
-                      </ShallowLink>
-                      <AddToCartCounter
-                        bigMode
-                        count={count_in_cart}
-                        onChange={handleAddToCart}
-                      />
-                    </>
-                  )}
-                  {!count_in_cart && (
-                    <Button
-                      stretched
-                      color="orange-outline"
-                      onClick={() => handleAddToCart()}
+    <div className="section">
+        <div className="product">
+            <h1 className="product__header product__header--sm">{name_ru}</h1>
+            <div className="product__media">
+            <div className="product-media" data-gallery>
+                <div className="product-media__gallery">
+                {images.map((image, index) => (
+                    <div 
+                    key={index}
+                    className={`product-media__image ${index === 0 ? 'active' : ''}`} 
+                    data-gallery-image={index + 1}
                     >
-                      Добавить в корзину
-                    </Button>
-                  )}
-                </div>
-                <div className={styles.AvailableInStore}>
-                  <Text level="s15h18w800" colorMode="green">
-                    В наличии на складе и в 1 магазине
-                  </Text>
-                  <Text level="s12h16w400" colorMode="grey">
-                    Наличие в магазинах
-                  </Text>
-                  <div className={styles.StoreAddresses}>
-                    <div className={styles.Visible}>
-                      <div>
-                        <Text level="s12h11w500">Ленинградский проспект -</Text>{' '}
-                        <Text level="s12h11w500" colorMode="green">
-                          в наличии
-                        </Text>
-                      </div>
-                      <ArrowUpIcon />
+                    <img src={image} className="img-fluid" alt="" />
                     </div>
-                    <div className={styles.Extendable}>
-                      <Text level="s11h16w400" colorMode="grey">
-                        Адрес: Москва, Ленинградский просп.,48
-                      </Text>
-                      <div className={styles.Group}>
-                        <Text level="s11h16w400" colorMode="grey">
-                          Метро:
-                        </Text>
-                        <Text level="s11h16w400" colorMode="green">
-                          Аэропорт, Динамо,
-                        </Text>
-                        <Text level="s11h16w400" color="#00C5C3">
-                          Петровский парк
-                        </Text>
-                      </div>
-                      <Text level="s11h16w400" colorMode="grey">
-                        Принимаем заказы круглосуточно онлайн и рады видеть вас
-                        в винотеке с 11:00 до 23:00
-                      </Text>
-                      <div className={styles.Group}>
-                        <Text level="s11h16w400" colorMode="grey">
-                          Уточняйте наличие по тел.
-                        </Text>
-                        <Text level="s11h16w400">+7 (926) 018-07-07</Text>
-                      </div>
+                ))}
+                </div>
+                <div className="product-media__thumbs">
+                {images.map((image, index) => (
+                    <div 
+                    key={index}
+                    className="product-media__thumb" 
+                    data-gallery-thumb={index + 1}
+                    >
+                    <div className="product-media__wrap">
+                        <img src={image} className="img-fluid" alt="" />
                     </div>
-                  </div>
+                    </div>
+                ))}
                 </div>
-                <div className={styles.Tips}>
-                  <div>
-                    <SslIcon />
-                    <Text level="s12h16w400" colorMode="grey">
-                      Надежная покупка с SSL-сертификатом
-                    </Text>
-                  </div>
-                  <div>
-                    <CreditCardIcon />
-                    <Text level="s12h16w400" colorMode="grey">
-                      Принимаем Visa, Master Card, МИР
-                    </Text>
-                  </div>
-                  <div>
-                    <SertificatedIcon />
-                    <Text level="s12h16w400" colorMode="grey">
-                      Вся продукция сертифицирована
-                    </Text>
-                  </div>
+            </div>
+            <button type="button" className={`product__favorite ${in_favorite ? 'active' : ''}`} onClick={() => {}}>
+                <i>
+                    <svg className="ico-svg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <use xlinkHref="img/sprites/sprite.svg#heart-small" />
+                    </svg>
+                </i>
+            </button>
+            <div className="product__tags">
+                {tags.map((tag, index) => (
+                <div key={index} className={`item__tag ${tag === 'discount' ? 'item__tag--orange' : 'item__tag--dark'}`}>
+                    {tag === 'discount' ? `-${discount}%` : tag}
                 </div>
-              </>
-            ) : (
-              <>
-                <div className={styles.Replacement}>
-                  <Text level="s14h16w600" colorMode="red">
-                    Товар отсутствует
-                  </Text>
-                  <Text level="s24h32w700"> Рекомендуемая замена </Text>
+                ))}
+            </div>
+            </div>
+            <div className="product__main">
+            <h1 className="product__header product__header--xl">{name_ru}</h1>
+            <div className="product__text product__text--xl">
+                <p>{properties?.description?.[0]?.value || ''}</p>
+            </div>
+            <div className="product__available">
+                <div className="product-available">
+                <span className="product-available__text">{in_stock ? 'В наличии на складе и в 1 магазине' : 'Нет в наличии'}</span>
+                <a href="#" className="product-available__icon">
+                    <svg className="img-fluid" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                    <use xlinkHref="img/sprites/sprite.svg#question" />
+                    </svg>
+                </a>
                 </div>
-                <DefaultProductCard
-                  productInfo={recommendedReplacement!}
-                  noPaddingAndBorderMode
-                />
-              </>
-            )}
-          </div>
-        )}
-      </div>
+            </div>
+            <div className="product__features">
+                {volumesAndVintages && (
+                <>
+                    <div className="product__group">
+                    <div className="product__label">Выберите объем:</div>
+                    <div className="option-group">
+                        {Object.keys(volumesAndVintages).map((volume) => (
+                        <label key={volume} className="option option--sm">
+                            <input type="radio" name="product-volume" value={volume} defaultChecked={properties?.pval?.[0]?.value === volume} />
+                            <span>{volume}</span>
+                        </label>
+                        ))}
+                    </div>
+                    </div>
+                    <div className="product__group">
+                    <div className="product__label">Выберите винтаж:</div>
+                    <div className="d-flex">
+                        <div className="select" data-select>
+                        <input type="hidden" name="view" data-select-value defaultValue={properties?.vintage?.[0]?.value} />
+                        <div className="select__header" data-select-toggle>
+                            <div className="select_active" data-select-active>{properties?.vintage?.[0]?.value}</div>
+                        </div>
+                        <div className="select__dropdown" data-select-dropdown>
+                            {volumesAndVintages[properties?.pval?.[0]?.value]?.map((vintage) => (
+                            <div key={vintage} className="select__item" data-select-item={vintage}>{vintage}</div>
+                            ))}
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </>
+                )}
+            </div>
+            <div className="product__price">
+                <div className="product__price-current">{price}</div>
+                {discount && <div className="product__price-old">{price}</div>}
+            </div>
+            <div className="product__purchase">
+                <div className="product-purchase" data-purchase>
+                <div className="product-purchase__button">
+                    <button 
+                    type="button" 
+                    className="btn btn-primary product-purchase__btn" 
+                    data-purchase-add
+                    onClick={() => handleAddToCart(1)}
+                    >
+                    <span>В Беру</span>
+                    </button>
+                </div>
+                <div className="product-purchase__quantity">
+                    <button className="product-purchase__control product-purchase__control--minus" data-purchase-change="minus"></button>
+                    <div className="product-purchase__field">
+                    <input type="number" className="product-purchase__input" min="0" max="99" defaultValue={count_in_cart || 0} data-purchase-quantity />
+                    </div>
+                    <button className="product-purchase__control product-purchase__control--plus" data-purchase-change="plus"></button>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div className="product__info">
+            <div className="product-info">
+                {propertiesDictionary && Object.entries(propertiesDictionary).map(([key, value]) => (
+                <div key={key} className="product-info__row">
+                    <div className="product-info__label">{value}</div>
+                    <div className="product-info__value">
+                        {/* {Array.isArray(value.values) ? value.values.map((val, idx) => (
+                            <React.Fragment key={idx}>
+                            {idx > 0 && ', '}
+                            <a href="#" onClick={(e) => { e.preventDefault(); onScrollToAllParams?.(); }}>{val}</a>
+                            </React.Fragment>
+                        )) : (
+                            <a href="#" onClick={(e) => { e.preventDefault(); onScrollToAllParams?.(); }}>{value.values}</a>
+                        )} */}
+                    </div>
+                </div>
+                ))}
+            </div>
+            <div className="product__docs">
+                <img src="img/award.svg" width="35" height="35" alt="" />
+                <span>{isRussianProduct ? 'Вся продукция сертифицирована' : 'Продукция импортирована'}</span>
+            </div>
+            </div>
+            <div className="product__text product__text--sm">
+            <p>{properties?.description?.[0]?.value || ''}</p>
+            </div>
+        </div>
     </div>
   );
 };
