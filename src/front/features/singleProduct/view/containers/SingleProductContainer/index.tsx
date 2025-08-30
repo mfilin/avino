@@ -31,6 +31,10 @@ interface IOwnProps {
 }
 
 const SingleProductContainer: React.FC<IOwnProps> = (props) => {
+
+  document.body.className = '';
+  document.body.classList.add('page-base');
+
   const { pageProps, productId } = props;
   const { isMobile } = useDeviceInfo();
   const { userData, updateCartWithProduct } = React.useContext(UserDataContext);
