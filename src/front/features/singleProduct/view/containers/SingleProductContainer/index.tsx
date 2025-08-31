@@ -209,20 +209,38 @@ const SingleProductContainer: React.FC<IOwnProps> = (props) => {
 
   return (
     <MainLayout haveHeadPanel={true}>
-      {checkedProduct && (
-        <>
-          {Boolean(productGroup) ? (
-            <ProductCard
-              productInfo={checkedProduct}
-              propertiesDictionary={pageProps.settings?.dict}
-              recommendedReplacement={recommendedReplacement}
-              volumesAndVintages={volumesAndVintages}
-              onAddToCart={updateCartWithProduct} 
-              onScrollToAllParams={handleScrollToAllParams}
-            />
-          ) : null}
-        </>
-      )}      
+      <section className="main">
+        <div className="container">
+
+          <ol className="breadcrumb">
+            <li className="breadcrumb__item">
+              <a href="#" className="breadcrumb__link">Главная</a>
+            </li>
+            <li className="breadcrumb__item">
+              <a href="#" className="breadcrumb__link">Вина</a>
+            </li>
+            <li className="breadcrumb__item">
+              <span className="breadcrumb__active">Название</span>
+            </li>
+          </ol>
+
+          {checkedProduct && (
+            <>
+              {Boolean(productGroup) ? (
+                <ProductCard
+                  productInfo={checkedProduct}
+                  propertiesDictionary={pageProps.settings?.dict}
+                  recommendedReplacement={recommendedReplacement}
+                  volumesAndVintages={volumesAndVintages}
+                  onAddToCart={updateCartWithProduct} 
+                  onScrollToAllParams={handleScrollToAllParams}
+                />
+              ) : null}
+            </>
+          )}
+
+        </div>
+      </section>    
     </MainLayout>
     
     /*
