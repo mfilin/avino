@@ -102,48 +102,49 @@ const SingleProductCard: React.FC<IOwnProps> = ({
     <div className="section">
         <div className="product">
             <h1 className="product__header product__header--sm">{name_ru}</h1>
+            
             <div className="product__media">
-                <div className="product-media" data-gallery>
+                <div className="product-media" data-gallery="">
                     <div className="product-media__gallery">
-                    {images.map((image, index) => (
-                        <div 
-                        key={index}
-                        className={`product-media__image ${index === 0 ? 'active' : ''}`} 
-                        data-gallery-image={index + 1}
-                        >
-                            <picture>
-                                <source srcSet={image} type="image/webp" />
-                                <img src={image} className="img-fluid" alt="" />
-                            </picture>
-                        </div>
-                    ))}
+                        {images.map((image, index) => (
+                            <div 
+                            key={index}
+                            className={`product-media__image ${index === 0 ? 'active' : ''}`} 
+                            data-gallery-image={index + 1}
+                            >
+                                <picture>
+                                    <source srcSet={image} type="image/webp" />
+                                    <img src={image} className="img-fluid" alt="" />
+                                </picture>
+                            </div>
+                        ))}
                     </div>
                     <div className="product-media__thumbs">
-                    {images.map((image, index) => (
-                        <div 
-                        key={index}
-                        className="product-media__thumb" 
-                        data-gallery-thumb={index + 1}
-                        >
-                            <div className="product-media__wrap">
-                                <img src={image} className="img-fluid" alt="" />
+                        {images.map((image, index) => (
+                            <div 
+                            key={index}
+                            className="product-media__thumb" 
+                            data-gallery-thumb={index + 1}
+                            >
+                                <div className="product-media__wrap">
+                                    <img src={image} className="img-fluid" alt="" />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                     </div>
                 </div>
                 <button type="button" className={`product__favorite ${in_favorite ? 'active' : ''}`} onClick={() => {}}>
                     <i>
                         <svg className="ico-svg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                            <use xlinkHref="img/sprites/sprite.svg#heart-small" />
+                            <use xlinkHref="images/sprites/sprite.svg#heart-small" />
                         </svg>
                     </i>
                 </button>
                 <div className="product__tags">
                     {tags.map((tag, index) => (
-                    <div key={index} className={`item__tag ${tag === 'discount' ? 'item__tag--orange' : 'item__tag--dark'}`}>
-                        {tag === 'discount' ? `-${discount}%` : tag}
-                    </div>
+                        <div key={index} className={`item__tag ${tag === 'discount' ? 'item__tag--orange' : 'item__tag--dark'}`}>
+                            {tag === 'discount' ? `-${discount}%` : tag}
+                        </div>
                     ))}
                 </div>
             </div>
@@ -240,7 +241,7 @@ const SingleProductCard: React.FC<IOwnProps> = ({
                     ))}
                 </div>
                 <div className="product__docs">
-                    <img src="img/award.svg" width="35" height="35" alt="" />
+                    <img src="images/award.svg" width="35" height="35" alt="" />
                     <span>{isRussianProduct ? 'Вся продукция сертифицирована' : 'Продукция импортирована'}</span>
                 </div>
             </div>
