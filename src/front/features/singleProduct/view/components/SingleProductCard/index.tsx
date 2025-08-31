@@ -102,7 +102,6 @@ const SingleProductCard: React.FC<IOwnProps> = ({
     <div className="section">
         <div className="product">
             <h1 className="product__header product__header--sm">{name_ru}</h1>
-            
             <div className="product__media">
                 <div className="product-media" data-gallery="">
                     <div className="product-media__gallery">
@@ -224,7 +223,7 @@ const SingleProductCard: React.FC<IOwnProps> = ({
             </div>
             <div className="product__info">
                 <div className="product-info">
-                    {propertiesDictionary && Object.entries(propertiesDictionary).map(([key, value]) => (
+                    {propertiesDictionary && Object.entries(propertiesDictionary).slice(0, 10).map(([key, value]) => (
                     <div key={key} className="product-info__row">
                         <div className="product-info__label">{value}</div>
                         <div className="product-info__value">
