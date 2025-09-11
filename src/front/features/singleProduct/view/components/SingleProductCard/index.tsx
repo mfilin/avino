@@ -132,7 +132,7 @@ const SingleProductCard: React.FC<IOwnProps> = ({
         <div className="product">
             <h1 className="product__header product__header--sm">{name_ru}</h1>
             <div className="product__media">
-                <div className="product-media" data-gallery="">
+                <div className="product-media" data-gallery>
                     <div className="product-media__gallery">
                         {images.map((image, index) => (
                             <div 
