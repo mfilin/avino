@@ -140,10 +140,7 @@ const SingleProductCard: React.FC<IOwnProps> = ({
                             className={`product-media__image ${index === 0 ? 'active' : ''}`} 
                             data-gallery-image={index + 1}
                             >
-                                <picture>
-                                    <source srcSet={image} type="image/webp" />
-                                    <img src={image} className="img-fluid" alt="" />
-                                </picture>
+                                <img src={image} className="img-fluid" alt="" />                                
                             </div>
                         ))}
                     </div>
