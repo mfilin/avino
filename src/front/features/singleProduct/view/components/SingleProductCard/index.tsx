@@ -75,7 +75,10 @@ const SingleProductCard: React.FC<IOwnProps> = ({
   onAddToCart,
 }) => {
   const images = Object.values(media || {}).map((media) => {
-    return `https://vinogradnevinovat.ru/storage/${media?.id}/${media?.file_name}`;
+    let url = `https://vinogradnevinovat.ru/storage/${media?.id}/conversions/`;
+    const fileExtension = media?.file_name.split('.').pop();
+    return url + media?.file_name.replace(`.${fileExtension}`, `-medium.${fileExtension}`);
+    //return `https://vinogradnevinovat.ru/storage/${media?.id}/${media?.file_name}`;
   });
   // console.log('productInfo', productInfo);
   const handleAddToCart = React.useCallback(
