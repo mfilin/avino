@@ -77,7 +77,7 @@ const SingleProductCard: React.FC<IOwnProps> = ({
   const images = Object.values(media || {}).map((media) => {
     let url = `https://vinogradnevinovat.ru/storage/${media?.id}/conversions/`;
     const fileExtension = media?.file_name.split('.').pop();
-    return url + media?.file_name.replace(`.${fileExtension}`, `-medium.${fileExtension}`);
+    return url + media?.file_name.replace(`.${fileExtension}`, `-medium.jpg`);
     //return `https://vinogradnevinovat.ru/storage/${media?.id}/${media?.file_name}`;
   });
   // console.log('productInfo', productInfo);
