@@ -59,6 +59,35 @@ $ yarn run migration up
 $ yarn run export-catalog-to-elastic
 ```
 
+## Docker
+
+1. Create the environment file and fill in secure values:
+
+```bash
+cp .env.example .env
+```
+
+2. Start the application, MySQL and Elasticsearch:
+
+```bash
+docker compose up --build
+```
+
+The storefront and API are then available at `http://localhost:4000`; MySQL
+and Elasticsearch are exposed on ports `3306` and `9200` by default.
+
+The repository does not include the initial MySQL dump. Import it after MySQL
+starts, then run the optional maintenance container to apply migrations and
+populate Elasticsearch:
+
+```bash
+docker compose --profile tools run --rm toolbox migration up
+docker compose --profile tools run --rm toolbox export-catalog-to-elastic
+```
+
+Use `docker compose down` to stop the stack. Add `-v` only when the persistent
+MySQL and Elasticsearch data may be removed.
+
 ## Running the app
 
 ```bash

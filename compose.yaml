@@ -1,0 +1,90 @@
+name: avino
+
+services:
+  app:
+    build:
+      context: .
+      target: production
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4000
+      DBHOST: mysql
+      DBPORT: 3306
+      DBUSERNAME: ${DBUSERNAME:-vino}
+      DBPASSWORD: ${DBPASSWORD:-vino}
+      DBDATABASE: ${DBDATABASE:-vinogradnevi}
+      ELASTICURL: http://elasticsearch:9200
+    ports:
+      - "${APP_PORT:-4000}:4000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: ${DBDATABASE:-vinogradnevi}
+      MYSQL_USER: ${DBUSERNAME:-vino}
+      MYSQL_PASSWORD: ${DBPASSWORD:-vino}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change-me-before-production}
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.19.2
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.security.http.ssl.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "${ELASTIC_PORT:-9200}:9200"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=1s >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+    restart: unless-stopped
+
+  toolbox:
+    profiles: ["tools"]
+    build:
+      context: .
+      target: builder
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DBHOST: mysql
+      DBPORT: 3306
+      DBUSERNAME: ${DBUSERNAME:-vino}
+      DBPASSWORD: ${DBPASSWORD:-vino}
+      DBDATABASE: ${DBDATABASE:-vinogradnevi}
+      ELASTICURL: http://elasticsearch:9200
+    depends_on:
+      mysql:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    entrypoint: ["yarn"]
+    command: ["migration", "up"]
+
+volumes:
+  mysql-data:
+  elasticsearch-data:

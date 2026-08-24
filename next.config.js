@@ -1,7 +1,9 @@
 const withLess = require('next-with-less');
 
 module.exports = withLess({
-  distDir: '/.next',
+  // Keep the Next build inside the project directory. An absolute path breaks
+  // portable builds, including Docker images.
+  distDir: '.next',
   basePath: process.env.BASE_PATH,
   webpack: (config, webpack) => {
     // We can modify NEXT config here
