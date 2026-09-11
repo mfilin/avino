@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { IPageProps } from '../../../../../../types/portal/server';
 import HowToCreateOrder from '../../../../../components/HowToCreateOrder/index';
 import PopularProducts from '../../components/PopularProducts/index';
-import NewArrivals from '../../components/NewArrivals/index';
+import NewArrivalsCarousel from '../../components/NewArrivalsCarousel';
 import PopularCategories from '../../components/PopularCategories/index';
 import MainBanners from '../../components/MainBanners/index';
 import AddUsToFavorite from '../../components/AddUsToFavorite/index';
@@ -36,8 +36,8 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
 
   const { products: popularProducts, isLoading: popularProductsLoading } =
     usePopularProducts(currentPopularTab);
-//   const { products: newProducts, isLoading: newProductsLoading } =
-//     useNewProducts();
+  const { products: newProducts, isLoading: newProductsLoading } =
+    useNewProducts();
 
   const handleChangePopularTab = React.useCallback((tab: string) => {
     setCurrentPopularTab(tab);
@@ -208,7 +208,10 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div>{/*<-- .section popular-category-swiper -->*/}
 
-            {/* новинки */}
+            <NewArrivalsCarousel
+              products={newProducts}
+              isFetching={newProductsLoading}
+            />
 
             {/* товары со скидкой */}
 

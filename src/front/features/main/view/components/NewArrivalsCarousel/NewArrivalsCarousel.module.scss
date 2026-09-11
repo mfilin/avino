@@ -1,0 +1,123 @@
+.NewArrivals {
+  padding: 64px 0;
+  background-color: #f9f9fa;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.Navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.PrevButton,
+.NextButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Status {
+  min-height: 240px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(29, 29, 27, 0.6);
+}
+
+.Carousel {
+  overflow: visible;
+}
+
+.Slide {
+  width: 232px;
+  height: auto;
+}
+
+.Card {
+  height: 100%;
+  background-color: #fff;
+}
+
+.ImageLink {
+  display: block;
+  color: inherit;
+}
+
+.ImageWrapper {
+  position: relative;
+  height: 260px;
+  padding: 24px;
+  background-color: #f3f0ea;
+}
+
+.Image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.Tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #e67e22;
+}
+
+.Content {
+  padding: 20px;
+}
+
+.Name {
+  display: block;
+  min-height: 42px;
+  color: #1d1d1b;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+
+  &:hover {
+    color: #e67e22;
+  }
+}
+
+.Details {
+  min-height: 20px;
+  margin: 10px 0 0;
+  color: rgba(29, 29, 27, 0.55);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.Price {
+  margin: 16px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .NewArrivals {
+    padding: 90px 0;
+  }
+
+  .Header {
+    margin-bottom: 40px;
+  }
+
+  .Slide {
+    width: auto;
+  }
+}
