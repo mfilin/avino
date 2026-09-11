@@ -50,6 +50,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
         })}
       > */}
 
+            {/* TODO: TASK-001 — replace the hardcoded main banner slides with FE-integrated data. */}
             <div className="primary">
                 <Swiper
                 className="swiper"
@@ -155,6 +156,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
 
             <PromoContainer pageProps={pageProps} />
 
+            {/* TODO: TASK-001 — replace hardcoded popular categories with FE-integrated data. */}
             <div className="section">
                 <div className="container">
                     <div className="section__header">
@@ -213,6 +215,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
             {/* Неделя континентальной Австралии */}
             <PromoArticleContainer pageProps={pageProps} />
 
+            {/* TODO: TASK-001 — replace the hardcoded promotions subscription block with FE integration. */}
             <div className="section">
                 <div className="action">
                     <div className="container">
@@ -244,6 +247,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
             
             {/* Вас могут заинтересовать */}
 
+            {/* TODO: TASK-001 — replace hardcoded popular brands with FE-integrated data. */}
             <div className="section">
                 <div className="container">
                     <div className="section__header">
@@ -297,6 +301,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div>{/* статьи */}
 
+            {/* TODO: TASK-001 — replace the hardcoded company statistics block with FE-integrated data. */}
             <div className="section section--sm">
                 <div className="container">
                     <div className="lead">
@@ -330,6 +335,7 @@ const MainPageContainer: React.FC<IOwnProps> = ({ pageProps }) => {
                 </div>
             </div>{/* контент */}
 
+            {/* TODO: TASK-001 — replace hardcoded news cards with FE-integrated data. */}
             <div className="section">
                 <div className="container">
                     <div className="section__header section__header--sm">
